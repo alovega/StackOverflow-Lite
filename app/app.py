@@ -34,5 +34,13 @@ class QuestionList(Resource):
     def get(self):
         return {'qestions': questions}
 
+    def post(self):
+        args = self.reqparse.parse_args()
+        question = {
+            'id': questions[-1]['id'] + 1,
+            'title': args['title'],
+            'description': args['description'],
+        }
 
-def
+        questions.append(question)
+        return {'question': questions}, 201

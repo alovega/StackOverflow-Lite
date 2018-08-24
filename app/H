@@ -1,13 +1,3 @@
- def post(self):
-        args = self.reqparse.parse_args()
-        question = {
-            'id': questions[-1]['id'] + 1,
-            'title': args['title'],
-            'description': args['description'],
-        }
-
-        questions.append(question)
-        return {'question': questions}, 201
 
 
 class Question(Resource):
