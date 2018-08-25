@@ -1,7 +1,7 @@
 from flask import Flask
 from flask_restful import Api
-from app.app import Question, Answer
-from app.app import QuestionList
+from app.app import Question, AnswerList, Answer
+from app.app import QuestionList,Answers
 
 from instance.config import app_config
 
@@ -24,4 +24,6 @@ def create_api(app):
 
     api.add_resource(QuestionList, '/questions', endpoint='questions')
     api.add_resource(Question, '/questions/<int:id>', endpoint='question')
-    api.add_resource(Answer, '/questions/<int:id>/answers', endpoint='answers')
+    api.add_resource(AnswerList,'/questions/<int:id>/answers', endpoint='answerlist')
+    api.add_resource(Answers,'/questions/answers', endpoint='answers_all')
+    api.add_resource(Answer,'/questions/<int:id>/answers/<int:answer_id>', endpoint='answer')
