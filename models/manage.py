@@ -8,9 +8,13 @@ try:
 
         commands = (
             """
+            CREATE TABLE IF NOT EXISTS users(id SERIAL PRIMARY KEY,email VARCHAR NOT NULL UNIQUE,username 
+            VARCHAR NOT NULL UNIQUE, password VARCHAR NOT NULL)""",
+            """
             CREATE TABLE IF NOT EXISTS question(id SERIAL PRIMARY KEY, question VARCHAR NOT NULL UNIQUE)""",
             """
-            CREATE TABLE IF NOT EXISTS answer(answer_id SERIAL PRIMARY KEY, answer VARCHAR(1000),accept BOOLEAN DEFAULT FALSE, id INT NOT NULL, FOREIGN KEY (id) REFERENCES question (id) ON DELETE CASCADE)
+            CREATE TABLE IF NOT EXISTS answer(answer_id SERIAL PRIMARY KEY, answer VARCHAR(1000),accept BOOLEAN DEFAULT 
+            FALSE, id INT NOT NULL, FOREIGN KEY (id) REFERENCES question (id) ON DELETE CASCADE)
             """,)
         cur = conn.cursor()
         for command in commands:

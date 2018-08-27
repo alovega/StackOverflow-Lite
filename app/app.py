@@ -1,4 +1,4 @@
-from flask_restful import Resource, fields, reqparse, marshal, abort
+from flask_restful import Resource, fields, reqparse, abort
 
 from models.models import AppDb
 

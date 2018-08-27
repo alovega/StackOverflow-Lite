@@ -96,3 +96,38 @@ class AppDb:
         self.connection.commit()
         cur.close()
         return updated_rows
+
+    def insert_user(self, UserApi):
+        sql = """INSERT INTO users(email, username, password) 
+          VALUES (%s,%s,%s)"""
+        # get connection
+        cur = self.connection.cursor()
+        # insert into database
+        cur.execute(sql, (UserApi.email, UserApi.username, UserApi.password))
+        self.connection.commit()
+        cur.close()
+
+    def get_user_by_username(self, username):
+        cur = self.connection.cursor(cursor_factory=RealDictCursor)
+        cur.execute("""SELECT email,username,password from users 
+                        where username = %(username)s """,
+                    {'username': username})
+        rows = cur.fetchall()
+        return rows
+
+    def get_all(self):
+        cur = self.connection.cursor(cursor_factory=RealDictCursor)
+        cur.execute("SELECT id, email, username,password  from users")
+        rows = cur.fetchall()
+        return rows
+
+    def check_user_exist_by_username(self, username):
+        cur = self.connection.cursor(cursor_factory=RealDictCursor)
+        cur.execute("SELECT id, username, password from users where username = %(username)s", {'username':
+                                                                                                   username})
+        rows = cur.fetchone()
+        if rows:
+            return True
+        else:
+            return False
+        cur.close()
