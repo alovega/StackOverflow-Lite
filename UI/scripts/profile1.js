@@ -11,6 +11,8 @@ function showQuestionCards(divId){
 
 function showWebStatistics(){
        document.getElementsByClassName("web-statistics")[0].style.display = 'table';
+         document.getElementsByClassName("statistics")[0].style.display = 'flex';
+
 }
 
 function showAnswerForm(){
@@ -35,7 +37,17 @@ function closeForm(){
  function ShowAnswerList(){
         document.getElementsByClassName('answerList')[0].style.display = 'block';
  }
+ function ShowAnswerList1(){
+       document.getElementsByClassName('answerList')[1].style.display = 'block';
+}
+function ShowAnswerList2(){
+       document.getElementsByClassName('answerList')[2].style.display = 'block';
+}
 
  function ShowMostAnswered(){
-        document.getElementById('')
+        document.getElementById('mostAnswered').style.display= 'block';
+ }
+
+ function ShowQuestionForm(){
+        document.getElementsByClassName('post')[0].style.display = 'block';
  }

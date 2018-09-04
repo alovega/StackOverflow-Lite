@@ -72,6 +72,9 @@ a{
     padding: 15px;
 
 }
+#mostAnswered{
+display: none;
+}
 .web-statistics {
 margin-top: 15px;
 margin-left:70px;
@@ -148,12 +151,14 @@ div.statistics::after {
     content: "";
     clear: both;
     display: none;
+    width: 80%;
 }
 div.square{
     float:left;
     background-color: #0D1112;
     padding: 15px;
     width: 50%;
+    color: white;
 }
 div.icon{
     color: black;
@@ -174,29 +179,7 @@ div.footer{
     position: fixed;
     margin-top: 2px;
 }
-a.mobile{
-display: block;
-color:#fff;
-background-color: #000;
-text-align: center;
-padding: 7px;
-}
 
-a.mobile:active{
-    background-color: #4a4a4a;
-}
-@media only screen and (max-width:420px){
-    .content{
-        margin-left: 0px;
-        height: 85%;
-    }
-}
-@media only screen and (min-width:420px){
-    .content{
-        height: 100%;
-        display: block;
-    }
-}
 hr{
     border: 1px solid #f1f1f1;
     margin-bottom: 25px;
@@ -226,6 +209,22 @@ hr{
     border:none;
     cursor: pointer;
   }
+
+  input[type=submit]#stackoverflow{
+  margin-left: 50px;
+  }
+
+div.post {
+    border-radius: 5px;
+    background-color: burlywood;
+    padding: 20px;
+    margin-bottom: 20%;
+    margin-top: 2%;
+    width: 80%;
+    margin-left: 50px;
+    display: none;
+
+}
   /* adds padding to container elements*/
   .container{
     padding: 16px;

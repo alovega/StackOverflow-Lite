@@ -8,7 +8,7 @@
             initial-scale: 1.0, user-scalabe=0"/></meta>
             <script src="scripts/jquery-1.12.2.min.js"></script>
             <script src="scripts/general.js"></script>
-             <script src="scripts/profile.js"></script>
+             <script src="scripts/profile1.js"></script>
 
     </head>
 
@@ -16,10 +16,8 @@
         <body>
           <div class="topnav" id="myTopnav">
              <div class="logo"><a href="#">StackOverflow<span>Lite</span></a></div>
-              <a href="index.html" class="highlight">SignUp</a>
-              <a href="login.html">Profile</a>
-              <a href="..\profile.html">RecentQuestions</a>
-              <a href="question.html">MostAnswered</a>
+              <a href="Profile1.html">Profile</a>
+              <a href="mostAnswered1.html">MostAnswered</a>
               <a onclick="showWebStatistics()" >Statistics</a>
               <a href="login.html" style="float: right;">Logout</a>
               <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
@@ -50,7 +48,7 @@
                   </p>
               </div>
           </div>
-          <div onclick="ShowMostAnswered()" class="top">Most Answered</div>
+          <div onclick="ShowMostAnswered()" class="top">Click to view most answered</div>
                 <div class="box" id="mostAnswered">
                         <div class="box-panel">
                            <div class="Question">
@@ -69,20 +67,27 @@
                                    </div>
                                </section>
                                <div  class="Question-form">
-                                   <div class="answers">
-                                       this is the first answer
-                                   </div>
-                                   <div class="answers">
-                                       this is the second answer
-                                   </div>
-                                   <div class="answers">
-                                       this is the third answer
-                                   </div>
                                    <form id="user-profile">
                                        <input id="answer" type="text" value="answer" placeholder="add you answer"><br>
                                        <button id="add" type="button" value="add">add</button>
                                        <button onclick="closeForm()"   id="close" type="button" value="close">close</button>
                                    </form>
+                               </div>
+
+                                <div class="answerList">
+                                       <div class="answers">
+                                       this is the first answer<br>
+                                        this is the first answer<br>
+                                        this is the first answer<br>
+                                        this is the first answer<br>
+                                        <button id="accept" type="button" value="accept">accept</button>
+                                        </div>
+                                        <div class="answers">
+                                            this is the second answer
+                                        </div>
+                                        <div class="answers">
+                                            this is the third answer
+                                        </div>
                                </div>
 
                                <div id="date">
@@ -101,7 +106,7 @@
                                         <i class="fa fa-plus" onclick="showAnswerForm()"></i><br>Answer
                                    </div>
                                    <div class="icon2">
-                                       <i class="fa fa-reply" onclick="ShowAnswerList()"></i><br>3
+                                       <i class="fa fa-reply" onclick="ShowAnswerList1()"></i><br>3
                                    </div>
                                </section>
                                 <div  class="Question-form">
@@ -110,6 +115,21 @@
                                        <button id="add" type="button" value="add">add</button>
                                        <button onclick="closeForm2()"   id="close" type="button" value="close">close</button>
                                    </form>
+                               </div>
+                                 <div class="answerList">
+                                       <div class="answers">
+                                       this is the first answer<br>
+                                        this is the first answer<br>
+                                        this is the first answer<br>
+                                        this is the first answer<br>
+                                        <button id="accept" type="button" value="accept">accept</button>
+                                        </div>
+                                        <div class="answers">
+                                            this is the second answer
+                                        </div>
+                                        <div class="answers">
+                                            this is the third answer
+                                        </div>
                                </div>
                                <div id="date">
                                    <Span class="span-icon">Date: 20th-August-2019</Span>
@@ -128,7 +148,7 @@
                                         <i class="fa fa-plus" onclick="showAnswerForm()"></i><br>Answer
                                    </div>
                                    <div class="icon2">
-                                       <i class="fa fa-reply" onclick="ShowAnswerList()"></i><br>3
+                                       <i class="fa fa-reply" onclick="ShowAnswerList2()"></i><br>3
                                    </div>
                                </section>
                                   <div  class="Question-form">
@@ -137,6 +157,21 @@
                                        <button id="add" type="button" value="add">add</button>
                                        <button onclick="closeForm3()"   id="close" type="button" value="close">close</button>
                                    </form>
+                               </div>
+                                 <div class="answerList">
+                                       <div class="answers">
+                                       this is the first answer<br>
+                                        this is the first answer<br>
+                                        this is the first answer<br>
+                                        this is the first answer<br>
+                                        <button id="accept" type="button" value="accept">accept</button>
+                                        </div>
+                                        <div class="answers">
+                                            this is the second answer
+                                        </div>
+                                        <div class="answers">
+                                            this is the third answer
+                                        </div>
                                </div>
                                <div id="date">
                                    <Span class="span-icon">Date: 20th-August-2019</Span>
