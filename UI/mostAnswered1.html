@@ -1,0 +1,190 @@
+<html>
+    <head>
+            <title>Username</title>
+            <link rel="stylesheet" type="text/css" href="styles/style1.css">
+            <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <meta name="viewport" content="with=device-width,
+            initial-scale: 1.0, user-scalabe=0"/></meta>
+            <script src="scripts/jquery-1.12.2.min.js"></script>
+            <script src="scripts/general.js"></script>
+             <script src="scripts/profile1.js"></script>
+
+    </head>
+
+
+        <body>
+          <div class="topnav" id="myTopnav">
+             <div class="logo"><a href="#">StackOverflow<span>Lite</span></a></div>
+              <a href="Profile1.html">Profile</a>
+              <a href="mostAnswered1.html">MostAnswered</a>
+              <a onclick="showWebStatistics()" >Statistics</a>
+              <a href="login.html" style="float: right;">Logout</a>
+              <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+          </div>
+          <div class="web-statistics">
+              <div class=statistics>
+                  <p>
+                  <div class="square">
+                  <div class="icon" ><i class="fa fa-question" style="font-size:50px;"></i></div>
+                  <div class="question-stat">
+                      <h3>54</h3>
+                  </div>
+                  <div class="question">
+                      <h4>Questions</h4>
+                  </div>
+              </div>
+                  </p>
+                  <p>
+                  <div class="square" style="background-color:#242626">
+                  <div class="icon" ><i class="fa fa-eye" style="font-size:50px;"></i></div>
+                  <div class="answer-stat">
+                      <h3>28</h3>
+                  </div>
+                  <div class="question">
+                      <h4>answers</h4>
+                  </div>
+              </div>
+                  </p>
+              </div>
+          </div>
+          <div onclick="ShowMostAnswered()" class="top">Click to view most answered</div>
+                <div class="box" id="mostAnswered">
+                        <div class="box-panel">
+                           <div class="Question">
+                               <h3 style="text-align:center;">Question1</h3>
+                               <P>
+                               <a href=#>Trying to calculate statistics using
+                                stochastic process can you help</a>
+                               </P>
+                               <br>
+                                <section>
+                                   <div class="icon">
+                                        <i class="fa fa-plus" onclick="showAnswerForm()"></i><br>Answer
+                                   </div>
+                                   <div class="icon2">
+                                       <i class="fa fa-reply" onclick="ShowAnswerList()"></i><br>3
+                                   </div>
+                               </section>
+                               <div  class="Question-form">
+                                   <form id="user-profile">
+                                       <input id="answer" type="text" value="answer" placeholder="add you answer"><br>
+                                       <button id="add" type="button" value="add">add</button>
+                                       <button onclick="closeForm()"   id="close" type="button" value="close">close</button>
+                                   </form>
+                               </div>
+
+                                <div class="answerList">
+                                       <div class="answers">
+                                       this is the first answer<br>
+                                        this is the first answer<br>
+                                        this is the first answer<br>
+                                        this is the first answer<br>
+                                        <button id="accept" type="button" value="accept">accept</button>
+                                        </div>
+                                        <div class="answers">
+                                            this is the second answer
+                                        </div>
+                                        <div class="answers">
+                                            this is the third answer
+                                        </div>
+                               </div>
+
+                               <div id="date">
+                                   <Span class="span-icon">Date: 20th-August-2019</Span>
+                               </div>
+                           </div>
+                            <div class="Question">
+                               <h3 style="text-align:center;">Question2</h3>
+                               <P>
+                               <a href=#>Trying to calculate statistics using
+                                stochastic process can you help</a>
+                               </P>
+                               <br>
+                                 <section>
+                                   <div class="icon">
+                                        <i class="fa fa-plus" onclick="showAnswerForm()"></i><br>Answer
+                                   </div>
+                                   <div class="icon2">
+                                       <i class="fa fa-reply" onclick="ShowAnswerList1()"></i><br>3
+                                   </div>
+                               </section>
+                                <div  class="Question-form">
+                                   <form id="user-profile">
+                                       <input id="answer" type="text" value="answer" placeholder="add you answer"><br>
+                                       <button id="add" type="button" value="add">add</button>
+                                       <button onclick="closeForm2()"   id="close" type="button" value="close">close</button>
+                                   </form>
+                               </div>
+                                 <div class="answerList">
+                                       <div class="answers">
+                                       this is the first answer<br>
+                                        this is the first answer<br>
+                                        this is the first answer<br>
+                                        this is the first answer<br>
+                                        <button id="accept" type="button" value="accept">accept</button>
+                                        </div>
+                                        <div class="answers">
+                                            this is the second answer
+                                        </div>
+                                        <div class="answers">
+                                            this is the third answer
+                                        </div>
+                               </div>
+                               <div id="date">
+                                   <Span class="span-icon">Date: 20th-August-2019</Span>
+                               </div>
+
+                           </div>
+                            <div class="Question">
+                                <h3 style="text-align:center;">Question3</h3>
+                               <P>
+                               <a href=#>Trying to calculate statistics using
+                                stochastic process can you help</a>
+                               </P>
+                               <br>
+                                 <section>
+                                   <div class="icon">
+                                        <i class="fa fa-plus" onclick="showAnswerForm()"></i><br>Answer
+                                   </div>
+                                   <div class="icon2">
+                                       <i class="fa fa-reply" onclick="ShowAnswerList2()"></i><br>3
+                                   </div>
+                               </section>
+                                  <div  class="Question-form">
+                                   <form id="user-profile">
+                                       <input id="answer" type="text" value="answer" placeholder="add you answer"><br>
+                                       <button id="add" type="button" value="add">add</button>
+                                       <button onclick="closeForm3()"   id="close" type="button" value="close">close</button>
+                                   </form>
+                               </div>
+                                 <div class="answerList">
+                                       <div class="answers">
+                                       this is the first answer<br>
+                                        this is the first answer<br>
+                                        this is the first answer<br>
+                                        this is the first answer<br>
+                                        <button id="accept" type="button" value="accept">accept</button>
+                                        </div>
+                                        <div class="answers">
+                                            this is the second answer
+                                        </div>
+                                        <div class="answers">
+                                            this is the third answer
+                                        </div>
+                               </div>
+                               <div id="date">
+                                   <Span class="span-icon">Date: 20th-August-2019</Span>
+                               </div>
+
+                           </div>
+
+                    </div>
+                </div>
+
+                <div class="footer" id="question">
+                    <p>@AlwaSite</p>
+                </div>
+              </div>
+        </body>
+    </html>
