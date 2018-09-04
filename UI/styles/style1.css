@@ -176,7 +176,7 @@ div.footer{
     font-size: 1.6em;
     margin: 0 auto;
     bottom: 0;
-    position: fixed;
+    position: absolute;
     margin-top: 2px;
 }
 
@@ -254,7 +254,8 @@ div.post {
     border:1px solid #ccc;
     margin-left: 30%;
     margin-right: 30%;
-    margin-bottom:3px;
+    margin-top: 10px;
+    margin-bottom:10px;
     border-radius: 8px;
   }
 
@@ -271,7 +272,7 @@ div.post {
     margin: 8px 0;
     border: none;
     cursor:pointer;
-    width: 20%;
+    width: 40%;
     opacity: 0.9;
     border-radius: 5px;
   }
