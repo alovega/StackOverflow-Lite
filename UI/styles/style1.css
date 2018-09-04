@@ -174,10 +174,8 @@ div.footer{
     text-align: center;
     padding: 15px;
     font-size: 1.6em;
-    margin: 0 auto;
     bottom: 0;
-    position: absolute;
-    margin-top: 2px;
+    position: fixed;
 }
 
 hr{
@@ -218,7 +216,7 @@ div.post {
     border-radius: 5px;
     background-color: burlywood;
     padding: 20px;
-    margin-bottom: 20%;
+    margin-bottom: 10px;
     margin-top: 2%;
     width: 80%;
     margin-left: 50px;
@@ -245,7 +243,7 @@ div.post {
    background-color:teal;
    color:black;
    border: solid black 1.5px;
-   padding: 3%;
+   padding: 1%;
    }
   /*end of styling middle section  */
 
