@@ -11,41 +11,13 @@ body {
 a{
     text-decoration: none;
 }
-div#header{
-    width: 100%;
-    height: 50px;
-    background-color: #2c3e50;
-    margin: 0 auto; 
 
-}
-.logo{
-    float:left;
-    margin-top: 10px;
-    margin-left: 15px;
-}
-.logo a{ 
-    font-size: 1.6em;
-    color: #fff;
-}
-.logo a span{
-    font-weight: 300; 
-}
-div#container{
-    width: 100%; 
-    margin: 0 auto;
-}
-.sidebar{
-    width:250px;
-    /*height: 100%;*/
-    background-color: #171717;
-    float: left;
-}
 .topnav {
     overflow: hidden;
     background-color: #2c3e50;
     margin-bottom:0;
   }
-  
+
   .topnav a {
     float: left;
     display: block;
@@ -55,21 +27,21 @@ div#container{
     text-decoration: none;
     font-size: 120%;
   }
-  
+
   .topnav a:hover {
     background-color: #ddd;
     color: black;
   }
-  
+
   .highlight {
     background-color: #4CAF50;
     color: white;
   }
-  
+
   .topnav .icon {
     display: none;
   }
-  
+
   @media screen and (max-width: 600px) {
     .topnav a:not(:first-child) {display: none;}
     .topnav a.icon {
@@ -77,7 +49,7 @@ div#container{
       display: block;
     }
   }
-  
+
   @media screen and (max-width: 600px) {
     .topnav.responsive {position: relative;}
     .topnav.responsive .icon {
@@ -91,69 +63,66 @@ div#container{
       text-align: left;
     }
   }
-ul#nav {
-
-}
-ul#nav li { 
-    list-style: none;    
-}
-ul#nav li a {
-    color: #ccc;
-    display: block;
-    padding:10px;  
-    font-size:1.0em;
-    border-bottom: 1px solid #0A0A0A;
-    -webkit-transition: 0.2s;
-    -moz-transition: 0.2s;
-    -o-transition: 0.2s;
-    transition: 0.2s;
-}  
-ul#nav li a:hover{
-    background-color: #030303;
-    color:#fff;
-    padding-left: 30px;
-}
-ul#nav li a.selected {
-    background-color: #030303;
-    color: #fff;
-    
-}
-ul#questions{
-    list-style: circle;
-    padding: 10px;
-    background-color: #95a5a6;
-    margin: 0 auto;
-}
-ul#questions li{
-     
-}
-.content{
+#UserQuestions{
     width: auto;
-    margin-left: 250px; 
+    margin-left: 20px;
     height:85%;
+    margin-right:20px;
     background-color: #fff;
     padding: 15px;
-    
+
 }
-.content p {
-   color:#424242;
-   font-size: 0.73em;  
+.web-statistics {
+margin-top: 15px;
+margin-left:70px;
+margin-right:70px;
+display:none;
+width: 80%;
 }
-div#box {
+.UserQuestions{
+ background-color:black;
+}
+.box{
+background-color: white;
+}
+.Question{
+border:inset;
+height: auto;
+text-align: Justify;
+width: 80%;
+margin-left: 50px;
+margin-right: 50px;
 margin-top: 15px;
 }
-div#question {
-    margin-top: 15px;
-    }
-div#box .box-top {
-    color: #fff;
-    text-shadow:0px 0px 1px #000;
-    background-color: #2980b9;
-    padding:5px;
-    padding-left:15px;
-    font-weight: 300;
+.answerList{
+display: none;
 }
-div#question .box-top {
+.icon{
+float:left;
+margin-top:-2%;
+}
+.icon#question{
+margin-bottom:-2%;
+}
+.icon2{
+margin-left: 20%;
+}
+.icon i{
+font-size:1em;
+}
+i{
+margin-top: -2%;
+}
+#date{
+float:right;
+margin-top: -3%;
+}
+.top{
+background-color:grey;
+padding: 1%;
+margin:0.2%;
+}
+.question .box-top {
     color: #fff;
     text-shadow:0px 0px 1px #000;
     background-color: #2980b9;
@@ -162,12 +131,12 @@ div#question .box-top {
     font-weight: 300;
 }
 div#box .box-panel{
-    padding: 15px; 
-    background-color: #95a5a6;
+    padding: 15px;
+    background-color: beige;
     color: #333;
 }
 div#question .box-panel{
-    padding: 15px; 
+    padding: 15px;
     background-color: hsl(180, 17%, 91%);
     color: #333;
 }
@@ -178,7 +147,7 @@ div#question .box-panel{
 div.statistics::after {
     content: "";
     clear: both;
-    display: table;
+    display: none;
 }
 div.square{
     float:left;
@@ -187,12 +156,9 @@ div.square{
     width: 50%;
 }
 div.icon{
-    color: #F5F9FA;
+    color: black;
 }
 div.question-stat{
-    color:#f5f9fa;
-}
-div.question{
     color:#f5f9fa;
 }
 div.footer{
@@ -203,7 +169,7 @@ div.footer{
     text-align: center;
     padding: 15px;
     font-size: 1.6em;
-    margin: 0 auto; 
+    margin: 0 auto;
     bottom: 0;
     position: fixed;
     margin-top: 2px;
@@ -220,23 +186,12 @@ a.mobile:active{
     background-color: #4a4a4a;
 }
 @media only screen and (max-width:420px){
-    .sidebar{
-        width: 100%;
-        display: none;
-    }
     .content{
         margin-left: 0px;
         height: 85%;
     }
 }
 @media only screen and (min-width:420px){
-    a.mobile{
-        display: none;
-    }
-    .sidebar{
-        height: 100%;
-        display: block;
-    }
     .content{
         height: 100%;
         display: block;
@@ -247,9 +202,9 @@ hr{
     margin-bottom: 25px;
   }
   /* endof styling separating line  */
-  
+
   /*start of styling form */
-  
+
   input[type=text],input[type=password] {
     width: 100%;
     padding:15px;
@@ -259,10 +214,7 @@ hr{
     background: #f1f1f1;
     border-radius: 6px;
   }
-   input:focus{
-    background-color:#ddd;
-    outline: none;
-  }
+
   input[type=submit] {
     width: 20%;
     height:35px;
@@ -277,10 +229,27 @@ hr{
   /* adds padding to container elements*/
   .container{
     padding: 16px;
-  
+
   }
+  .Question-form{
+  border:outset;
+  margin-top: 10px;
+  width:80%;
+  margin-left:50px;
+  margin-right:50px;
+  display:none;
+  }
+  form#user-profile{
+   padding:16px;
+   }
+   .answers{
+   background-color:teal;
+   color:black;
+   border: solid black 1.5px;
+   padding: 3%;
+   }
   /*end of styling middle section  */
-  
+
   /*start of styling form */
   .login{
     border:1px solid #ccc;
@@ -290,7 +259,7 @@ hr{
     border-radius: 8px;
   }
 
-.form-inline {  
+.form-inline {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
@@ -303,11 +272,19 @@ hr{
     margin: 8px 0;
     border: none;
     cursor:pointer;
-    width: 50%;
+    width: 20%;
     opacity: 0.9;
     border-radius: 5px;
   }
-  
+  button#close{
+  float: right;
+  }
+
+  button#accept{
+  margin-left: 75%;
+  margin-bottom: 0;
+  }
+
   button:hover{
     opacity: 1;
   }
@@ -335,7 +312,7 @@ hr{
          width: 100%;
       }
     }
- 
+
   /*changes styles for cancel in small screen  */
   @media screen and (max-width: 300px) {
       .cancelbtn, .Register,{
@@ -343,8 +320,8 @@ hr{
       }
     }
     /* user style begins here */
-  
-  
+
+
   @media screen and (max-width: 300px){
       span.psw {
          display: block;
@@ -357,4 +334,3 @@ hr{
         width: 100%;
       }
     }
-   

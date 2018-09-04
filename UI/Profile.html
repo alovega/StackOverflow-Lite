@@ -19,23 +19,23 @@
               <a href="index.html" class="highlight">SignUp</a>
               <a href="login.html">Profile</a>
               <a href="..\profile.html">RecentQuestions</a>
-              <a href="question.html">MostAnswered</a>
+              <a href="mostAnswered.html">MostAnswered</a>
               <a onclick="showWebStatistics()" >Statistics</a>
-              <a href="login.html" style="float: right;">Logout</a>
+              <a href="login.html" style="float:right;">Logout</a>
               <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
           </div>
           <div class="web-statistics">
               <div class=statistics>
                   <p>
                   <div class="square">
-                  <div class="icon" ><i class="fa fa-question" style="font-size:50px;"></i></div>
-                  <div class="question-stat">
-                      <h3>54</h3>
-                  </div>
-                  <div class="question">
-                      <h4>Questions</h4>
-                  </div>
-              </div>
+                    <div class="icon" ><i class="fa fa-question" style="font-size:50px;"></i></div>
+                    <div class="question-stat">
+                        <h3>54</h3>
+                    </div>
+                    <div class="question">
+                        <h4>Questions</h4>
+                    </div>
+                   </div>
                   </p>
                   <p>
                   <div class="square" style="background-color:#242626">
@@ -50,8 +50,9 @@
                   </p>
               </div>
           </div>
-          <div onclick="ShowMostAnswered()" class="top">Most Answered</div>
-                <div class="box" id="mostAnswered">
+                <p>Here yo can see the list of questions</p>
+                <div class="box" id="recentQuestion">
+                    <div class="top">Recent questions</div>
                         <div class="box-panel">
                            <div class="Question">
                                <h3 style="text-align:center;">Question1</h3>
@@ -60,7 +61,7 @@
                                 stochastic process can you help</a>
                                </P>
                                <br>
-                                <section>
+                               <section>
                                    <div class="icon">
                                         <i class="fa fa-plus" onclick="showAnswerForm()"></i><br>Answer
                                    </div>
@@ -68,21 +69,31 @@
                                        <i class="fa fa-reply" onclick="ShowAnswerList()"></i><br>3
                                    </div>
                                </section>
+
+
                                <div  class="Question-form">
-                                   <div class="answers">
-                                       this is the first answer
-                                   </div>
-                                   <div class="answers">
-                                       this is the second answer
-                                   </div>
-                                   <div class="answers">
-                                       this is the third answer
-                                   </div>
                                    <form id="user-profile">
                                        <input id="answer" type="text" value="answer" placeholder="add you answer"><br>
                                        <button id="add" type="button" value="add">add</button>
                                        <button onclick="closeForm()"   id="close" type="button" value="close">close</button>
                                    </form>
+
+                               </div>
+
+                               <div class="answerList">
+                                       <div class="answers">
+                                       this is the first answer<br>
+                                        this is the first answer<br>
+                                        this is the first answer<br>
+                                        this is the first answer<br>
+                                        <button id="accept" type="button" value="accept">accept</button>
+                                        </div>
+                                        <div class="answers">
+                                            this is the second answer
+                                        </div>
+                                        <div class="answers">
+                                            this is the third answer
+                                        </div>
                                </div>
 
                                <div id="date">
@@ -96,15 +107,15 @@
                                 stochastic process can you help</a>
                                </P>
                                <br>
-                                 <section>
+                               <section>
                                    <div class="icon">
                                         <i class="fa fa-plus" onclick="showAnswerForm()"></i><br>Answer
                                    </div>
                                    <div class="icon2">
-                                       <i class="fa fa-reply" onclick="ShowAnswerList()"></i><br>3
+                                       <i class="fa fa-reply" onclick="showAnswerList()"></i><br>3
                                    </div>
                                </section>
-                                <div  class="Question-form">
+                                  <div  class="Question-form">
                                    <form id="user-profile">
                                        <input id="answer" type="text" value="answer" placeholder="add you answer"><br>
                                        <button id="add" type="button" value="add">add</button>
@@ -123,7 +134,7 @@
                                 stochastic process can you help</a>
                                </P>
                                <br>
-                                 <section>
+                                <section>
                                    <div class="icon">
                                         <i class="fa fa-plus" onclick="showAnswerForm()"></i><br>Answer
                                    </div>
