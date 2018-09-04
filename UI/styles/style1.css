@@ -345,4 +345,8 @@ div.post {
       .question{
       font-size:90%;
       }
+      .login{
+      width:70%;
+      margin: auto;
+      }
     }
