@@ -44,11 +44,37 @@ reqparse_copy.add_argument('answer', type=str, required=True, help='plase provid
 reqparse_copy.remove_argument('title')
 reqparse_copy.remove_argument('description')
 
+def myconverter(o):
+    if isinstance(o, datetime.datetime):
+        return o.__str__()
+
 
 class Questions(Resource):
 
     def get(self):
         return {'qestions': questions}
+
+    def post(self):
+        date = datetime.datetime.now()
+        args = reqparse.parse_args()
+        question = {
+            'id': questions[-1]['id'] + 1,
+            'title': args['title'],
+            'description': args['description'],
+            'date': json.dumps(date, default=myconverter)
+        }
+        questions.append(question)
+        print(question)
+        return {'question': question}, 201
+
+
+class Question(Resource):
+
+    def get(self, id):
+        question = [question for question in questions if question['id'] == id]
+        if len(question) == 0:
+            abort(404)
+        return {'question': question[0]}
 
 
 class Answer(Resource):
