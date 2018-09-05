@@ -35,8 +35,30 @@ question_fields = {
     'answers': fields.String
 }
 
+reqparse = reqparse.RequestParser()
+reqparse.add_argument('title', type=str, required=True, help='No request title provided', location='json')
+reqparse.add_argument('description', type=str, required=True, help='No request description provided', location='json')
+
+
+def myconverter(o):
+    if isinstance(o, datetime.datetime):
+        return o.__str__()
+
 
 class Questions(Resource):
 
     def get(self):
         return {'qestions': questions}
+
+    def post(self):
+        date = datetime.datetime.now()
+        args = reqparse.parse_args()
+        question = {
+            'id': questions[-1]['id'] + 1,
+            'title': args['title'],
+            'description': args['description'],
+            'date': json.dumps(date, default=myconverter)
+        }
+        questions.append(question)
+        print(question)
+        return {'question': question}, 201
