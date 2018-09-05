@@ -40,3 +40,14 @@ class Questions(Resource):
 
     def get(self):
         return {'qestions': questions}
+
+
+
+class Question(Resource):
+
+    def get(self, id):
+        question = [question for question in questions if question['id'] == id]
+        if len(question) == 0:
+            abort(404)
+        return {'question': question[0]}
+
