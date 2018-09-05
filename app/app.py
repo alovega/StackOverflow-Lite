@@ -1,4 +1,7 @@
-from flask_restful import Resource, fields, reqparse, marshal, abort
+from flask_restful import Resource, reqparse, abort
+import datetime
+from flask_restful import fields
+import json
 
 questions = [    {
         'id': 1,
@@ -14,24 +17,25 @@ questions = [    {
                       'answer':'False'}]
     }]
 
+
+class QuestionDao(object):
+    def __init__(self,id,title, description, date, answers):
+        self.id = id
+        self.title = title
+        self.description = description
+        self.date = datetime.datetime.now()
+        self.answers = answers
+
+
 question_fields = {
     'title': fields.String,
     'description': fields.String,
+    'date':fields.datetime,
     'answers': fields.String
 }
 
 
-class QuestionList(Resource):
-    def __init__(self):
-        self.reqparse = reqparse.RequestParser()
-        self.reqparse.add_argument('title', type=str, required=True,
-                                   help='No task title provided',
-                                   location='json')
-        self.reqparse.add_argument('description', type=str, default="",
-                                   location='json')
-        super(QuestionList, self).__init__()
+class Questions(Resource):
 
     def get(self):
         return {'qestions': questions}
-
-
