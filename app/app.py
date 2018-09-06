@@ -36,10 +36,10 @@ question_fields = {
 }
 
 reqparse = reqparse.RequestParser()
-reqparse.add_argument('title', type=str, required=True, help='No request title provided', location='json')
-reqparse.add_argument('description', type=str, required=True, help='No request description provided', location='json')
+reqparse.add_argument('title', type=str, required=True, help='title can not be empty', location='json')
+reqparse.add_argument('description', type=str, required=True, help='description can not be empty', location='json')
 reqparse_copy = reqparse.copy()
-reqparse_copy.add_argument('answer', type=str, required=True, help='plase provide your answer', location='json')
+reqparse_copy.add_argument('answer', type=str, required=True, help='Answer can not be empty', location='json')
 reqparse_copy.remove_argument('title')
 reqparse_copy.remove_argument('description')
 
@@ -62,9 +62,14 @@ class Questions(Resource):
             'description': args['description'],
             'date': json.dumps(date, default=myconverter)
         }
-        questions.append(question)
-        print(question)
-        return {'question': question}, 201
+        if not question['title'].replace(" ", ""):
+            return {"message": "title can not be empty"}
+        elif not question['description'].replace(" ", ""):
+            return {"message": "description can not be empty"}
+        else:
+            questions.append(question)
+            print(question)
+            return {'question': question}, 201
 
 
 class Question(Resource):
@@ -86,6 +91,12 @@ class Answer(Resource):
                     'id': question['answers'][-1]['id'] + 1,
                     'answer': args['answer'],
                 }
-                question['answers'].append(answers)
+                if not question['answer'].replace(" ", ""):
+                    return {"message": "Answer can not be empty"}
+                else:
+                    question['answers'].append(answers)
+                    print(question['answers'])
+                    return {'answers': answers}, 201
 
-                return {'answers': answers}, 201
+
+
