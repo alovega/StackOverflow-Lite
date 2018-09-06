@@ -20,6 +20,7 @@ def create_api(app):
 
     api = Api(app)
 
+    #api endpoints
     api.add_resource(Questions, '/questions', endpoint='questions')
     api.add_resource(Question, '/question/<int:id>', endpoint='question')
     api.add_resource(Answer, '/answer/<int:id>', endpoint='answer')

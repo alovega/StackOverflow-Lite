@@ -1,6 +1,5 @@
 from flask_restful import Resource, reqparse, abort
 import datetime
-from flask_restful import fields
 import json
 
 questions = [{
@@ -16,8 +15,8 @@ questions = [{
 
 answers = []
 
-
 class QuestionDao(object):
+    """class representing the questions object"""
     def __init__(self,id,title, description):
         self.id = id
         self.title = title
@@ -26,16 +25,12 @@ class QuestionDao(object):
 
 
 class AnswerDao(object):
+    """class representing the answer object"""
     def __init__(self, id, answer):
         self.id = id
         self.answer = answer
 
-
-question_fields = {
-    'title': fields.String,
-    'description': fields.String,
-    'date':fields.datetime,
-}
+"""this indicates the arguments that we will be passing while using our Api endpoints"""
 
 reqparse = reqparse.RequestParser()
 reqparse.add_argument('title', type=str, required=True, help='title can not be empty', location='json')
@@ -46,12 +41,14 @@ reqparse_copy.add_argument('answers', type=str, required=True, help='Answer can 
 reqparse_copy.remove_argument('title')
 reqparse_copy.remove_argument('description')
 
+#this method converts the datetime object to a string
 def myconverter(o):
     if isinstance(o, datetime.datetime):
         return o.__str__()
 
 
 class Questions(Resource):
+    """class representing the resource endpoints for getting all questions and posting  a question"""
 
     def get(self):
         return {'qestions': questions}
@@ -76,7 +73,7 @@ class Questions(Resource):
 
 
 class Question(Resource):
-
+    """this class represents the resource endpoint for getting a single question"""
     def get(self, id):
         question = [question for question in questions if question['id'] == id]
         if len(question) == 0:
@@ -85,7 +82,7 @@ class Question(Resource):
 
 
 class Answer(Resource):
-
+    """this class represents the resource endpoint for posting an answer to a question"""
     def post(self, id):
         args = reqparse_copy.parse_args()
         for question in questions:
