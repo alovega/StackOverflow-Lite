@@ -50,6 +50,24 @@ class TestUserModel(unittest.TestCase):
         self.assertEqual(res1.json['question'], res2.json['question'])
 
 
+    def test_post_answer(self):
+        request = {"title": "question1", "description": "this is a sample description"}
+        res1 = self.client().post("/questions", json=request)
+        answer = {"answers": "sample answer2"}
+        res4 = self.client().post("/answer/3", json=answer)
+        print(res4)
+        self.assertEqual(res4.status_code, 201)
+
+    def test_post_empty_answer(self):
+        request = {"title": "question1", "description": "this is a sample description"}
+        res1 = self.client().post("/questions", json=request)
+        answer = {"answers": ""}
+        res4 = self.client().post("/answer/3", json=answer)
+        print(res4)
+        self.assertEqual(res4.status_code, 200)
+        self.assertEqual(res4.json, {"message": "answer can not be empty"})
+
+
 
 if __name__ == '__main__':
     unittest.main()

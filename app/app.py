@@ -7,39 +7,42 @@ questions = [{
         'id': 1,
         'title': u'Buy groceries',
         'description': u'Milk, Cheese, Pizza, Fruit, Tylenol',
-        'answers': False
     },
     {
         'id': 2,
         'title': u'Learn Python',
         'description': u'Need to find a good Python tutorial on the web',
-        'answers': [{'id':1,
-                      'answer':'False'}]
     }]
+
 answers = []
 
 
 class QuestionDao(object):
-    def __init__(self,id,title, description, date, answers):
+    def __init__(self,id,title, description):
         self.id = id
         self.title = title
         self.description = description
         self.date = datetime.datetime.now()
-        self.answers = answers
+
+
+class AnswerDao(object):
+    def __init__(self, id, answer):
+        self.id = id
+        self.answer = answer
 
 
 question_fields = {
     'title': fields.String,
     'description': fields.String,
     'date':fields.datetime,
-    'answers': fields.String
 }
 
 reqparse = reqparse.RequestParser()
 reqparse.add_argument('title', type=str, required=True, help='title can not be empty', location='json')
 reqparse.add_argument('description', type=str, required=True, help='description can not be empty', location='json')
+reqparse.add_argument('answers', action='append', location='json')
 reqparse_copy = reqparse.copy()
-reqparse_copy.add_argument('answer', type=str, required=True, help='Answer can not be empty', location='json')
+reqparse_copy.add_argument('answers', type=str, required=True, help='Answer can not be empty', location='json')
 reqparse_copy.remove_argument('title')
 reqparse_copy.remove_argument('description')
 
@@ -60,7 +63,7 @@ class Questions(Resource):
             'id': questions[-1]['id'] + 1,
             'title': args['title'],
             'description': args['description'],
-            'date': json.dumps(date, default=myconverter)
+            'date': json.dumps(date, default=myconverter),
         }
         if not question['title'].replace(" ", ""):
             return {"message": "title can not be empty"}
@@ -87,16 +90,16 @@ class Answer(Resource):
         args = reqparse_copy.parse_args()
         for question in questions:
             if question['id'] == id:
-                answers = {
-                    'id': question['answers'][-1]['id'] + 1,
-                    'answer': args['answer'],
+
+                answer = {
+                    'id': id,
+                    'answers': args['answers']
                 }
-                if not question['answer'].replace(" ", ""):
-                    return {"message": "Answer can not be empty"}
-                else:
-                    question['answers'].append(answers)
-                    print(question['answers'])
-                    return {'answers': answers}, 201
+                if not answer['answers'].replace(" ", ""):
+                    return {"message": "answer can not be empty"}
+                answers.append(answer)
+                print(answer)
+        return {'answers': answers}, 201
 
 
 
