@@ -16,21 +16,6 @@ questions = [{
 
 answers = []
 
-class QuestionDao(object):
-    """class representing the questions object"""
-    def __init__(self,id,title, description):
-        self.id = id
-        self.title = title
-        self.description = description
-        self.date = datetime.datetime.now()
-
-
-class AnswerDao(object):
-    """class representing the answer object"""
-    def __init__(self, id, answer):
-        self.id = id
-        self.answer = answer
-
 
 class Questions(Resource):
     """class representing the resource endpoints for getting all questions and posting  a question"""
