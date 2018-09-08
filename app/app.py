@@ -1,6 +1,7 @@
-from flask_restful import Resource, reqparse, abort
 import datetime
 import json
+from flask_restful import Resource, reqparse
+
 
 questions = [{
         'id': 1,
@@ -30,46 +31,44 @@ class AnswerDao(object):
         self.id = id
         self.answer = answer
 
-"""this indicates the arguments that we will be passing while using our Api endpoints"""
-
-reqparse = reqparse.RequestParser()
-reqparse.add_argument('title', type=str, required=True, help='title can not be empty', location='json')
-reqparse.add_argument('description', type=str, required=True, help='description can not be empty', location='json')
-reqparse.add_argument('answers', action='append', location='json')
-reqparse_copy = reqparse.copy()
-reqparse_copy.add_argument('answers', type=str, required=True, help='Answer can not be empty', location='json')
-reqparse_copy.remove_argument('title')
-reqparse_copy.remove_argument('description')
-
-#this method converts the datetime object to a string
-def myconverter(o):
-    if isinstance(o, datetime.datetime):
-        return o.__str__()
-
 
 class Questions(Resource):
     """class representing the resource endpoints for getting all questions and posting  a question"""
+
+    def __init__(self):
+        self.reqparse = reqparse.RequestParser()
+        self.reqparse.add_argument('title', type=str, location='json')
+        self.reqparse.add_argument('description', type=str, location='json')
+        super(Questions, self).__init__()
+
+    # this method converts the datetime object to a string
+    def myconverter(self,o):
+        if isinstance(o, datetime.datetime):
+            return o.__str__()
 
     def get(self):
         return {'qestions': questions}
 
     def post(self):
         date = datetime.datetime.now()
-        args = reqparse.parse_args()
+        args = self.reqparse.parse_args()
         question = {
             'id': questions[-1]['id'] + 1,
             'title': args['title'],
             'description': args['description'],
-            'date': json.dumps(date, default=myconverter),
+            'date': json.dumps(date, default=self.myconverter),
         }
         if not question['title'].replace(" ", ""):
-            return {"message": "title can not be empty"}
+            return {"message": "title can not be empty"},400
         elif not question['description'].replace(" ", ""):
-            return {"message": "description can not be empty"}
-        else:
-            questions.append(question)
-            print(question)
-            return {'question': question}, 201
+            return {"message": "description can not be empty"},400
+
+        for i in questions:
+            if i['title'] == args['title']:
+                return{"message": "title already used"},409
+        questions.append(question)
+        print(question)
+        return {'question': question},201
 
 
 class Question(Resource):
@@ -77,26 +76,32 @@ class Question(Resource):
     def get(self, id):
         question = [question for question in questions if question['id'] == id]
         if len(question) == 0:
-            abort(404)
+            return {'message':'question does not exist'},404
         return {'question': question[0]}
 
 
 class Answer(Resource):
     """this class represents the resource endpoint for posting an answer to a question"""
-    def post(self, id):
-        args = reqparse_copy.parse_args()
-        for question in questions:
-            if question['id'] == id:
+    def __init__(self):
+        self.reqparse = reqparse.RequestParser()
+        self.reqparse.add_argument('answers', type=str, location='json')
+        super(Answer, self).__init__()
 
-                answer = {
-                    'id': id,
-                    'answers': args['answers']
-                }
-                if not answer['answers'].replace(" ", ""):
-                    return {"message": "answer can not be empty"}
-                answers.append(answer)
-                print(answer)
-        return {'answers': answers}, 201
+    def post(self, id):
+        args = self.reqparse.parse_args()
+        question = [question for question in questions if question['id'] == id]
+        if len(question) == 0:
+            return {"message": "question does not exist"},400
+        else:
+            answer = {
+                'id': id,
+                'answers': args['answers']
+            }
+            if not answer['answers'].replace(" ", ""):
+                return {"message": "answer can not be empty"},400
+            answers.append(answer)
+            print(answer)
+            return {'answer': answer}, 201
 
 
 

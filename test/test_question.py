@@ -17,8 +17,15 @@ class TestUserModel(unittest.TestCase):
     def test_post_question_with_empty_title(self):
         request = {"title":"", "description": "this is a sample description"}
         res = self.client().post ("/questions", json=request)
-        self.assertEqual (res.status_code, 200)
+        self.assertEqual (res.status_code, 400)
         self.assertIn("title can not be empty", str(res.json))
+
+    def test_post_question_with_existing_title(self):
+        request = {"title": "question5", "description": "this is a sample description"}
+        res = self.client().post("/questions", json=request)
+        res2 = self.client().post("/questions", json=request)
+        self.assertEqual(res2.status_code, 409)
+
 
 
     def test_post_question_with_empty_description(self):
@@ -29,7 +36,7 @@ class TestUserModel(unittest.TestCase):
     def test_post_question_with_empty_details(self):
         request = {"title": "", "description": ""}
         res = self.client().post("/questions", json=request)
-        self.assertEqual(res.status_code, 200)
+        self.assertEqual(res.status_code, 400)
 
     def test_get_all_question(self):
         res = self.client().get("/questions")
@@ -64,7 +71,7 @@ class TestUserModel(unittest.TestCase):
         answer = {"answers": ""}
         res4 = self.client().post("/answer/3", json=answer)
         print(res4)
-        self.assertEqual(res4.status_code, 200)
+        self.assertEqual(res4.status_code, 400)
         self.assertEqual(res4.json, {"message": "answer can not be empty"})
 
 
