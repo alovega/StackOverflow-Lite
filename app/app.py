@@ -1,5 +1,6 @@
-from flask_restful import Resource, fields, reqparse, abort
 
+
+from flask_restful import Resource, fields, reqparse, abort
 from models.models import AppDb
 
 
@@ -8,7 +9,7 @@ AppDao = AppDb()
 
 class QuestionDao(object):
 
-    def __init__(self,question):
+    def __init__(self,title, description,datetime):
         self.question = question
 
 

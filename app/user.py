@@ -1,4 +1,4 @@
-from flask_restful import Resource, fields, reqparse, abort, marshal_with
+from flask_restful import Resource, fields, reqparse,marshal_with
 from passlib.hash import pbkdf2_sha256 as sha256
 from models.models import AppDb
 from flask_jwt_extended import (create_access_token, create_refresh_token, jwt_refresh_token_required, get_jwt_identity)
@@ -27,25 +27,20 @@ user_fields = {
     'password': fields.String
 }
 
-
-reqparse = reqparse.RequestParser()
-reqparse.add_argument('email', type=str, required=True, help='please input email', location='json')
-reqparse.add_argument('username', type=str, required=True,help='please input username',location='json')
-reqparse.add_argument('password', type=str, required=True, help='please input password', location='json')
-
-reqparse_copy = reqparse.copy()
-reqparse_copy.remove_argument('email')
-reqparse_copy.add_argument('username', type=str, required=True, help='Invalid username', location='json')
-reqparse_copy.add_argument('password', type=str, required=True, help='Invalid password', location='json')
-
-
 class UserRegister(Resource):
+
+    def __init__(self):
+        self.reqparse = reqparse.RequestParser()
+        self.reqparse.add_argument('email', type=str, required=True, help='please input email', location='json')
+        self.reqparse.add_argument('username', type=str, required=True, help='please input username', location='json')
+        self.reqparse.add_argument('password', type=str, required=True, help='please input password', location='json')
+        super(UserRegister, self).__init__()
+
     def post(self):
-        args = reqparse.parse_args()
+        args = self.reqparse.parse_args()
         email = args['email']
         username = args['username']
         password = args['password']
-
 
         if not email.replace(" ", ""):
             return {"message":"email not valid"}
@@ -68,9 +63,13 @@ class UserRegister(Resource):
 
 
 class UserLogin(Resource):
+    def __init__(self):
+        self.reqparse = reqparse.RequestParser()
+        self.reqparse.add_argument('username', type=str, required=True, help='please input username', location='json')
+        self.reqparse.add_argument('password', type=str, required=True, help='please input password', location='json')
 
     def post(self):
-        args = reqparse_copy.parse_args()
+        args = self.reqparse.parse_args()
         user = AppDao.get_user_by_username(args['username'])
 
         if not user:
