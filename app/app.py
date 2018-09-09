@@ -107,6 +107,7 @@ class Answer(Resource):
         else:
             abort(404)
 
+
 class AcceptAnswer(Resource):
     def put(self,id, answer_id):
         result = AppDao.update_acceptance(answer_id)

@@ -2,15 +2,14 @@ import json
 import psycopg2
 from psycopg2.extras import RealDictCursor
 
+
 class AppDb:
     def __init__(self):
         try:
-            self.connection = psycopg2.connect (host='localhost', dbname='app_database', user='postgres', password='LUG4Z1V4', port=5432)
+            self.connection = psycopg2.connect (host='localhost', dbname='app_database',
+                                                user='postgres', password='LUG4Z1V4', port=5432)
         except:
             print("Unable to connect to the database")
-
-    def getConnection(self):
-        return self.connection
 
     def insert_question(self,QuestionDao):
         sql = """INSERT INTO question(question) VALUES (%s)"""
