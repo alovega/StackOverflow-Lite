@@ -5,7 +5,6 @@ class Config(object):
     DEBUG = False
     CSRF_ENABLED = True
     SECRET = os.getenv('SECRET')
-    SQLALCHEMY_DATABASE_URI = os.getenv('DATABASE_URL')
 
 class DevelopmentConfig(Config):
     """Configurations for Development."""
