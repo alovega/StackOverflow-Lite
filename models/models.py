@@ -154,3 +154,14 @@ class AppDb:
         else:
             return False
         cur.close()
+
+    def check_user_exist_by_email(self, email):
+        cur = self.connection.cursor(cursor_factory=RealDictCursor)
+        cur.execute("SELECT id, username, password from users where email = %(email)s", {'email':
+                                                                                                   email})
+        rows = cur.fetchone()
+        if rows:
+            return True
+        else:
+            return False
+        cur.close()

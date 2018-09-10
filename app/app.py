@@ -34,7 +34,7 @@ class Questions(Resource):
         self.reqparse.add_argument('title', type=str, location='json')
         self.reqparse.add_argument('details', type=str, location='json')
         super(Questions, self).__init__()
-
+    @jwt_required
     def get(self):
         questions = AppDao.get_all_questions()
 

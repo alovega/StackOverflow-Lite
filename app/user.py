@@ -5,7 +5,7 @@ from flask_jwt_extended import (create_access_token, create_refresh_token, jwt_r
 
 AppDao = AppDb()
 
-class UserApi(object):
+class UserData(object):
 
     def __init__(self,email,username,password):
         self.email = email
@@ -20,12 +20,6 @@ class UserApi(object):
     def verify_hash(password, hash):
         return sha256.verify(password, hash)
 
-
-user_fields = {
-    'email': fields.String,
-    'username': fields.String,
-    'password': fields.String
-}
 
 class UserRegister(Resource):
 
@@ -49,14 +43,26 @@ class UserRegister(Resource):
         elif not username.replace(" ", ""):
             return {"message":"input valid username"}
 
-        else:
-            user_password = UserApi.generate_hash(password)
-            AppDao.insert_user(UserApi(email=email,username=username,password=user_password))
-            return {
-                'message': 'User {0} was created'.format(username),
-            }
+        user = UserData(email=email, username=username, password=password)
 
-    @marshal_with(user_fields)
+
+        if AppDao.check_user_exist_by_email(user.email):
+            return {"message": "Email already used"}, 202
+        elif AppDao.check_user_exist_by_username(user.username):
+            return {"message": "username already used pick another one"}, 202
+
+        user.password = UserData.generate_hash(password)
+        AppDao.insert_user(user)
+        access_token = create_access_token(identity=user.username)
+        refresh_token = create_refresh_token(identity=user.username)
+
+        return {
+            'message': 'User {0} was created'.format(username),
+            'access_token': access_token,
+            'refresh_token':refresh_token
+        }
+
+
     def get(self):
         result = AppDao.get_all()
         return result
@@ -76,7 +82,7 @@ class UserLogin(Resource):
             return {"message": 'User {} doesn\'t exist'.format(args['username'])}
 
 
-        if UserApi.verify_hash(args['password'], user[0]['password']):
+        if UserData.verify_hash(args['password'], user[0]['password']):
             access_token = create_access_token (identity=user[0]['username'])
             refresh_token = create_refresh_token (identity=user[0]['username'])
             return {
@@ -88,6 +94,7 @@ class UserLogin(Resource):
             return {
                 'message': 'wrong credentials provided'
            }
+
 
 class TokenRefresh(Resource):
     @jwt_refresh_token_required
