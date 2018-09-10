@@ -1,50 +1,39 @@
-
-
-from flask_restful import Resource, fields, reqparse, abort
+from datetime import datetime
+import json
+from flask_restful import Resource, reqparse, abort
 from models.models import AppDb
 
 
 AppDao = AppDb()
 
+DTime = datetime.now()
+
 
 class QuestionDao(object):
 
-    def __init__(self,title, description,datetime):
-        self.question = question
+    def __init__(self,title, details):
+        self.title = title
+        self.details = details
+        self.date = str(DTime.date())
 
+    def toJSON(self):
+        return json.dumps(self, default=lambda o: o.__dict__,
+                          sort_keys=True, indent=4)
 
 class AnswerDao(object):
-    def __init__(self,answer, id):
+
+    def __init__(self,answer,id):
         self.answer = answer
         self.id = id
 
 
-question_fields = {
-    'question': fields.String,
-    'answer': fields.String,
-}
+class Questions(Resource):
 
-reqparse = reqparse.RequestParser()
-reqparse.add_argument('question', type=str, required=True, help='please input a question', location='json')
-reqparse.remove_argument('answer')
-
-reqparse_copy = reqparse.copy()
-reqparse_copy.add_argument('answer', type=str, required=True, help='Can you input an answer', location='json')
-reqparse_copy.add_argument('id',type=int, required=True, help='input the id of question you are answering', location='json')
-reqparse_copy.remove_argument('question')
-
-reqparse2_copy = reqparse.copy()
-reqparse2_copy.add_argument('answer', type=str, required=True, help='Can you input an answer', location='json')
-reqparse2_copy.add_argument('answer_id', type=int, required=True, help='input answer_id', location='json')
-reqparse2_copy.remove_argument('question')
-
-reqparse3_copy = reqparse.copy()
-reqparse3_copy.remove_argument('answer',)
-reqparse3_copy.add_argument('answer_id', type=int, required=True, help='input answer_id', location='json')
-reqparse3_copy.remove_argument('question')
-
-
-class QuestionList(Resource):
+    def __init__(self):
+        self.reqparse = reqparse.RequestParser()
+        self.reqparse.add_argument('title', type=str, location='json')
+        self.reqparse.add_argument('details', type=str, location='json')
+        super(Questions, self).__init__()
 
     def get(self):
         questions = AppDao.get_all_questions()
@@ -53,41 +42,53 @@ class QuestionList(Resource):
 
     def post(self):
 
-        args = reqparse.parse_args()
+        args = self.reqparse.parse_args()
 
-        questions = QuestionDao(question = args['question'])
+        questions = QuestionDao(title = args['title'], details=args['details'])
+        if AppDao.check_question_title_exists(questions.title):
+            return {"message": "title already used"}, 202
+
         AppDao.insert_question(questions)
-        return AppDao.insert_question(questions)
+        return {questions.title: questions.details}
 
 
 class Question(Resource):
 
     def get(self, id):
-        questions = AppDao.get_question(id)
+        questions = AppDao.get_question_with_answers(id)
+        print(questions)
 
         if questions:
             return questions
-        else:
-            return {"message": "quest id not existing"}
+
 
     def delete(self, id):
         questions = AppDao.get_question(id)
         if questions:
             AppDao.delete_question(id)
+            return{"message":"successfully deleted"}
 
         else:
             return {"message": "question id not existing"}
 
 
-class AnswerList(Resource):
-
-    def post(self,id):
-        args = reqparse_copy.parse_args()
-        answers = AnswerDao(answer=args['answer'],id=args['id'])
-        AppDao.insert_answer(answers)
-
-
 class Answers(Resource):
+
+    def __init__(self):
+        self.reqparse = reqparse.RequestParser()
+        self.reqparse.add_argument('answer', type=str, location='json')
+        self.reqparse.add_argument('id', type=int, location='json')
+        super(Answers, self).__init__()
+
+    def post(self, id):
+        args = self.reqparse.parse_args()
+        answers = AnswerDao(answer=args['answer'], id=id)
+        print(answers)
+        if AppDao.check_answer_exists(answers.answer):
+            return {"message": "answer already posted"}, 400
+        AppDao.insert_answer(answers)
+        return {"answer": answers.answer}
+
 
     def get(self):
         answer = AppDao.get_all_answers()
@@ -97,22 +98,23 @@ class Answers(Resource):
 
 class Answer(Resource):
 
-    def put(self, id, answer_id):
-        args = reqparse2_copy.parse_args()
-        result = AppDao.update_answer(args['answer'],args['answer_id'])
-        if result == -1:
-            return {"message": "unable to edit this answer"}, 400
-        if result:
-            return AppDao.get_answers(args['answer_id'])
-        else:
-            abort(404)
+
+    def __init__(self):
+        self.reqparse = reqparse.RequestParser()
+        self.reqparse.add_argument('answer', type=str, location='json')
+        self.reqparse.add_argument('id', type=str, location='json')
+        super(Answer, self).__init__()
+
+    def put(self, id,answer_id):
+        args = self.reqparse.parse_args()
+        answers = AnswerDao(answer=args['answer'], id=id)
+        print(answers)
+        check = AppDao.get_answers(answer_id)
+        print(check)
+        if check:
+            result =AppDao.update_answer(answers.answer, answer_id)
+            return result
+
+        return {"answer does not exist"}
 
 
-class AcceptAnswer(Resource):
-    def put(self,id, answer_id):
-        result = AppDao.update_acceptance(answer_id)
-
-        if result:
-            return AppDao.get_all_answers()
-        else:
-            return {'message': 'request id given not existing'}, 400

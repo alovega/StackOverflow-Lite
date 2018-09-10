@@ -12,10 +12,11 @@ try:
             VARCHAR NOT NULL UNIQUE, password VARCHAR NOT NULL)""",
             """
             CREATE TABLE IF NOT EXISTS question(id SERIAL PRIMARY KEY, title VARCHAR NOT NULL UNIQUE, details VARCHAR
-            NOT NULL UNIQUE)""",
+            NOT NULL UNIQUE, date VARCHAR)""",
             """
-            CREATE TABLE IF NOT EXISTS answer(answer_id SERIAL PRIMARY KEY, answer VARCHAR(1000),
-            preferred BOOLEAN DEFAULT FALSE, question_id INT NOT NULL REFERENCES question(id) ON DELETE CASCADE)
+            CREATE TABLE IF NOT EXISTS answer(answer_id SERIAL PRIMARY KEY, answer VARCHAR(1000) NOT NULL UNIQUE,
+            preferred BOOLEAN DEFAULT FALSE, question_id INTEGER NOT NULL, 
+             FOREIGN KEY(question_id) REFERENCES question(id) ON DELETE CASCADE)
             """,)
         cur = conn.cursor()
         for command in commands:
