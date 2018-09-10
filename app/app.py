@@ -1,5 +1,7 @@
 from datetime import datetime
 import json
+
+from flask_jwt_extended import jwt_required
 from flask_restful import Resource, reqparse, abort
 from models.models import AppDb
 
@@ -39,7 +41,7 @@ class Questions(Resource):
         questions = AppDao.get_all_questions()
 
         return questions
-
+    @jwt_required
     def post(self):
 
         args = self.reqparse.parse_args()
@@ -53,7 +55,7 @@ class Questions(Resource):
 
 
 class Question(Resource):
-
+    @jwt_required
     def get(self, id):
         questions = AppDao.get_question_with_answers(id)
         print(questions)
@@ -61,7 +63,7 @@ class Question(Resource):
         if questions:
             return questions
 
-
+    @jwt_required
     def delete(self, id):
         questions = AppDao.get_question(id)
         if questions:
@@ -79,7 +81,7 @@ class Answers(Resource):
         self.reqparse.add_argument('answer', type=str, location='json')
         self.reqparse.add_argument('id', type=int, location='json')
         super(Answers, self).__init__()
-
+    @jwt_required
     def post(self, id):
         args = self.reqparse.parse_args()
         answers = AnswerDao(answer=args['answer'], id=id)
@@ -89,7 +91,7 @@ class Answers(Resource):
         AppDao.insert_answer(answers)
         return {"answer": answers.answer}
 
-
+    @jwt_required
     def get(self):
         answer = AppDao.get_all_answers()
 
@@ -104,7 +106,7 @@ class Answer(Resource):
         self.reqparse.add_argument('answer', type=str, location='json')
         self.reqparse.add_argument('id', type=str, location='json')
         super(Answer, self).__init__()
-
+    @jwt_required
     def put(self, id,answer_id):
         args = self.reqparse.parse_args()
         answers = AnswerDao(answer=args['answer'], id=id)
