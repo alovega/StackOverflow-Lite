@@ -165,3 +165,4 @@ class AppDb:
         else:
             return False
         cur.close()
+

@@ -2,7 +2,7 @@ from datetime import datetime
 import json
 
 from flask_jwt_extended import jwt_required
-from flask_restful import Resource, reqparse, abort
+from flask_restful import Resource, reqparse
 from models.models import AppDb
 
 
@@ -45,8 +45,15 @@ class Questions(Resource):
     def post(self):
 
         args = self.reqparse.parse_args()
+        title = args['title']
+        details = args['details']
 
-        questions = QuestionDao(title = args['title'], details=args['details'])
+        if not title.replace(" ", ""):
+            return {"message":"title can not be empty"}, 400
+        elif not details.replace(" ", ""):
+            return {"message":"details can not be empty"}, 400
+
+        questions = QuestionDao(title = title, details= details)
         if AppDao.check_question_title_exists(questions.title):
             return {"message": "title already used"}, 202
 
@@ -84,7 +91,10 @@ class Answers(Resource):
     @jwt_required
     def post(self, id):
         args = self.reqparse.parse_args()
-        answers = AnswerDao(answer=args['answer'], id=id)
+        answer = args['answer']
+        if not answer.replace(" ", ""):
+            return {"message":"can't post an empty answer"}, 400
+        answers = AnswerDao(answer=answer, id=id)
         print(answers)
         if AppDao.check_answer_exists(answers.answer):
             return {"message": "answer already posted"}, 400
@@ -109,7 +119,10 @@ class Answer(Resource):
     @jwt_required
     def put(self, id,answer_id):
         args = self.reqparse.parse_args()
-        answers = AnswerDao(answer=args['answer'], id=id)
+        answer = args['answer']
+        if not answer.replace(" ", ""):
+            return {"message":"can't post an empty answer"}, 400
+        answers = AnswerDao(answer=answer, id=id)
         print(answers)
         check = AppDao.get_answers(answer_id)
         print(check)
