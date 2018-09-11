@@ -165,3 +165,8 @@ class AppDb:
             return False
         cur.close()
 
+    def drop_table(self, table_name):
+        cur = self.connection.cursor(cursor_factory=RealDictCursor)
+        cur.execute("DROP TABLE IF EXISTS" + " "+ table_name +";")
+        self.connection.commit()
+
