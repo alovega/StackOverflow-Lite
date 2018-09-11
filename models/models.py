@@ -26,9 +26,9 @@ class AppDb:
 
     def insert_question(self,QuestionDao):
 
-        sql = """INSERT INTO question(title, details, date) VALUES (%s, %s, %s)"""
+        sql = """INSERT INTO question(title, details, date, author) VALUES (%s, %s, %s, %s)"""
         cur = self.connection.cursor()
-        cur.execute(sql, (QuestionDao.title, QuestionDao.details, QuestionDao.date,))
+        cur.execute(sql, (QuestionDao.title, QuestionDao.details, QuestionDao.date, QuestionDao.author))
         cur.close()
         self.connection.commit()
 
@@ -44,9 +44,9 @@ class AppDb:
 
     def insert_answer(self, AnswerDao):
 
-        sql = """INSERT INTO answer(answer, question_id) VALUES (%s, %s)"""
+        sql = """INSERT INTO answer(answer, question_id, user_name) VALUES (%s, %s, %s)"""
         cur = self.connection.cursor()
-        cur.execute(sql, (AnswerDao.answer,AnswerDao.id))
+        cur.execute(sql, (AnswerDao.answer,AnswerDao.id, AnswerDao.author))
         self.connection.commit()
         cur.close()
 
@@ -64,13 +64,12 @@ class AppDb:
         rows = cur.fetchall()
         return rows
 
-
     def get_question_with_answers(self, id):
 
         cur = self.connection.cursor(cursor_factory=RealDictCursor)
-        cur.execute(""" SELECT id,title, details from question where id = %(id)s""", {'id': id})
+        cur.execute(""" SELECT id,title, details, date, author from question where id = %(id)s""", {'id': id})
         question_row = cur.fetchall()
-        cur.execute("""SELECT  answer_id, answer, preferred from answer INNER JOIN question ON (answer.question_id = question.id) 
+        cur.execute("""SELECT  answer_id, answer, preferred, question_id, user_name from answer INNER JOIN question ON (answer.question_id = question.id) 
         where question_id = %(id)s """,
                     {'id': id})
         rows = cur.fetchall()
@@ -86,7 +85,7 @@ class AppDb:
     def get_answers(self, answer_id):
 
         cur = self.connection.cursor(cursor_factory=RealDictCursor)
-        cur.execute("""SELECT answer_id, answer from answer where answer_id = %(id)s""",
+        cur.execute("""SELECT answer_id, answer, user_name from answer where answer_id = %(id)s""",
                     {'id': answer_id})
         rows = cur.fetchall()
         return rows
@@ -98,7 +97,7 @@ class AppDb:
         rows_deleted = cur.rowcount
         self.connection.commit()
         print(json.dumps(rows_deleted, indent=2))
-        cur = self.connection.cursor(cursor_factory=RealDictCursor)
+        cur.close()
 
     def update_answer(self, answer, answer_id):
         cur = self.connection.cursor(cursor_factory=RealDictCursor)
@@ -110,9 +109,9 @@ class AppDb:
         cur.close()
         return updated_rows
 
-    def update_acceptance(self,answer_id):
+    def update_preferred(self,answer_id):
         cur = self.connection.cursor(cursor_factory=RealDictCursor)
-        sql = "UPDATE preferred set preferred = true  where id = {0}".format(answer_id)
+        sql = "UPDATE answer set preferred = true  where answer_id = {0}".format(answer_id)
         cur.execute(sql)
         updated_rows = cur.rowcount
         print(json.dumps(updated_rows, indent=2))
