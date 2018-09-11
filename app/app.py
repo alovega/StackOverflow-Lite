@@ -65,8 +65,9 @@ class Question(Resource):
         questions = AppDao.get_question_with_answers(id)
         print(questions)
 
-        if questions:
+        if  questions[0]:
             return questions
+        return {"message":"question does not exist"}
 
     @jwt_required
     def delete(self, id):
@@ -132,13 +133,16 @@ class Answer(Resource):
         print(check)
         if check[0]['user_name'] == name:
             if check:
-                result =AppDao.update_answer(answers.answer, answer_id)
-                return result
+                if AppDao.check_answer_exists(answers.answer):
+                    return {"message": "answer already posted"}, 400
+                AppDao.update_answer(answers.answer, answer_id)
+                return {"update":answers.answer}
 
             return {"answer does not exist"}
-        elif question_author[0][0]['author'] == name:
-            result = AppDao.update_preferred(answer_id)
-            return  result
-        return {"message":"you are not authorized to update question"}
+        if question_author[0][0]['author'] == name:
+            AppDao.update_preferred(answer_id)
+            return {"message":"answer {0} is now preferred".format(answer_id)}
+
+        return {"message":"you are not authorized to update the answer"}
 
 
