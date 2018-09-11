@@ -89,4 +89,9 @@ class Answer(Resource):
             return {'answer': answer}, 201
 
 
+class HelloWorld(Resource):
+    def post(self):
+        return {"hello":"world"}
+
+
 
