@@ -11,16 +11,15 @@ class AppDb:
         DATABASE_URL = app_config[config_name].DATABASE_URL
 
         try:
-            self.connection = psycopg2.connect(DATABASE_URL)
+            self.connection = psycopg2.connect (DATABASE_URL)
         except:
             print("Unable to connect to the database")
 
-        self.conn = psycopg2.connect(DATABASE_URL)
-        self.cursor = self.conn.cursor()
-
+    def getConnection(self):
+        return self.connection
 
     def check_question_title_exists(self, title):
-        cur = self.cursor(cursor_factory=RealDictCursor)
+        cur = self.connection.cursor(cursor_factory=RealDictCursor)
         cur.execute("SELECT id,title,details, date from question where title = %(title)s ", {'title': title})
         rows = cur.fetchone()
         if rows:
@@ -128,7 +127,7 @@ class AppDb:
         sql = """INSERT INTO users(email, username, password) 
           VALUES (%s,%s,%s)"""
         # get connection
-        cur = self.cursor
+        cur = self.connection.cursor()
         # insert into database
         cur.execute(sql, (UserApi.email, UserApi.username, UserApi.password,))
         self.connection.commit()
@@ -174,5 +173,3 @@ class AppDb:
         cur = self.connection.cursor(cursor_factory=RealDictCursor)
         cur.execute("DROP TABLE IF EXISTS" + " "+ table_name +";")
         self.connection.commit()
-
-
