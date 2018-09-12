@@ -1,45 +1,29 @@
 import json
-import psycopg2
-from psycopg2.extras import RealDictCursor
-from instance.config import app_config
+from models.db import db
 
 
-class AppDb:
-    def __init__(self, config_name):
-
-
-        DATABASE_URL = app_config[config_name].DATABASE_URL
-
-        try:
-            self.connection = psycopg2.connect (DATABASE_URL)
-        except:
-            print("Unable to connect to the database")
-
-    def getConnection(self):
-        return self.connection
+class DatabaseModel():
 
     def check_question_title_exists(self, title):
-        cur = self.connection.cursor(cursor_factory=RealDictCursor)
-        cur.execute("SELECT id,title,details, date from question where title = %(title)s ", {'title': title})
-        rows = cur.fetchone()
+        #cur = self.connection.cursor(cursor_factory=RealDictCursor)
+        db.cursor.execute("SELECT id,title,details, date from question where title = %(title)s ", {'title': title})
+        rows = db.cursor.fetchone()
         if rows:
             return True
         else:
             return False
-        cur.close()
+        db.close()
 
     def insert_question(self,QuestionDao):
 
         sql = """INSERT INTO question(title, details, date, author) VALUES (%s, %s, %s, %s)"""
-        cur = self.connection.cursor()
-        cur.execute(sql, (QuestionDao.title, QuestionDao.details, QuestionDao.date, QuestionDao.author))
-        cur.close()
-        self.connection.commit()
+        db.cursor.execute(sql, (QuestionDao.title, QuestionDao.details, QuestionDao.date, QuestionDao.author))
+        db.commit()
+        db.close
 
     def check_answer_exists(self, answer):
-        cur = self.connection.cursor(cursor_factory=RealDictCursor)
-        cur.execute("SELECT answer_id, answer from answer where answer = %(answer)s ", {'answer': answer})
-        rows = cur.fetchone()
+        db.cursor.execute("SELECT answer_id, answer from answer where answer = %(answer)s ", {'answer': answer})
+        rows = db.cursor.fetchone()
         if rows:
             return True
         else:
@@ -49,34 +33,30 @@ class AppDb:
     def insert_answer(self, AnswerDao):
 
         sql = """INSERT INTO answer(answer, question_id, user_name) VALUES (%s, %s, %s)"""
-        cur = self.connection.cursor()
-        cur.execute(sql, (AnswerDao.answer,AnswerDao.id, AnswerDao.author))
-        self.connection.commit()
-        cur.close()
+        db.cursor.execute(sql, (AnswerDao.answer,AnswerDao.id, AnswerDao.author))
+        db.commit()
+        db.close()
 
     def get_all_questions(self):
 
-        cur = self.connection.cursor(cursor_factory=RealDictCursor)
-        cur.execute("SELECT id,title,details,date from question")
-        rows = cur.fetchall()
+        db.cursor.execute("SELECT id,title,details,date from question")
+        rows = db.cursor.fetchall()
         return rows
 
     def get_all_answers(self):
 
-        cur = self.connection.cursor(cursor_factory=RealDictCursor)
-        cur.execute("SELECT answer_id,answer,id  from answer")
-        rows = cur.fetchall()
+        db.cursor.execute("SELECT answer_id,answer,id  from answer")
+        rows = db.cursor.fetchall()
         return rows
 
     def get_question_with_answers(self, id):
 
-        cur = self.connection.cursor(cursor_factory=RealDictCursor)
-        cur.execute(""" SELECT id,title, details, date, author from question where id = %(id)s""", {'id': id})
-        question_row = cur.fetchall()
-        cur.execute("""SELECT  answer_id, answer, preferred, question_id, user_name from answer INNER JOIN question ON (answer.question_id = question.id) 
+        db.cursor.execute(""" SELECT id,title, details, date, author from question where id = %(id)s""", {'id': id})
+        question_row = db.cursor.fetchall()
+        db.cursor.execute("""SELECT  answer_id, answer, preferred, question_id, user_name from answer INNER JOIN question ON (answer.question_id = question.id) 
         where question_id = %(id)s """,
                     {'id': id})
-        rows = cur.fetchall()
+        rows = db.cursor.fetchall()
 
         if rows:
             question = (question_row, rows)
@@ -88,88 +68,78 @@ class AppDb:
 
     def get_answers(self, answer_id):
 
-        cur = self.connection.cursor(cursor_factory=RealDictCursor)
-        cur.execute("""SELECT answer_id, answer, user_name from answer where answer_id = %(id)s""",
+        db.cursor.execute("""SELECT answer_id, answer, user_name from answer where answer_id = %(id)s""",
                     {'id': answer_id})
-        rows = cur.fetchall()
+        rows = db.cursor.fetchall()
         return rows
 
 
     def delete_question(self,id):
-        cur = self.connection.cursor(cursor_factory=RealDictCursor)
-        cur.execute("DELETE from question where id = %(id)s ", {'id': id})
-        rows_deleted = cur.rowcount
-        self.connection.commit()
+        db.cursor.execute("DELETE from question where id = %(id)s ", {'id': id})
+        rows_deleted = db.cursor.rowcount
+        db.commit()
         print(json.dumps(rows_deleted, indent=2))
-        cur.close()
+        db.close()
 
     def update_answer(self, answer, answer_id):
-        cur = self.connection.cursor(cursor_factory=RealDictCursor)
         sql = "UPDATE answer set answer = '{0}' where answer_id = '{1}' ".format(answer, answer_id)
-        cur.execute(sql)
-        print (cur)
-        updated_rows = cur.rowcount
+        db.cursor.execute(sql)
+        print (db.cursor.execute(sql))
+        updated_rows = db.cursor.rowcount
         self.connection.commit()
-        cur.close()
+        db.close()
         return updated_rows
 
     def update_preferred(self,answer_id):
-        cur = self.connection.cursor(cursor_factory=RealDictCursor)
         sql = "UPDATE answer set preferred = true  where answer_id = {0}".format(answer_id)
-        cur.execute(sql)
-        updated_rows = cur.rowcount
+        db.cursor.execute(sql)
+        updated_rows = db.cursor.rowcount
         print(json.dumps(updated_rows, indent=2))
-        self.connection.commit()
-        cur.close()
+        db.commit()
+        db.close()
         return updated_rows
 
     def insert_user(self, UserApi):
         sql = """INSERT INTO users(email, username, password) 
           VALUES (%s,%s,%s)"""
-        # get connection
-        cur = self.connection.cursor()
         # insert into database
-        cur.execute(sql, (UserApi.email, UserApi.username, UserApi.password,))
-        self.connection.commit()
-        cur.close()
+        db.cursor.execute(sql, (UserApi.email, UserApi.username, UserApi.password))
+        db.commit()
+        db.close()
 
     def get_user_by_username(self, username):
-        cur = self.connection.cursor(cursor_factory=RealDictCursor)
-        cur.execute("""SELECT email,username,password from users 
+        db.cursor.execute("""SELECT email,username,password from users 
                         where username = %(username)s """,
                     {'username': username})
-        rows = cur.fetchall()
+        rows = db.cursor.fetchall()
         return rows
 
     def get_all(self):
-        cur = self.connection.cursor(cursor_factory=RealDictCursor)
-        cur.execute("SELECT id, email, username,password  from users")
-        rows = cur.fetchall()
+        db.cursor.execute("SELECT id, email, username,password  from users")
+        rows = db.cursor.fetchall()
         return rows
 
     def check_user_exist_by_username(self, username):
-        cur = self.connection.cursor(cursor_factory=RealDictCursor)
-        cur.execute("SELECT id, username, password from users where username = %(username)s", {'username':
+        db.cursor.execute("SELECT id, username, password from users where username = %(username)s", {'username':
                                                                                                    username})
-        rows = cur.fetchone()
+        rows = db.cursor.fetchone()
         if rows:
             return True
         else:
             return False
-        cur.close()
+        db.close()
 
     def check_user_exist_by_email(self, email):
-        cur = self.connection.cursor(cursor_factory=RealDictCursor)
-        cur.execute("SELECT id, username, password from users where email = %(email)s", {'email':
+        db.cursor.execute("SELECT id, username, password from users where email = %(email)s", {'email':
                                                                                                    email})
-        rows = cur.fetchone()
+        rows = db.cursor.fetchone()
         if rows:
             return True
         else:
             return False
-        cur.close()
+        db.close()
+
 
     def drop_table(self, table_name):
-        cur = self.connection.cursor(cursor_factory=RealDictCursor)
-        cur.execute("DROP TABLE IF EXISTS" + " "+ table_name +";")
-        self.connection.commit()
+        db.cursor.execute("DROP TABLE IF EXISTS" + " "+ table_name +";")
+        db.commit()

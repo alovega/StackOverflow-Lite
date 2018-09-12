@@ -1,9 +1,9 @@
 from datetime import datetime
 from flask_jwt_extended import jwt_required, get_jwt_identity
 from flask_restful import Resource, reqparse
-from models.models import AppDb
+from models.models import DatabaseModel
 
-AppDao = AppDb('development')
+AppDao = DatabaseModel()
 
 DTime = datetime.now()
 

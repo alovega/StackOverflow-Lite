@@ -1,9 +1,12 @@
 import unittest
 from app import create_app
-from models.models import AppDb
+from models.db import AppDb
+from models.models import DatabaseModel
 import psycopg2
 
-AppDao = AppDb('testing')
+
+db = AppDb('testing')
+AppDao = DatabaseModel()
 
 def create_tables():
     try:
@@ -52,8 +55,9 @@ class BaseTestCase(unittest.TestCase):
         self.client = self.app.test_client()
         create_tables()
 
-
-
+    def tearDown(self):
+        self.app = None
+        drop_tables()
 
 if __name__ =='__main__':
     unittest.main()
