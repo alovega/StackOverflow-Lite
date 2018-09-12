@@ -1,4 +1,4 @@
-from flask_restful import Resource, fields, reqparse,marshal_with
+from flask_restful import Resource, reqparse
 from passlib.hash import pbkdf2_sha256 as sha256
 from models.models import DatabaseModel
 from flask_jwt_extended import (create_access_token, create_refresh_token, jwt_refresh_token_required, get_jwt_identity)
@@ -32,6 +32,23 @@ class UserRegister(Resource):
         super(UserRegister, self).__init__()
 
     def post(self):
+        """
+                User signup
+                ---
+                description: User signup
+                parameters:
+                    - name: User
+                      in: body
+                      type: string
+                      required: true
+                      schema:
+                        $ref: '#/definitions/User_sign_up'
+                responses:
+                  201:
+                    description: User {} was created
+                  400:
+                    description: Bad request
+                """
         args = self.reqparse.parse_args()
         email = args['email']
         username = args['username']
@@ -61,7 +78,7 @@ class UserRegister(Resource):
             'message': 'User {0} was created'.format(username),
             'access_token': access_token,
             'refresh_token':refresh_token
-        }
+        },201
 
 
     def get(self):
@@ -76,7 +93,31 @@ class UserLogin(Resource):
         self.reqparse.add_argument('password', type=str, required=True, help='please input password', location='json')
 
     def post(self):
+        """
+               Login
+               ---
+               description: User login
+               parameters:
+                   - name: Login
+                     in: body
+                     type: string
+                     schema:
+                       $ref: '#/definitions/User_login'
+               responses:
+                   202:
+                       description: successfully logged in
+                   401:
+                       description: wrong credentintials provided
+                   404:
+                       description: User doesn't exist
+               """
         args = self.reqparse.parse_args()
+        username = args['username']
+        password = args['password']
+        if not username.replace(" ", ""):
+            return {"message":"input valid username"}, 400
+        elif not password.replace(" ", ""):
+            return {"message":"input password it is empty"}, 400
         user = AppDao.get_user_by_username(args['username'])
 
         if not user:
