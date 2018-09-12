@@ -10,7 +10,7 @@ class TestUserSignUp(BaseTestCase):
         request = {"email": "alovegakevin@gmail.com", "username": "alwa", "password":"LUG4Z1V4"}
         res = self.client.post("/auth/signup", json=request)
         self.assertEqual(res.status_code, 200)
-
+    #
     # def test_user_name_empty(self):
     #     request = {"email": "alovegakevin@gmail.com", "username": "", "password": "LUG4Z1V4"}
     #     res = self.client.post("/auth/signup", json=request)
@@ -69,7 +69,7 @@ class TestUserSignUp(BaseTestCase):
     #     request = self.client.post("/auth/signup", json=request2)
     #     self.assertEqual(request.status_code, 409)
     #     self.assertIn({"message": "username already used pick another one"}, str(request.json))
-
+    #
 
 if __name__=='__main__':
     unittest.main()

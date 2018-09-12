@@ -1,9 +1,9 @@
 from datetime import datetime
 from flask_jwt_extended import jwt_required, get_jwt_identity
 from flask_restful import Resource, reqparse
-from models.models import AppDb
+from models.models import DatabaseModel
 
-AppDao = AppDb('development')
+AppDao = DatabaseModel()
 
 DTime = datetime.now()
 
@@ -35,6 +35,9 @@ class Questions(Resource):
     @jwt_required
     def get(self):
         questions = AppDao.get_all_questions()
+        if questions:
+            return questions
+        return {"message":"no questions posted"}
 
         return questions
     @jwt_required
@@ -52,7 +55,7 @@ class Questions(Resource):
 
         questions = QuestionDao(title = title, details= details, author = author)
         if AppDao.check_question_title_exists(questions.title):
-            return {"message": "title already used"}, 202
+            return {"message": "title already used"}, 400
 
         AppDao.insert_question(questions)
         return {questions.title: questions.details}
@@ -63,23 +66,24 @@ class Question(Resource):
     def get(self, id):
         questions = AppDao.get_question_with_answers(id)
         print(questions)
-
-        if  questions[0]:
+        if questions[0]:
             return questions
-        return {"message":"question does not exist"}
+        return {"message":"question does not exist"},404
 
     @jwt_required
     def delete(self, id):
         user = get_jwt_identity()
         questions = AppDao.get_question_with_answers(id)
-        if questions[0][0]['author'] == user:
-            if questions:
+        if questions[0]:
+            if questions[0][0]['author'] == user:
                 AppDao.delete_question(id)
-                return{"message":"successfully deleted"}
+                return{"message":"successfully deleted"},200
 
-            else:
-                return {"message": "question id not existing"}
-        return {"message":"you can't delete a question you didn't create"}
+            return {"message": "you can't delete a question you didn't create"}, 401
+
+        elif not questions[0]:
+            return {"message":"questions doesn't exists"}
+
 
 class Answers(Resource):
 
@@ -98,16 +102,14 @@ class Answers(Resource):
             return {"message":"can't post an empty answer"}, 400
         answers = AnswerDao(answer=answer, id=id, author = author)
         print(answers)
-        if AppDao.check_answer_exists(answers.answer):
-            return {"message": "answer already posted"}, 400
-        AppDao.insert_answer(answers)
-        return {"answer": answers.answer}
+        questions = AppDao.get_question(id)
 
-    @jwt_required
-    def get(self):
-        answer = AppDao.get_all_answers()
-
-        return answer
+        if questions:
+            if AppDao.check_answer_exists(answers.answer):
+                return {"message": "answer already posted"}, 400
+            AppDao.insert_answer(answers)
+            return {"answer": answers.answer}
+        return {"message":"can post to a question that doesn't exist"}
 
 
 class Answer(Resource):
@@ -137,11 +139,11 @@ class Answer(Resource):
                 AppDao.update_answer(answers.answer, answer_id)
                 return {"update":answers.answer}
 
-            return {"answer does not exist"}
+            return {"answer does not exist"},404
         if question_author[0][0]['author'] == name:
             AppDao.update_preferred(answer_id)
-            return {"message":"answer {0} is now preferred".format(answer_id)}
+            return {"message":"answer {0} is now preferred".format(answer_id)},201
 
-        return {"message":"you are not authorized to update the answer"}
+        return {"message":"you are not authorized to update the answer"},401
 
 

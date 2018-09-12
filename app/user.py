@@ -1,9 +1,10 @@
 from flask_restful import Resource, fields, reqparse,marshal_with
 from passlib.hash import pbkdf2_sha256 as sha256
-from models.models import AppDb
+from models.models import DatabaseModel
 from flask_jwt_extended import (create_access_token, create_refresh_token, jwt_refresh_token_required, get_jwt_identity)
 
-AppDao = AppDb('development')
+AppDao = DatabaseModel()
+
 
 class UserData(object):
 
@@ -79,8 +80,7 @@ class UserLogin(Resource):
         user = AppDao.get_user_by_username(args['username'])
 
         if not user:
-            return {"message": 'User {} doesn\'t exist'.format(args['username'])}
-
+            return {"message": 'User {} doesn\'t exist'.format(args['username'])},404
 
         if UserData.verify_hash(args['password'], user[0]['password']):
             access_token = create_access_token (identity=user[0]['username'])
@@ -89,11 +89,9 @@ class UserLogin(Resource):
                 'message': 'Logged in as {}'.format (user[0]['username']),
                 'access_token': access_token,
                 'refresh_token': refresh_token
-            }
+            },202
         else:
-            return {
-                'message': 'wrong credentials provided'
-           }
+            return {'message': 'wrong credentials provided'},401
 
 
 class TokenRefresh(Resource):
@@ -101,4 +99,4 @@ class TokenRefresh(Resource):
     def post(self):
         current_user = get_jwt_identity()
         access_token = create_access_token(identity = current_user)
-        return {'access_token': access_token}
+        return {'access_token': access_token},202

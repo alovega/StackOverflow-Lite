@@ -9,7 +9,6 @@ class TestQuestions(BaseTestCase):
     def test_post_question(self):
         signup = {"email": "alovegakevin@gmail.com", "username": "alwa", "password": "LUG4Z1V4"}
         res_signup = self.client.post("/auth/signup", json=signup)
-        print(res_signup)
         self.assertEqual(res_signup.status_code, 200)
         request = {"title":"question 1","description":"sample description"}
         res = self.client.post("/questions",json=request)
