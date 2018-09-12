@@ -3,7 +3,7 @@ from passlib.hash import pbkdf2_sha256 as sha256
 from models.models import AppDb
 from flask_jwt_extended import (create_access_token, create_refresh_token, jwt_refresh_token_required, get_jwt_identity)
 
-AppDao = AppDb()
+AppDao = AppDb('development')
 
 class UserData(object):
 
@@ -37,19 +37,19 @@ class UserRegister(Resource):
         password = args['password']
 
         if not email.replace(" ", ""):
-            return {"message":"email not valid"}
+            return {"message":"email not valid"}, 400
         elif not password.replace(" ", ""):
-            return {"message":"input password"}
+            return {"message":"input password it is empty"}, 400
         elif not username.replace(" ", ""):
-            return {"message":"input valid username"}
+            return {"message":"input valid username"}, 400
 
         user = UserData(email=email, username=username, password=password)
 
 
         if AppDao.check_user_exist_by_email(user.email):
-            return {"message": "Email already used"}, 202
+            return {"message": "Email already used"}, 409
         elif AppDao.check_user_exist_by_username(user.username):
-            return {"message": "username already used pick another one"}, 202
+            return {"message": "username already used pick another one"}, 409
 
         user.password = UserData.generate_hash(password)
         AppDao.insert_user(user)

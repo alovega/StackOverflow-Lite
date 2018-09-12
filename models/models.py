@@ -1,21 +1,26 @@
 import json
 import psycopg2
 from psycopg2.extras import RealDictCursor
+from instance.config import app_config
 
 
 class AppDb:
-    def __init__(self):
+    def __init__(self, config_name):
+
+
+        DATABASE_URL = app_config[config_name].DATABASE_URL
+
         try:
-            self.connection = psycopg2.connect (host='localhost', dbname='app_database',
-                                                user='postgres', password='LUG4Z1V4', port=5432)
+            self.connection = psycopg2.connect(DATABASE_URL)
         except:
             print("Unable to connect to the database")
 
-    def getConnection(self):
-        return self.connection
+        self.conn = psycopg2.connect(DATABASE_URL)
+        self.cursor = self.conn.cursor()
+
 
     def check_question_title_exists(self, title):
-        cur = self.connection.cursor(cursor_factory=RealDictCursor)
+        cur = self.cursor(cursor_factory=RealDictCursor)
         cur.execute("SELECT id,title,details, date from question where title = %(title)s ", {'title': title})
         rows = cur.fetchone()
         if rows:
@@ -123,7 +128,7 @@ class AppDb:
         sql = """INSERT INTO users(email, username, password) 
           VALUES (%s,%s,%s)"""
         # get connection
-        cur = self.connection.cursor()
+        cur = self.cursor
         # insert into database
         cur.execute(sql, (UserApi.email, UserApi.username, UserApi.password,))
         self.connection.commit()
@@ -169,4 +174,5 @@ class AppDb:
         cur = self.connection.cursor(cursor_factory=RealDictCursor)
         cur.execute("DROP TABLE IF EXISTS" + " "+ table_name +";")
         self.connection.commit()
+
 
