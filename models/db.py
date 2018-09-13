@@ -8,11 +8,10 @@ class AppDb:
 
     def __init__(self, config_name):
 
-
         DATABASE_URL = app_config[config_name].DATABASE_URL
 
         try:
-            self.connection = psycopg2.connect (DATABASE_URL)
+            self.connection = psycopg2.connect(DATABASE_URL)
         except:
             print("Unable to connect to the database")
         self.cursor = self.connection.cursor(cursor_factory=RealDictCursor)
@@ -30,6 +29,7 @@ class AppDb:
 
     def close(self):
         self.cursor.close()
+
 
 current_environment = os.getenv("APP_SETTINGS")
 print (current_environment)
