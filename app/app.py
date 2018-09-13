@@ -100,7 +100,7 @@ class Questions(Resource):
             return {"message": "title already used"}, 400
 
         AppDao.insert_question(questions)
-        return {questions.title: questions.details}
+        return {questions.title: questions.details},201
 
 
 class Question(Resource):
@@ -170,7 +170,7 @@ class Question(Resource):
             return {"message": "you can't delete a question you didn't create"}, 401
 
         elif not questions[0]:
-            return {"message":"questions doesn't exists"}
+            return {"message":"question doesn't exists"},404
 
 
 class Answers(Resource):
@@ -217,7 +217,7 @@ class Answers(Resource):
             if AppDao.check_answer_exists(answers.answer):
                 return {"message": "answer already posted"}, 400
             AppDao.insert_answer(answers)
-            return {"answer": answers.answer}
+            return {"answer": answers.answer},201
         return {"message":"can post to a question that doesn't exist"},404
 
 
@@ -272,21 +272,27 @@ class Answer(Resource):
         if not answer.replace(" ", ""):
             return {"message":"can't post an empty answer"}, 400
         answers = AnswerDao(answer=answer, id=id, author= name)
-        print(answers)
+
         check = AppDao.get_answers(answer_id)
-        question_author = AppDao.get_question_with_answers(id)
         print(check)
-        if check[0]['user_name'] == name:
-            if check:
+
+        question_author = AppDao.get_question_with_answers(id)
+
+        if check:
+            if check[0]['user_name'] == name:
                 if AppDao.check_answer_exists(answers.answer):
                     return {"message": "answer already posted"}, 400
                 AppDao.update_answer(answers.answer, answer_id)
-                return {"update":answers.answer}
+                return {"update":answers.answer},201
+        if not check:
+            return {"message":"no such answer"}
 
             return {"answer does not exist"},404
         if question_author[0][0]['author'] == name:
-            AppDao.update_preferred(answer_id)
-            return {"message":"answer {0} is now preferred".format(answer_id)},201
+            if AppDao.check_answer_exists(answers.answer):
+                AppDao.update_preferred(answer_id)
+                return {"message":"answer {0} is now preferred".format(answer_id)},200
+            return{"message":"answer does not exist"}
 
         return {"message":"you are not authorized to update the answer"},401
 

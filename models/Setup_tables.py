@@ -18,7 +18,8 @@ try:
             preferred BOOLEAN DEFAULT FALSE, question_id INTEGER NOT NULL, user_name VARCHAR NOT NULL, 
             FOREIGN KEY(user_name)
             REFERENCES users(username),FOREIGN KEY(question_id) REFERENCES question(id) ON DELETE CASCADE)
-            """,)
+            """,
+            """CREATE TABLE IF NOT EXISTS revoked_tokens(id SERIAL PRIMARY KEY, jti VARCHAR(256) )""",)
         cur = conn.cursor()
         for command in commands:
             cur.execute(command)
