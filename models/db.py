@@ -2,6 +2,7 @@ import json
 import psycopg2
 from psycopg2.extras import RealDictCursor
 from instance.config import app_config
+import os
 
 
 class AppDb:
@@ -31,5 +32,7 @@ class AppDb:
     def close(self):
         self.cursor.close()
 
+current_environment = os.getenv("APP_SETTINGS")
+print (current_environment)
 
-db = AppDb('development')
+db = AppDb(current_environment)
