@@ -15,7 +15,6 @@ This is pre-bootcamp challenge project that creates a Flask-api that allows a us
 | POST         | /api/v1/questions/<question_id>/answers    |   Post an answer                                             |
 | GET          | /api/v1/questions/<question_id>/answers    |   Get all answers for a question                             |
 | PUT          | /api/v1/questions/<question_id>/answers/<answer_id>           |   Edit or accept an answer                |
-| GET          | /api/v1/users/questions                    |   Get all questions asked by user                            |
 ## Prerequisites
     pip
     virtualenv
