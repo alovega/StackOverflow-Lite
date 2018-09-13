@@ -8,7 +8,6 @@ This is pre-bootcamp challenge project that creates a Flask-api that allows a us
 | ------------ | ----------------------------------         | ------------------------------------------------------------ |
 | POST         | /api/v1/auth/signup                        |   Creates a user account                                     |
 | POST         | /api/v1/auth/login                         |   Logs in a user                                             |
-| POST         | /api/v1/auth/logout                        |   Logs out a user                                            |
 | GET          | /api/v1/questions                          |   Get all questions on platform                              |
 | POST         | /api/v1/questions                          |   Post a new question                                        |
 | GET          | /api/v1/questions/<question_id>            |   Get a single question                                      |
@@ -16,13 +15,7 @@ This is pre-bootcamp challenge project that creates a Flask-api that allows a us
 | POST         | /api/v1/questions/<question_id>/answers    |   Post an answer                                             |
 | GET          | /api/v1/questions/<question_id>/answers    |   Get all answers for a question                             |
 | PUT          | /api/v1/questions/<question_id>/answers/<answer_id>           |   Edit or accept an answer                |
-| POST         | /api/v1/questions/<question_id>/answers/<answer_id>/upvote    |   Upvote an answer                        |
-| POST         | /api/v1/questions/<question_id>/answers/<answer_id>/downvote  |   Downvote an answer                      |
 | GET          | /api/v1/users/questions                    |   Get all questions asked by user                            |
-| POST         | /api/v1/questions/<question_id>/answers/<answer_id>/comments  |   Post a comment                          |
-| GET          | /api/v1/questions/<question_id>/answers/<answer_id>/comments  |   Get all comments for an answer          |
-| PUT          | /api/v1/questions/<question_id>/answers/<answer_id>           |   Edit comment                            |
-|              | /comments/<comments_id>                    |                                                              || POST         | /api/v1/questions/search?limit=10            |
 ## Prerequisites
     pip
     virtualenv
