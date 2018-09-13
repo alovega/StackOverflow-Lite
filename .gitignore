@@ -4,3 +4,4 @@ app/__pycache__
 intance/__pycache__
 test/__pyache_
 .env
+.env.testing
