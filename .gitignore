@@ -3,3 +3,5 @@ venv/
 app/__pycache__
 intance/__pycache__
 test/__pyache__
+.env
+.env.testing
