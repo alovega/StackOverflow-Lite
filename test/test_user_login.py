@@ -72,16 +72,5 @@ class TestUserSignIn(BaseTestCase):
         self.assertIn("input valid username", str(res2.json))
 
 
-    def test_issued_authorizations_token_on_login(self):
-        request = {"email": "alovegakevin@gmail.com", "username": "alwa", "password": "LUG4Z1V4"}
-        res = self.client.post("/auth/signup", json=request)
-        self.assertEqual(res.status_code, 201)
-        request_login = {"username": "alwa", "password": "LUG4Z1V4"}
-        res2 = self.client.post("/auth/login", json=request_login)
-        self.assertEqual(res2.status_code, 202)
-
-
-
-
 if __name__=='__main__':
     unittest.main()
