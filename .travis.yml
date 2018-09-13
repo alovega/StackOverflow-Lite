@@ -13,9 +13,10 @@ services:
 before_script:
   - psql -c 'create database "test_db";' -U postgres
 
+env:
+  - APP_SETTINGS="development"
 
 script:
-  - APP_SETTINGS="testing"
   - nosetests --exe -v --with-coverage
 
 after_success :
