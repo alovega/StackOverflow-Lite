@@ -26,6 +26,8 @@ class ProductionConfig(Config):
     """Configurations for Production."""
     DEBUG = False
     TESTING = False
+    DATABASE_URL = "dbname='app_database' user='postgres'"
+
 
 app_config = {
     'development': DevelopmentConfig,
