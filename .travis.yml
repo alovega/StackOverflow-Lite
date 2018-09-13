@@ -13,7 +13,7 @@ before_script:
   - psql -c 'create database "testdb";' -U postgres
 
 env:
-  APP_SETTINGS=testing
+  APP_SETTINGS="testing"
 
 script:
   - nosetests --exe -v --with-coverage
