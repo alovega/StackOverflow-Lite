@@ -4,8 +4,7 @@ import psycopg2
 def create_table():
 
     try:
-        conn = psycopg2.connect(host='localhost', dbname='app_database', user='postgres', password='LUG4Z1V4',
-                                port=5432)
+        conn = psycopg2.connect(host='localhost', dbname='app_database', user='postgres', password='LUG4Z1V4',)
         print('Established')
 
         commands = (
