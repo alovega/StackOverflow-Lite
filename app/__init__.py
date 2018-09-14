@@ -6,6 +6,7 @@ from app.app import Question, Answer
 from app.app import Questions,Answers
 from app.templates import TEMPLATE
 from app.user import UserRegister, UserLogin, TokenRefresh
+from models import Setup_tables
 
 from instance.config import app_config
 
@@ -17,7 +18,9 @@ def create_app(config_name):
     app.config.from_pyfile('config.py')
     Swagger(app, template=TEMPLATE)
     jwt = JWTManager(app)
+    Setup_tables.create_table()
     create_api(app)
+
     return app
 
 

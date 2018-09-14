@@ -1,10 +1,12 @@
 import psycopg2
 
-try:
-    conn = psycopg2.connect(host='localhost',dbname='app_database',user='postgres',password='LUG4Z1V4', port=5432)
-    print('Established')
 
-    def create_table():
+def create_table():
+
+    try:
+        conn = psycopg2.connect(host='localhost', dbname='app_database', user='postgres', password='LUG4Z1V4',
+                                port=5432)
+        print('Established')
 
         commands = (
             """
@@ -27,9 +29,9 @@ try:
         conn.commit()
         conn.close()
 
-except:
+    except:
 
-    print("I am unable to connect to the database")
+        print("I am unable to connect to the database")
 
 
 if __name__ == '__main__':

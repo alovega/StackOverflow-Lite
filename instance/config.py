@@ -26,7 +26,9 @@ class ProductionConfig(Config):
     """Configurations for Production."""
     DEBUG = False
     TESTING = False
-    DATABASE_URL = "dbname='app_database' user='postgres'"
+    DATABASE_URL = 'postgres://nrwwdvuzruatqi:ca6e6cf414b7b5a539e93d2074d77da001ec754cd166b58df2b241c747e48ced@ec2-54-83-29-34.compute-1.amazonaws.com:5432/d84nv6pknuhjff'
+
+
 
 
 app_config = {
