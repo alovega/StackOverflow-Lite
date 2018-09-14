@@ -210,7 +210,6 @@ class Answers(Resource):
         if not answer.replace(" ", ""):
             return {"message":"can't post an empty answer"}, 400
         answers = AnswerDao(answer=answer, id=id, author = author)
-        print(answers)
         questions = AppDao.get_question(id)
 
         if questions:
