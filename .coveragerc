@@ -29,3 +29,5 @@ omit =
         *concurrent/*
         *multiprocessing/*
         *pydoc.py*
+        *fileinput.py*
+        *typing.py*
