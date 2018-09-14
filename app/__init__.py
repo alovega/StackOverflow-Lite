@@ -1,5 +1,6 @@
 from flask import Flask
 from flask_restful import Api
+import os
 from flasgger import Swagger
 from flask_jwt_extended import JWTManager
 from app.app import Question, Answer
@@ -18,7 +19,7 @@ def create_app(config_name):
     app.config.from_pyfile('config.py')
     Swagger(app, template=TEMPLATE)
     jwt = JWTManager(app)
-    Setup_tables.create_table()
+    Setup_tables.create_table(config_name = os.getenv('APP_SETTINGS'))
     create_api(app)
 
     return app

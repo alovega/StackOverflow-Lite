@@ -1,10 +1,11 @@
 import psycopg2
+from instance.config import app_config
 
 
-def create_table():
-
+def create_table(config_name):
+    DATABASE_URL = app_config[config_name].DATABASE_URL
     try:
-        conn = psycopg2.connect(host='localhost', dbname='app_database', user='postgres', password='LUG4Z1V4',)
+        conn = psycopg2.connect(DATABASE_URL)
         print('Established')
 
         commands = (

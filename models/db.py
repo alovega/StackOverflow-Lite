@@ -32,6 +32,5 @@ class AppDb:
 
 
 current_environment = os.getenv("APP_SETTINGS")
-print (current_environment)
 
 db = AppDb(current_environment)
