@@ -6,19 +6,27 @@ This is pre-bootcamp challenge project that creates a Flask-api that allows a us
 #### Endpoints available:
 | http methods |    Endpoint route                          |   Endpoint functionality                                     |
 | ------------ | ----------------------------------         | ------------------------------------------------------------ |
-| POST         | /api/v1/auth/signup                        |   Creates a user account                                     |
-| POST         | /api/v1/auth/login                         |   Logs in a user                                             |
-| GET          | /api/v1/questions                          |   Get all questions on platform                              |
-| POST         | /api/v1/questions                          |   Post a new question                                        |
-| GET          | /api/v1/questions/<question_id>            |   Get a single question                                      |
-| DELETE       | /api/v1/questions/<question_id>            |   Delete a question                                          |
-| POST         | /api/v1/questions/<question_id>/answers    |   Post an answer                                             |
-| GET          | /api/v1/questions/<question_id>/answers    |   Get all answers for a question                             |
-| PUT          | /api/v1/questions/<question_id>/answers/<answer_id>           |   Edit or accept an answer                |
+| POST         | /auth/signup                        |   Creates a user account                                     |
+| POST         | /auth/login                         |   Logs in a user                                             |
+| GET          | /questions                          |   Get all questions on platform                              |
+| POST         | /questions                          |   Post a new question                                        |
+| GET          | /questions/<question_id>            |   Get a single question                                      |
+| DELETE       | /questions/<question_id>            |   Delete a question                                          |
+| POST         | /questions/<question_id>/answers    |   Post an answer                                             |
+| GET          | /questions/<question_id>/answers    |   Get all answers for a question                             |
+| PUT          | /questions/<question_id>/answers/<answer_id>           |   Edit or accept an answer                |
 ## Prerequisites
     pip
     virtualenv
     python 3.6
+    postgresql
+
+## Setting up database
+#### To create the databases through the command line:
+      ```
+      $ psql postgres
+      postgres=# CREATE DATABASE app_database;
+      postgres=#CREATE DATABASE test_db;
     
 ## installation
     clone this repo:
@@ -46,8 +54,11 @@ This is pre-bootcamp challenge project that creates a Flask-api that allows a us
 ## Running the tests
   The tests for StackOverflow-lite  are written using the python module unittests. The tests are found in the folder test
   .<br>
-  To run the tests:
-      
+  To run the tests:<br>
+    on Your Terminal:
+   ```
+    $export APP_SETTINGS=testing
+   ```
    ```
    $nosetests test/
    ```
