@@ -17,7 +17,7 @@ class DevelopmentConfig(Config):
 class TestingConfig(Config):
     """Configurations for Testing, with a separate test database."""
     TESTING = True
-    DATABASE_URL = "dbname='test_db' user='postgres' host='localhost' password='LUG4Z1V4'"
+    DATABASE_URL = "dbname='test_db' user='postgres'"
     DEBUG = True
 
 
