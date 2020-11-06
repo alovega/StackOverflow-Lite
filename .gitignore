@@ -4,3 +4,5 @@ app/__pycache__
 intance/__pycache__
 test/__pyache__
 .vscode/
+.env
+.env.testing
