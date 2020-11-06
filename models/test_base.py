@@ -4,16 +4,16 @@ from models.db import AppDb
 from models.models import DatabaseModel
 import psycopg2
 
-
 db = AppDb('testing')
 AppDao = DatabaseModel()
 
+
 def create_tables():
     try:
-        conn = psycopg2.connect(host='localhost',dbname='test_db',user='postgres',password='LUG4Z1V4', port=5432)
+        conn = psycopg2.connect(
+            host='localhost', dbname='test_db', user='postgres', password='LUG4Z1V4', port=5432
+        )
         print('Established')
-
-
 
         commands = (
             """
@@ -39,14 +39,16 @@ def create_tables():
 
         print("I am unable to connect to the database")
 
+
 def drop_tables():
-    table_reverse = ["answer", "question","users"]
+    table_reverse = ["answer", "question", "users"]
     for table in table_reverse:
         AppDao.drop_table(table)
 
 
 class BaseTestCase(unittest.TestCase):
     """ class base test cases"""
+
     def setUp(self):
         """initialize app and define variables"""
         self.app = create_app(config_name='testing')
@@ -59,5 +61,6 @@ class BaseTestCase(unittest.TestCase):
         self.app = None
         drop_tables()
 
-if __name__ =='__main__':
+
+if __name__ == '__main__':
     unittest.main()

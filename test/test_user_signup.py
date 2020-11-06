@@ -1,5 +1,5 @@
 import unittest
-from test.test_base import BaseTestCase
+from models.test_base import BaseTestCase
 
 
 class TestUserSignUp(BaseTestCase):
