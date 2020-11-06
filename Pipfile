@@ -1,0 +1,26 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+aniso8601 = "==8.0.0"
+click = "==7.1.2"
+flask = "==1.1.2"
+flask-jwt-extended = "==3.24.1"
+flask-restful = "==0.3.8"
+itsdangerous = "==1.1.0"
+jinja2 = "==2.11.2"
+markupsafe = "==1.1.1"
+psycopg2 = "==2.8.6"
+pyjwt = "==1.7.1"
+pytz = "==2020.4"
+six = "==1.15.0"
+werkzeug = "==1.0.1"
+passlib = "*"
+flasgger = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"
