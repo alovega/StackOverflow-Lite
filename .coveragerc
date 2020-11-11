@@ -31,3 +31,24 @@ omit =
         *pydoc.py*
         *fileinput.py*
         *typing.py*
+        *models/*
+        *instance/*
+        *dataclasses.py*
+        *importlib\metadata.py*
+        *pathlib.py*
+        *socketserver.py*
+        *timeit.py*
+        *attr\*
+        *flasgger\*
+        *itsdangerous\*
+        *jsonschema\*
+        *mistune.py*
+        *psycopg2\*
+        *pyrsistent\*
+        *six.py*
+        *yaml\*
+        *flask_jwt_extended\*
+        *flask_restful\*
+        *csv.py*
+        *app\templates.py*
+

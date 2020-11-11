@@ -20,6 +20,7 @@ werkzeug = "==1.0.1"
 passlib = "*"
 flasgger = "*"
 nose = "*"
+coverage = "*"
 
 [dev-packages]
 
