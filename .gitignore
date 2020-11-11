@@ -1,8 +1,9 @@
 venv/
 .idea/
 app/__pycache__
-intance/__pycache__
-test/__pyache__
+instance/__pycache__
+test/__pycache__
+models/__pycache__
 .vscode/
 .env
 .env.testing

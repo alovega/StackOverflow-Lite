@@ -19,6 +19,7 @@ six = "==1.15.0"
 werkzeug = "==1.0.1"
 passlib = "*"
 flasgger = "*"
+nose = "*"
 
 [dev-packages]
 

@@ -23,7 +23,7 @@ class DatabaseModel:
 
     @staticmethod
     def check_answer_exists(answer):
-        db.cursor.execute("SELECT answer_id, answer from answer where answer = %(answer)s ", {'answer': answer})
+        db.cursor.execute("SELECT id, answer from answer where answer = %(answer)s ", {'answer': answer})
         rows = db.cursor.fetchone()
         if rows:
             return True
@@ -58,7 +58,7 @@ class DatabaseModel:
         )
         question_row = db.cursor.fetchall()
         db.cursor.execute(
-            """SELECT  answer_id, answer, preferred, question_id, user_name from answer INNER JOIN question ON (
+            """SELECT   answer, preferred, question_id, user_name from answer INNER JOIN question ON (
             answer.question_id = question.id) where question_id = %(id)s """,
             {'id': id})
         rows = db.cursor.fetchall()
@@ -71,7 +71,7 @@ class DatabaseModel:
 
     @staticmethod
     def get_answers(answer_id):
-        db.cursor.execute("""SELECT answer_id, answer, user_name from answer where answer_id = %(id)s""",
+        db.cursor.execute("""SELECT id, answer, user_name from answer where id = %(id)s""",
                           {'id': answer_id})
         rows = db.cursor.fetchall()
         return rows
@@ -92,7 +92,7 @@ class DatabaseModel:
 
     @staticmethod
     def update_answer(answer, answer_id):
-        sql = "UPDATE answer set answer = '{0}' where answer_id = '{1}' ".format(answer, answer_id)
+        sql = "UPDATE answer set answer = '{0}' where id = '{1}' ".format(answer, answer_id)
         db.cursor.execute(sql)
         print(db.cursor.execute(sql))
         updated_rows = db.cursor.rowcount

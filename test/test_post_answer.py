@@ -120,7 +120,7 @@ class TestUserPostAnswers(BaseTestCase):
         Answer = self.client.post(
             "/questions/1/answers",
             data=json.dumps(dict(
-                answer="This is my sample answer",
+                answer="This is my answer",
             )),
             headers={"content-type": "application/json",
                      "Authorization": token}
@@ -130,7 +130,7 @@ class TestUserPostAnswers(BaseTestCase):
         Answer2 = self.client.post(
             "/questions/1/answers",
             data=json.dumps(dict(
-                answer="This is my sample answer",
+                answer="This is my answer",
             )),
             headers={"content-type": "application/json",
                      "Authorization": token}

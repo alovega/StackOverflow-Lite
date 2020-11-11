@@ -1,7 +1,7 @@
 from datetime import datetime
 from flask_jwt_extended import jwt_required, get_jwt_identity
 from flask_restful import Resource, reqparse
-from models.models import DatabaseModel
+from models.models import DatabaseModel, insert_question
 
 AppDao = DatabaseModel()
 
@@ -29,8 +29,8 @@ class Questions(Resource):
 
     def __init__(self):
         self.request_parse = reqparse.RequestParser()
-        self.request_parse.add_argument('title', type=str, location='json')
-        self.request_parse.add_argument('details', type=str, location='json')
+        self.request_parse.add_argument('title', type=str, location=['json', 'form'])
+        self.request_parse.add_argument('details', type=str, location=['json', 'form'])
         super(Questions, self).__init__()
 
     @jwt_required
@@ -62,7 +62,6 @@ class Questions(Resource):
         if questions:
             return questions, 200
         return {"message": "no questions posted"}, 404
-
 
     @jwt_required
     def post(self):
@@ -178,8 +177,8 @@ class Answers(Resource):
 
     def __init__(self):
         self.reqparse = reqparse.RequestParser()
-        self.reqparse.add_argument('answer', type=str, location='json')
-        self.reqparse.add_argument('id', type=int, location='json')
+        self.reqparse.add_argument('answer', type=str, location=['json', 'form'])
+        self.reqparse.add_argument('id', type=int, location=['json', 'form'])
         super(Answers, self).__init__()
 
     @jwt_required
@@ -226,8 +225,8 @@ class Answer(Resource):
 
     def __init__(self):
         self.reqparse = reqparse.RequestParser()
-        self.reqparse.add_argument('answer', type=str, location='json')
-        self.reqparse.add_argument('id', type=str, location='json')
+        self.reqparse.add_argument('answer', type=str, location=['json', 'form'])
+        self.reqparse.add_argument('id', type=str, location=['json', 'form'])
         super(Answer, self).__init__()
 
     @jwt_required
@@ -283,7 +282,7 @@ class Answer(Resource):
             if check[0]['user_name'] == name:
                 if AppDao.check_answer_exists(answers.answer):
                     return {"message": "answer already posted"}, 400
-                AppDao.update_answer(answers.answer, answer_id)
+                AppDao.update_answer(answers.answer, id)
                 return {"update": answers.answer}, 201
         if not check:
             return {"message": "no such answer"}

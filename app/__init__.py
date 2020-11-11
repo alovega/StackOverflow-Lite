@@ -31,9 +31,9 @@ def create_api(app):
 
     api.add_resource(Questions, '/questions', endpoint='questions')
     api.add_resource(Question, '/questions/<int:id>', endpoint='question')
-    api.add_resource(Answers,'/questions/<int:id>/answers', endpoint='answers')
-    api.add_resource(Answer,'/questions/<int:id>/answers/<int:answer_id>', endpoint='answer')
-    api.add_resource(UserRegister,'/auth/signup', endpoint='Register')
+    api.add_resource(Answers, '/questions/<int:id>/answers', endpoint='answers')
+    api.add_resource(Answer, '/questions/<int:id>/answers/<int:answer_id>', endpoint='answer')
+    api.add_resource(UserRegister, '/auth/signup', endpoint='Register')
     api.add_resource(UserLogin, '/auth/login', endpoint='Login')
     api.add_resource(TokenRefresh, '/auth/login/refresh', endpoint='Refresh')
 
