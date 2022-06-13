@@ -7,3 +7,4 @@ models/__pycache__
 .vscode/
 .env
 .env.testing
+**/*.pyc

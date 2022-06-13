@@ -52,6 +52,7 @@ class BaseTestCase(unittest.TestCase):
     def setUp(self):
         """initialize app and define variables"""
         self.app = create_app(config_name='testing')
+        print(self.app.config.get('congfig_name'))
         self.app_context = self.app.app_context()
         self.app_context.push()
         self.client = self.app.test_client()

@@ -2,7 +2,7 @@ from flask_restful import Resource, reqparse
 from passlib.hash import pbkdf2_sha256 as sha256
 from models.models import DatabaseModel
 from flask_jwt_extended import (
-    create_access_token, create_refresh_token, jwt_refresh_token_required, get_jwt_identity
+    create_access_token, create_refresh_token, jwt_required, get_jwt_identity
 )
 
 AppDao = DatabaseModel()
@@ -139,7 +139,7 @@ class UserLogin(Resource):
 
 
 class TokenRefresh(Resource):
-    @jwt_refresh_token_required
+    @jwt_required(refresh=True)
     def post(self):
         current_user = get_jwt_identity()
         access_token = create_access_token(identity=current_user)
