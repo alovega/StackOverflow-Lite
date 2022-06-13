@@ -11,13 +11,13 @@ class Config(object):
 class DevelopmentConfig(Config):
     """Configurations for Development."""
     DEBUG = True
-    DATABASE_URL = "dbname='postgres' user='postgres' host='localhost' password='LUG4Z1V4'"
+    DATABASE_URL = "dbname='postgres' user='root' host='localhost' password='root'"
 
 
 class TestingConfig(Config):
     """Configurations for Testing, with a separate test database."""
     TESTING = True
-    DATABASE_URL = "dbname='test_db' user='postgres' host='localhost' password='LUG4Z1V4'"
+    DATABASE_URL = "dbname='test_db' user='root' host='localhost' password='root'"
     DEBUG = True
 
 
