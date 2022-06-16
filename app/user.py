@@ -1,19 +1,30 @@
+from distutils.log import error
+import re
+from flask import jsonify, make_response, request
 from flask_restful import Resource, reqparse
 from passlib.hash import pbkdf2_sha256 as sha256
-from models.models import DatabaseModel
 from flask_jwt_extended import (
     create_access_token, create_refresh_token, jwt_required, get_jwt_identity
 )
+from flask import current_app
 
-AppDao = DatabaseModel()
+from app.models import User, db
+from app.schema import UserFormSchema, UserSchema
 
 
+user_form = UserFormSchema()
+user_schema = UserSchema()
+users_schema = UserSchema(many=True)
 class UserData(object):
 
-    def __init__(self, email, username, password):
+    def __init__(self, email, username, name, password, **kwargs):
         self.email = email
         self.username = username
         self.password = password
+        self.name = name
+
+    def __str__(self):
+        return f"{self.name}"
 
     @staticmethod
     def generate_hash(password):
@@ -25,17 +36,6 @@ class UserData(object):
 
 
 class UserRegister(Resource):
-
-    def __init__(self):
-        self.request_parse = reqparse.RequestParser()
-        self.request_parse.add_argument(
-            'email', type=str, required=True, help='please input email', location=['json', 'form']
-        )
-        self.request_parse.add_argument('username', type=str, required=True, help='please input username',
-                                        location=['json', 'form'])
-        self.request_parse.add_argument('password', type=str, required=True, help='please input password',
-                                        location=['json', 'form'])
-        super(UserRegister, self).__init__()
 
     def post(self):
         """
@@ -54,36 +54,38 @@ class UserRegister(Resource):
                     description: User {} was created
                   400:
                     description: Bad request
-                """
-        args = self.request_parse.parse_args()
-        email = args['email']
-        username = args['username']
-        password = args['password']
+              """
+        try:
+            args = request.json
+            error = user_form.validate(args)
 
-        if not email.replace(" ", ""):
-            return {"message": "email not valid"}, 400
-        elif not password.replace(" ", ""):
-            return {"message": "input password it is empty"}, 400
-        elif not username.replace(" ", ""):
-            return {"message": "input valid username"}, 400
+            if error:
+                return make_response(jsonify({"message": f"{error}"}), 400)
 
-        user = UserData(email=email, username=username, password=password)
-
-        if AppDao.check_user_exist_by_email(user.email):
-            return {"message": "Email already used"}, 409
-        elif AppDao.check_user_exist_by_username(user.username):
-            return {"message": "username already used pick another one"}, 409
-
-        user.password = UserData.generate_hash(password)
-        AppDao.insert_user(user)
-
-        return {'message': 'User {0} was created'.format(username)}, 201
+            user = UserData(**args)
+            user.password = UserData.generate_hash(args['password'])
+            if User.query.filter_by(email=user.email).first():
+                return make_response(jsonify({"message": "email already exists"}), 403)
+            elif User.query.filter_by(username=user.username).first():
+                return make_response(jsonify({"message": "username already used"}), 403)
+            me = User(username=user.username, password=user.password, email=user.email, name=user.name)
+            db.session.add(me)
+            db.session.commit()
+            return make_response(jsonify({'message': 'User {0} was created'.format(user.username)}),201)
+        except Exception as e:
+            current_app.logger.error(f"{e}")
+            db.session.rollback()
+            return make_response(jsonify({"error": f"Server Error {e}"}), 500)
 
     @staticmethod
     def get():
-        result = AppDao.get_all()
-        return result
-
+        try:
+            result = User.query.all()
+            return users_schema.dump(result)
+        except Exception as e:
+            current_app.logger.error(e)
+            db.session.rollback()
+            return make_response(jsonify({"error": "Server Error"}), 500)
 
 class UserLogin(Resource):
     def __init__(self):
@@ -121,19 +123,18 @@ class UserLogin(Resource):
             return {"message": "input valid username"}, 400
         elif not password.replace(" ", ""):
             return {"message": "input password it is empty"}, 400
-        user = AppDao.get_user_by_username(args['username'])
-
+        user = User.query.filter_by(username=args['username']).first()
         if not user:
             return {"message": 'User {} doesn\'t exist'.format(args['username'])}, 404
 
-        if UserData.verify_hash(args['password'], user[0]['password']):
-            access_token = create_access_token(identity=user[0]['username'])
-            refresh_token = create_refresh_token(identity=user[0]['username'])
-            return {
-                       'message': 'Logged in as {}'.format(user[0]['username']),
+        if UserData.verify_hash(args['password'], user.password):
+            access_token = create_access_token(identity=user.username)
+            refresh_token = create_refresh_token(identity=user.username)
+            return make_response(jsonify( {
+                       'message': 'Logged in as {}'.format(user.username),
                        'access_token': access_token,
                        'refresh_token': refresh_token
-                   }, 202
+                   }), 202)
         else:
             return {'message': 'wrong credentials provided'}, 401
 

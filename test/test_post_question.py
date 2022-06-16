@@ -185,7 +185,7 @@ class TestUserPostQuestion(BaseTestCase):
                        "Authorization":token}
         )
         self.assertEqual(Question.status_code,201)
-
+        
         Question2 = self.client.post(
             "/questions",
             data=json.dumps(dict(
