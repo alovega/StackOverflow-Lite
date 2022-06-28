@@ -37,10 +37,6 @@ migrate.init_app(app, db)
 ma.init_app(app)
 mail.init_app(app)
 from .models import Answer, User, Question, Category, Badge
-# login_manager.init_app(app)
-# @login_manager.user_loader
-# def load_user(user_id):
-#     return User.query.filter(User.id == int(user_id)).first()
 api = Api(app)
 api.add_resource(ConfirmEmail, '/confirm/<token>', endpoint='Confirm')
 api.add_resource(UserRegister, '/auth/signup', endpoint='Register')

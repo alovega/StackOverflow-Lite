@@ -1,5 +1,4 @@
 import datetime
-
 from app.email import send_email
 from .token import generate_confirmation_token, confirm_token
 from flask import jsonify, make_response, render_template, request, url_for
@@ -18,7 +17,7 @@ from app.schema import UserFormSchema, UserSchema
 user_form = UserFormSchema()
 user_schema = UserSchema()
 users_schema = UserSchema(many=True)
-login_manager = LoginManager()
+# login_manager = LoginManager()
 
 class UserData(object):
 
@@ -80,7 +79,6 @@ class UserRegister(Resource):
             html = render_template('user/activate.html', confirm_url=confirm_url)
             subject = "Please confirm your email"
             send_email(user.email, subject, html)
-            login_user(me)
             return make_response(jsonify({'message': 'User {0} was created'.format(user.username)}),201)
         except Exception as e:
             current_app.logger.error(f"{e}")

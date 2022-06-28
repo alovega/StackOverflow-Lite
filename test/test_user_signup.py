@@ -5,9 +5,10 @@ class TestUserSignUp(BaseTestCase):
     """class for user sign up test case"""
     
     def test_user_sign_up(self):
-        request = {"email": "alovegakevin@gmail.com", "username": "alwa", "name": "pass", "password":"LUG4Z1V4"}
-        res = self.client.post("/auth/signup", json=request)
-        self.assertEqual(res.status_code, 201)
+        with self.app.app_context():
+            request = {"email": "alovegakevin@gmail.com", "username": "alwa", "name": "pass", "password":"LUG4Z1V4"}
+            res = self.client.post("/auth/signup", json=request)
+            self.assertEqual(res.status_code, 201)
 
     def test_user_name_empty(self):
         request = {"email": "alovegakevin@gmail.com", "username": "kelvin", "name":"", "password": "LUG4Z1V4"}

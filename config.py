@@ -26,6 +26,15 @@ class TestingConfig(Config):
     """Configurations for Testing, with a separate test database."""
     TESTING = True
     SQLALCHEMY_DATABASE_URI = "postgresql://root:root@localhost:5432/test_db"
+    SECRET_KEY = os.getenv('SECRET_KEY')
+    MAIL_SERVER  =  'smtp.mailtrap.io'
+    MAIL_PORT  = 2525
+    MAIL_USERNAME='6f0a580826fa2c'
+    MAIL_PASSWORD='c66df6573eb8b0'
+    MAIL_DEFAULT_SENDER='kelvin@example.com'
+    MAIL_USE_TLS = True
+    MAIL_USE_SSL = False
+    SECURITY_PASSWORD_SALT = os.getenv('SECURITY_PASSWORD_SALT')
     DEBUG = False
     SQLALCHEMY_TRACK_MODIFICATIONS = True
 

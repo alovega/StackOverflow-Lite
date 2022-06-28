@@ -3,8 +3,13 @@ from flask import current_app, jsonify, make_response
 from itsdangerous import BadSignature, Serializer, SignatureExpired, URLSafeTimedSerializer
 
 def generate_confirmation_token(email):
-    serializer = URLSafeTimedSerializer(current_app.config['SECRET_KEY'])
-    return serializer.dumps(email, salt=current_app.config['SECURITY_PASSWORD_SALT'])
+    try:
+        serializer = URLSafeTimedSerializer(current_app.config['SECRET_KEY'])
+        return serializer.dumps(email, salt=current_app.config['SECURITY_PASSWORD_SALT'])
+    
+    except Exception as e:
+        current_app.logger.error(f"{e}")
+        return {"Error": "Error while generating token"}
 
 
 def confirm_token(token, expiration=1):
@@ -18,10 +23,10 @@ def confirm_token(token, expiration=1):
         return email
     except SignatureExpired as e:
         current_app.logger.error(f"{e}")
-        return None
+        return {"Error": "token expired"}
     except BadSignature as e:
         current_app.logger.error(f"{e}")
-        return None
+        return {"Error": "Invalid token provided"}
 
 
 def generate_auth_token(email, expiration= 3600 * 15):
@@ -36,9 +41,9 @@ def verify_token(token):
         return email
     except SignatureExpired as e:
         current_app.logger.error(f"{e}")
-        return None
+        return {"Error": "token expired"}
     except BadSignature as e:
         current_app.logger.error(f"{e}")
-        return None
+        return {"Error": "Invalid token provided"}
 
     

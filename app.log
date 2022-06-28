@@ -800,3 +800,130 @@ WHERE "user".email = %(email_1)s
 2022-06-28 10:44:08,051 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
 2022-06-28 10:44:14,789 - werkzeug - _log():224]INFO in _internal:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
 2022-06-28 10:44:14,790 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-28 10:44:59,306 - werkzeug - _log():224]INFO in _internal:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+2022-06-28 10:44:59,307 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-28 10:45:42,688 - app - post():86]ERROR in user: 'NoneType' object is not iterable
+2022-06-28 10:45:47,392 - app - post():86]ERROR in user: 'NoneType' object is not iterable
+2022-06-28 10:45:47,852 - app - post():86]ERROR in user: 'NoneType' object is not iterable
+2022-06-28 10:45:48,520 - app - post():86]ERROR in user: 'NoneType' object is not iterable
+2022-06-28 11:47:57,757 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-28 11:47:57,956 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-28 12:02:22,228 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
+2022-06-28 12:02:22,375 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-28 12:03:23,109 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
+2022-06-28 12:03:23,244 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-28 12:03:43,289 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
+2022-06-28 12:03:43,460 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-28 12:04:16,737 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
+2022-06-28 12:04:16,945 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-28 12:06:04,497 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
+2022-06-28 12:06:04,644 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-28 12:06:24,565 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
+2022-06-28 12:06:24,720 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-28 12:06:40,634 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
+2022-06-28 12:06:40,802 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-28 12:07:04,631 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
+2022-06-28 12:07:04,825 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-28 12:07:56,571 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
+2022-06-28 12:07:56,724 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-28 12:08:16,602 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
+2022-06-28 12:08:16,756 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-28 12:08:31,644 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
+2022-06-28 12:08:31,822 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-28 12:12:51,008 - app - post():85]ERROR in user: 'NoneType' object is not iterable
+2022-06-28 12:12:57,218 - app - post():85]ERROR in user: 'NoneType' object is not iterable
+2022-06-28 12:13:05,978 - app - post():85]ERROR in user: 'NoneType' object is not iterable
+2022-06-28 12:13:14,995 - app - post():85]ERROR in user: 'NoneType' object is not iterable
+2022-06-28 12:13:51,052 - app - post():85]ERROR in user: 'NoneType' object is not iterable
+2022-06-28 12:15:21,923 - app - post():85]ERROR in user: 'NoneType' object is not iterable
+2022-06-28 12:15:44,168 - app - post():85]ERROR in user: 'NoneType' object is not iterable
+2022-06-28 12:18:04,365 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-28 12:18:04,552 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-28 12:19:06,878 - app - post():85]ERROR in user: 'NoneType' object is not iterable
+2022-06-28 12:19:27,526 - app - post():84]ERROR in user: (psycopg2.errors.UndefinedTable) relation "user" does not exist
+LINE 2: FROM "user" 
+             ^
+
+[SQL: SELECT "user".id AS user_id, "user".name AS user_name, "user".username AS user_username, "user".email AS user_email, "user".password AS user_password, "user".confirmed AS user_confirmed, "user".confirmed_on AS user_confirmed_on, "user".date_created AS user_date_created 
+FROM "user" 
+WHERE "user".email = %(email_1)s 
+ LIMIT %(param_1)s]
+[parameters: {'email_1': 'alovegakevin@gmail.com', 'param_1': 1}]
+(Background on this error at: https://sqlalche.me/e/14/f405)
+2022-06-28 12:19:44,488 - app - post():84]ERROR in user: 'NoneType' object is not iterable
+2022-06-28 12:20:35,561 - app - post():84]ERROR in user: 'NoneType' object is not iterable
+2022-06-28 12:23:02,587 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/token.py', reloading
+2022-06-28 12:23:02,783 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-28 12:23:20,815 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_base.py', reloading
+2022-06-28 12:23:20,993 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-28 12:24:14,819 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_base.py', reloading
+2022-06-28 12:24:15,012 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-28 12:24:44,132 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/config.py', reloading
+2022-06-28 12:24:44,432 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-28 12:27:21,489 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-28 12:27:48,167 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/config.py', reloading
+2022-06-28 12:27:48,331 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-28 12:28:02,227 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/config.py', reloading
+2022-06-28 12:28:02,379 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-28 12:29:03,246 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/config.py', reloading
+2022-06-28 12:29:03,455 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-28 12:29:45,139 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-28 12:30:04,977 - app - send_email():16]ERROR in email: 'MAIL_DEFAULT_SENDER'
+2022-06-28 12:31:07,930 - app - send_email():16]ERROR in email: 'MAIL_DEFAULT_SENDER'
+2022-06-28 12:32:37,995 - app - send_email():16]ERROR in email: 'MAIL_DEFAULT_SENDER'
+2022-06-28 12:36:29,833 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
+2022-06-28 12:36:29,983 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-28 12:37:01,883 - app - send_email():16]ERROR in email: 'MAIL_DEFAULT_SENDER'
+2022-06-28 12:37:54,593 - app - send_email():16]ERROR in email: 'MAIL_DEFAULT_SENDER'
+2022-06-28 12:37:55,095 - app - send_email():16]ERROR in email: 'MAIL_DEFAULT_SENDER'
+2022-06-28 12:38:37,754 - app - send_email():16]ERROR in email: 'MAIL_DEFAULT_SENDER'
+2022-06-28 12:43:38,332 - app - send_email():16]ERROR in email: 'MAIL_DEFAULT_SENDER'
+2022-06-28 12:43:53,733 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
+2022-06-28 12:43:53,963 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-28 12:44:00,047 - app - send_email():16]ERROR in email: 'MAIL_DEFAULT_SENDER'
+2022-06-28 12:44:00,649 - app - send_email():16]ERROR in email: 'MAIL_DEFAULT_SENDER'
+2022-06-28 12:44:01,333 - app - send_email():16]ERROR in email: 'MAIL_DEFAULT_SENDER'
+2022-06-28 12:45:38,230 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
+2022-06-28 12:45:38,359 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-28 12:48:46,081 - app - send_email():16]ERROR in email: 'MAIL_DEFAULT_SENDER'
+2022-06-28 12:49:26,286 - app - send_email():16]ERROR in email: 'MAIL_DEFAULT_SENDER'
+2022-06-28 12:52:28,143 - app - send_email():16]ERROR in email: 'MAIL_DEFAULT_SENDER'
+2022-06-28 12:55:10,110 - app - send_email():16]ERROR in email: 'MAIL_DEFAULT_SENDER'
+2022-06-28 12:56:45,986 - app - send_email():16]ERROR in email: 'MAIL_DEFAULT_SENDER'
+2022-06-28 12:57:19,896 - app - send_email():16]ERROR in email: 'MAIL_DEFAULT_SENDER'
+2022-06-28 13:09:10,425 - app - send_email():16]ERROR in email: 'MAIL_DEFAULT_SENDER'
+2022-06-28 13:11:13,875 - app - send_email():16]ERROR in email: 'MAIL_DEFAULT_SENDER'
+2022-06-28 13:11:15,435 - app - send_email():16]ERROR in email: 'MAIL_DEFAULT_SENDER'
+2022-06-28 13:13:21,761 - app - send_email():16]ERROR in email: 'MAIL_DEFAULT_SENDER'
+2022-06-28 13:13:23,859 - app - send_email():16]ERROR in email: 'MAIL_DEFAULT_SENDER'
+2022-06-28 13:19:28,742 - app - send_email():16]ERROR in email: 'MAIL_DEFAULT_SENDER'
+2022-06-28 13:20:45,358 - app - send_email():16]ERROR in email: 'MAIL_DEFAULT_SENDER'
+2022-06-28 13:20:47,455 - app - send_email():16]ERROR in email: 'MAIL_DEFAULT_SENDER'
+2022-06-28 13:20:47,924 - app - send_email():16]ERROR in email: 'MAIL_DEFAULT_SENDER'
+2022-06-28 13:20:48,774 - app - send_email():16]ERROR in email: 'MAIL_DEFAULT_SENDER'
+2022-06-28 13:23:57,815 - app - send_email():16]ERROR in email: 'MAIL_DEFAULT_SENDER'
+2022-06-28 13:23:59,973 - app - send_email():16]ERROR in email: 'MAIL_DEFAULT_SENDER'
+2022-06-28 13:24:00,585 - app - send_email():16]ERROR in email: 'MAIL_DEFAULT_SENDER'
+2022-06-28 13:24:01,508 - app - send_email():16]ERROR in email: 'MAIL_DEFAULT_SENDER'
+2022-06-28 13:31:05,047 - app - send_email():16]ERROR in email: 'MAIL_DEFAULT_SENDER'
+2022-06-28 13:31:37,189 - app - send_email():16]ERROR in email: 'MAIL_DEFAULT_SENDER'
+2022-06-28 13:31:37,684 - app - send_email():16]ERROR in email: 'MAIL_DEFAULT_SENDER'
+2022-06-28 13:31:38,402 - app - send_email():16]ERROR in email: 'MAIL_DEFAULT_SENDER'
+2022-06-28 13:32:17,621 - app - send_email():16]ERROR in email: 'MAIL_DEFAULT_SENDER'
+2022-06-28 13:32:18,251 - app - send_email():16]ERROR in email: 'MAIL_DEFAULT_SENDER'
+2022-06-28 13:32:19,072 - app - send_email():16]ERROR in email: 'MAIL_DEFAULT_SENDER'
+2022-06-28 13:33:22,371 - app - send_email():16]ERROR in email: 'MAIL_DEFAULT_SENDER'
+2022-06-28 13:33:22,842 - app - send_email():16]ERROR in email: 'MAIL_DEFAULT_SENDER'
+2022-06-28 13:33:23,693 - app - send_email():16]ERROR in email: 'MAIL_DEFAULT_SENDER'
+2022-06-28 13:35:40,561 - app - send_email():16]ERROR in email: 'MAIL_DEFAULT_SENDER'
+2022-06-28 13:35:41,181 - app - send_email():16]ERROR in email: 'MAIL_DEFAULT_SENDER'
+2022-06-28 13:38:05,637 - app - send_email():16]ERROR in email: 'MAIL_DEFAULT_SENDER'
+2022-06-28 13:50:09,909 - app - send_email():16]ERROR in email: (530, b'5.7.0 Authentication Required. Learn more at\n5.7.0  https://support.google.com/mail/?p=WantAuthError d9-20020a05600c3ac900b003a03be22f9fsm17883858wms.18 - gsmtp', 'kelvin@example.com')
+2022-06-28 13:50:12,414 - app - send_email():16]ERROR in email: (530, b'5.7.0 Authentication Required. Learn more at\n5.7.0  https://support.google.com/mail/?p=WantAuthError m2-20020a7bcb82000000b0039744bd664esm20833211wmi.13 - gsmtp', 'kelvin@example.com')
+2022-06-28 13:50:45,591 - app - send_email():16]ERROR in email: (530, b'5.7.0 Authentication Required. Learn more at\n5.7.0  https://support.google.com/mail/?p=WantAuthError o19-20020a05600c511300b0039c7dbafa7asm21387355wms.19 - gsmtp', 'kelvin@example.com')
+2022-06-28 13:52:11,193 - app - send_email():16]ERROR in email: (530, b'5.7.0 Authentication Required. Learn more at\n5.7.0  https://support.google.com/mail/?p=WantAuthError y15-20020a5d4acf000000b0021b9c520953sm13274624wrs.64 - gsmtp', 'kelvin@example.com')
+2022-06-28 13:52:14,163 - app - send_email():16]ERROR in email: (530, b'5.7.0 Authentication Required. Learn more at\n5.7.0  https://support.google.com/mail/?p=WantAuthError d10-20020adff2ca000000b0021a38089e99sm13331868wrp.57 - gsmtp', 'kelvin@example.com')
+2022-06-28 13:52:18,362 - app - send_email():16]ERROR in email: (530, b'5.7.0 Authentication Required. Learn more at\n5.7.0  https://support.google.com/mail/?p=WantAuthError bs30-20020a056000071e00b0021bb9071374sm11847073wrb.53 - gsmtp', 'kelvin@example.com')
+2022-06-28 13:52:31,778 - app - send_email():16]ERROR in email: (530, b'5.7.0 Authentication Required. Learn more at\n5.7.0  https://support.google.com/mail/?p=WantAuthError a3-20020a056000100300b0021b943a50b3sm13670947wrx.85 - gsmtp', 'kelvin@example.com')
+2022-06-28 13:52:34,744 - app - send_email():16]ERROR in email: (530, b'5.7.0 Authentication Required. Learn more at\n5.7.0  https://support.google.com/mail/?p=WantAuthError q11-20020adfea0b000000b0020fff0ea0a3sm13120783wrm.116 - gsmtp', 'kelvin@example.com')
+2022-06-28 13:54:14,062 - app - send_email():16]ERROR in email: (530, b'5.7.0 Authentication Required. Learn more at\n5.7.0  https://support.google.com/mail/?p=WantAuthError n12-20020a5d420c000000b0021b8d1b0568sm13600909wrq.52 - gsmtp', 'kelvin@example.com')
