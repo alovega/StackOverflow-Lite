@@ -794,3 +794,9 @@ WHERE "user".email = %(email_1)s
 2022-06-27 19:37:08,145 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
 2022-06-27 19:37:51,600 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/decorator.py', reloading
 2022-06-27 19:37:51,754 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-28 10:42:47,594 - werkzeug - _log():224]INFO in _internal:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+2022-06-28 10:42:47,595 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-28 10:44:07,854 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/config.py', reloading
+2022-06-28 10:44:08,051 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-28 10:44:14,789 - werkzeug - _log():224]INFO in _internal:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+2022-06-28 10:44:14,790 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
