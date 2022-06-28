@@ -4,14 +4,15 @@ import os
 from flasgger import Swagger
 from flask_jwt_extended import JWTManager
 from .models import *
+from .email import *
 from .schema import ma
 # from app.templates import TEMPLATE
-from .user import UserRegister, UserLogin, TokenRefresh
+from .user import *
 from config import app_config
 
 import logging
 
-logging.basicConfig(filename = 'app.log', level=logging.ERROR, format = '%(asctime)s - %(name)s - %(levelname)s: %(message)s')
+logging.basicConfig(filename = 'app.log', level=logging.ERROR, format = '%(asctime)s - %(name)s - %(funcName)s():%(lineno)s]%(levelname)s in %(module)s: %(message)s')
 
 def create_api(app):
 
@@ -25,7 +26,6 @@ def create_api(app):
     api.add_resource(UserLogin, '/auth/login', endpoint='Login')
     api.add_resource(TokenRefresh, '/auth/login/refresh', endpoint='Refresh')
 
-
 app = Flask(__name__)
 app.config['JWT_SECRET_KEY'] = 'jwt-secret-string'
 app.config.from_object(app_config.get(os.environ.get('APP_SETTINGS')))
@@ -35,8 +35,14 @@ jwt = JWTManager(app)
 db.init_app(app)
 migrate.init_app(app, db)
 ma.init_app(app)
+mail.init_app(app)
 from .models import Answer, User, Question, Category, Badge
+# login_manager.init_app(app)
+# @login_manager.user_loader
+# def load_user(user_id):
+#     return User.query.filter(User.id == int(user_id)).first()
 api = Api(app)
+api.add_resource(ConfirmEmail, '/confirm/<token>', endpoint='Confirm')
 api.add_resource(UserRegister, '/auth/signup', endpoint='Register')
 api.add_resource(UserLogin, '/auth/login', endpoint='Login')
 api.add_resource(TokenRefresh, '/auth/login/refresh', endpoint='Refresh')

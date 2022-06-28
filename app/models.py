@@ -16,7 +16,29 @@ class User(db.Model):
     email = db.Column(db.String(100), unique=True, index=True)
     password = db.Column(db.String(200))
     badges = db.relationship('Badge', secondary=badges, lazy='subquery', backref=db.backref('users', lazy=True))
+    confirmed = db.Column(db.Boolean, nullable=False, default=False)
+    confirmed_on = db.Column(db.DateTime, nullable=True)
     date_created = db.Column(db.DateTime, nullable=False,default=datetime.utcnow)
+    
+    def __init__(self, email, username, name, password, confirmed, confirmed_on=None):
+        self.email = email
+        self.username = username
+        self.name = name
+        self.password = password
+        self.confirmed = confirmed
+        self.confirmed_on = confirmed_on
+    
+    def is_authenticated(self):
+        return True
+
+    def is_active(self):
+        return True
+
+    def is_anonymous(self):
+        return False
+
+    def get_id(self):
+        return self.id
 
 class Badge(db.Model):
     id = db.Column(db.Integer, primary_key=True)

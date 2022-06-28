@@ -14,6 +14,22 @@ class DevelopmentConfig(Config):
     """Configurations for Development."""
     FLASK_ENV = 'development'
     DEBUG = False
+    SECRET_KEY = 'Kelvin Alwa!'
+    SECURITY_PASSWORD_SALT = 'my_precious_two'
+    # MAIL_SERVER = 'smtp.gmail.com'
+    # MAIL_PORT = 465
+    # MAIL_USE_TLS = False
+    # MAIL_USE_SSL = True
+    # MAIL_USERNAME = os.environ['APP_MAIL_USERNAME']
+    # MAIL_PASSWORD = os.environ['APP_MAIL_PASSWORD']
+    # MAIL_DEFAULT_SENDER = 'kelvinlugaziva@gmail.com'
+    MAIL_SERVER  =  'smtp.gmail.com'
+    MAIL_PORT  = 465
+    MAIL_USERNAME = 'kelvinlugaziva@gmail.com'
+    MAIL_PASSWORD = 'efbfvelcbqobxudi'
+    MAIL_DEFAULT_SENDER = 'kelvinlugaziva@gmail.com'
+    MAIL_USE_TLS = False
+    MAIL_USE_SSL = True
     SQLALCHEMY_DATABASE_URI = "postgresql://root:root@localhost:5432/postgres"
     SQLALCHEMY_TRACK_MODIFICATIONS = True
 

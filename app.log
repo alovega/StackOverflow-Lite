@@ -1,561 +1,796 @@
-2022-06-15 19:22:18,101 - werkzeug - INFO:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
-2022-06-15 19:22:18,102 - werkzeug - INFO:  * Restarting with stat
-2022-06-15 19:22:26,955 - app - ERROR: (psycopg2.OperationalError) FATAL:  password authentication failed for user "roo"
+2022-06-27 12:01:33,279 - werkzeug - _log():224]INFO in _internal:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+2022-06-27 12:01:33,280 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 12:02:08,272 - app - send_email():16]ERROR in email: (530, b'5.7.0 Authentication Required. Learn more at\n5.7.0  https://support.google.com/mail/?p=WantAuthError r15-20020a05600c35cf00b003a0375c4f73sm11794110wmq.44 - gsmtp', 'admin@askquestions.com')
+2022-06-27 12:02:08,272 - app - post():85]ERROR in user: 'UserData' object has no attribute 'is_active'
+2022-06-27 12:02:08,274 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 12:02:08] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 500 -
+2022-06-27 12:03:26,113 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 12:03:26,290 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 12:04:46,721 - app - send_email():16]ERROR in email: (530, b'5.7.0 Authentication Required. Learn more at\n5.7.0  https://support.google.com/mail/?p=WantAuthError g12-20020a7bc4cc000000b003a03185231bsm12226429wmk.31 - gsmtp', 'admin@askquestions.com')
+2022-06-27 12:04:46,721 - app - post():85]ERROR in user: 'User' object has no attribute 'is_active'
+2022-06-27 12:04:46,722 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 12:04:46] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 500 -
+2022-06-27 12:10:15,261 - werkzeug - _log():224]INFO in _internal:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+2022-06-27 12:10:15,262 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 12:10:39,172 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/config.py', reloading
+2022-06-27 12:10:39,354 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 12:16:25,079 - werkzeug - _log():224]INFO in _internal:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+2022-06-27 12:16:25,080 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 12:16:30,210 - app - send_email():16]ERROR in email: (530, b'5.7.0 Authentication Required. Learn more at\n5.7.0  https://support.google.com/mail/?p=WantAuthError c16-20020adfe750000000b002103a7c5c91sm9693292wrn.43 - gsmtp', 'alovegakevin@gmail.com')
+2022-06-27 12:16:30,210 - app - post():85]ERROR in user: 'User' object has no attribute 'is_active'
+2022-06-27 12:16:30,211 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 12:16:30] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 500 -
+2022-06-27 12:17:12,538 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/config.py', reloading
+2022-06-27 12:17:12,806 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 12:18:55,382 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/config.py', reloading
+2022-06-27 12:18:55,571 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 12:23:21,451 - werkzeug - _log():224]INFO in _internal:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+2022-06-27 12:23:21,452 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 12:23:57,084 - app - send_email():16]ERROR in email: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials r4-20020a05600c158400b0039c457cea21sm11971723wmf.34 - gsmtp')
+2022-06-27 12:23:57,085 - app - post():85]ERROR in user: 'User' object has no attribute 'is_active'
+2022-06-27 12:23:57,089 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 12:23:57] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 500 -
+2022-06-27 12:25:08,317 - werkzeug - _log():224]INFO in _internal:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+2022-06-27 12:25:08,318 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 12:25:34,169 - app - send_email():16]ERROR in email: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials k1-20020a5d6281000000b0021b9e360523sm10087884wru.8 - gsmtp')
+2022-06-27 12:25:34,169 - app - post():85]ERROR in user: 'User' object has no attribute 'is_active'
+2022-06-27 12:25:34,170 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 12:25:34] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 500 -
+2022-06-27 12:25:38,058 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 12:25:38] "[31m[1mPOST /auth/signup HTTP/1.1[0m" 403 -
+2022-06-27 12:29:06,973 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/config.py', reloading
+2022-06-27 12:29:07,207 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 12:29:22,379 - werkzeug - _log():224]INFO in _internal:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+2022-06-27 12:29:22,380 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 12:30:05,461 - werkzeug - _log():224]INFO in _internal:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+2022-06-27 12:30:05,462 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 12:30:57,761 - app - send_email():16]ERROR in email: (534, b'5.7.9 Application-specific password required. Learn more at\n5.7.9  https://support.google.com/mail/?p=InvalidSecondFactor y10-20020a1c4b0a000000b0039c587342d8sm16971178wma.3 - gsmtp')
+2022-06-27 12:30:57,761 - app - post():85]ERROR in user: 'User' object has no attribute 'is_active'
+2022-06-27 12:30:57,762 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 12:30:57] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 500 -
+2022-06-27 12:36:40,961 - werkzeug - _log():224]INFO in _internal:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+2022-06-27 12:36:40,962 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 12:37:14,679 - app - send_email():16]ERROR in email: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials n7-20020a5d67c7000000b0021b9e8d4c22sm10012339wrw.61 - gsmtp')
+2022-06-27 12:37:14,680 - app - post():85]ERROR in user: 'User' object has no attribute 'is_active'
+2022-06-27 12:37:14,683 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 12:37:14] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 500 -
+2022-06-27 12:46:41,473 - werkzeug - _log():224]INFO in _internal:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+2022-06-27 12:46:41,477 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 12:47:42,281 - app - send_email():16]ERROR in email: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials n12-20020a5d6b8c000000b0020c5253d8fcsm11815244wrx.72 - gsmtp')
+2022-06-27 12:47:42,281 - app - post():85]ERROR in user: 'User' object has no attribute 'is_active'
+2022-06-27 12:47:42,286 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 12:47:42] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 500 -
+2022-06-27 12:53:31,782 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/config.py', reloading
+2022-06-27 12:53:31,995 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 12:54:14,175 - app - send_email():16]ERROR in email: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials r1-20020aa7cb81000000b004357b717a96sm7236127edt.85 - gsmtp')
+2022-06-27 12:54:14,176 - app - post():85]ERROR in user: 'User' object has no attribute 'is_active'
+2022-06-27 12:54:14,176 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 12:54:14] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 500 -
+2022-06-27 12:58:53,372 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/config.py', reloading
+2022-06-27 12:58:53,808 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 12:59:16,603 - app - send_email():16]ERROR in email: [Errno 111] Connection refused
+2022-06-27 12:59:16,603 - app - post():85]ERROR in user: 'User' object has no attribute 'is_active'
+2022-06-27 12:59:16,604 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 12:59:16] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 500 -
+2022-06-27 12:59:19,472 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 12:59:19] "[31m[1mPOST /auth/signup HTTP/1.1[0m" 403 -
+2022-06-27 13:00:21,086 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/config.py', reloading
+2022-06-27 13:00:21,373 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 13:00:26,774 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/config.py', reloading
+2022-06-27 13:00:26,977 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 13:00:36,616 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/config.py', reloading
+2022-06-27 13:00:36,771 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 13:00:45,374 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/config.py', reloading
+2022-06-27 13:00:45,570 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 13:01:04,386 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/config.py', reloading
+2022-06-27 13:01:04,669 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 13:01:16,787 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/config.py', reloading
+2022-06-27 13:01:17,017 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 13:01:33,799 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/config.py', reloading
+2022-06-27 13:01:33,964 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 13:02:07,106 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/config.py', reloading
+2022-06-27 13:02:07,276 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 13:02:31,297 - app - send_email():16]ERROR in email: 'MAIL_DEFAULT_SENDER'
+2022-06-27 13:02:31,297 - app - post():85]ERROR in user: 'User' object has no attribute 'is_active'
+2022-06-27 13:02:31,298 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 13:02:31] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 500 -
+2022-06-27 13:02:35,137 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 13:02:35] "[31m[1mPOST /auth/signup HTTP/1.1[0m" 403 -
+2022-06-27 13:03:17,102 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/config.py', reloading
+2022-06-27 13:03:17,323 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 13:03:58,199 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 13:04:30,216 - app - send_email():16]ERROR in email: Connection unexpectedly closed
+2022-06-27 13:04:30,217 - app - post():85]ERROR in user: 'User' object has no attribute 'is_active'
+2022-06-27 13:04:30,220 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 13:04:30] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 500 -
+2022-06-27 13:06:05,347 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/config.py', reloading
+2022-06-27 13:06:05,631 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 13:06:41,951 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 13:06:42,129 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 13:06:44,398 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 13:06:44] "[31m[1mPOST /auth/signup HTTP/1.1[0m" 403 -
+2022-06-27 13:06:46,684 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 13:06:46] "[31m[1mPOST /auth/signup HTTP/1.1[0m" 403 -
+2022-06-27 13:07:24,910 - app - send_email():16]ERROR in email: Connection unexpectedly closed
+2022-06-27 13:07:24,910 - app - post():85]ERROR in user: 'User' object has no attribute 'is_active'
+2022-06-27 13:07:24,912 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 13:07:24] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 500 -
+2022-06-27 13:09:53,465 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 13:09:53,658 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 13:10:03,835 - app - send_email():16]ERROR in email: Connection unexpectedly closed
+2022-06-27 13:10:03,836 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 13:10:03] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 201 -
+2022-06-27 13:10:30,259 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 13:10:30,462 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 13:10:49,096 - app - send_email():16]ERROR in email: Connection unexpectedly closed
+2022-06-27 13:10:49,097 - app - post():85]ERROR in user: 'User' object has no attribute 'is_active'
+2022-06-27 13:10:49,100 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 13:10:49] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 500 -
+2022-06-27 13:14:05,971 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 13:14:06,163 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 13:14:40,464 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/models.py', reloading
+2022-06-27 13:14:40,756 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 13:14:56,457 - flask_migrate - wrapped():100]ERROR in __init__: Error: Directory migrations already exists and is not empty
+2022-06-27 13:17:11,318 - werkzeug - _log():224]INFO in _internal:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+2022-06-27 13:17:11,319 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 13:17:27,229 - app - send_email():16]ERROR in email: Connection unexpectedly closed
+2022-06-27 13:17:27,236 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 13:17:27] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 201 -
+2022-06-27 13:20:13,520 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/config.py', reloading
+2022-06-27 13:20:13,749 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 13:20:33,079 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/config.py', reloading
+2022-06-27 13:20:33,324 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 13:21:09,860 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 13:21:10,079 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 13:21:19,590 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 13:21:19] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 201 -
+2022-06-27 13:21:54,813 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 13:21:54] "[35m[1mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmEmg.qSfqyNgIy87rFAYeN3lFy-tZ1Uc HTTP/1.1[0m" 500 -
+2022-06-27 13:21:55,699 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 13:21:55] "GET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmEmg.qSfqyNgIy87rFAYeN3lFy-tZ1Uc?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2022-06-27 13:21:55,710 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 13:21:55] "GET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmEmg.qSfqyNgIy87rFAYeN3lFy-tZ1Uc?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2022-06-27 13:21:56,091 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 13:21:56] "GET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmEmg.qSfqyNgIy87rFAYeN3lFy-tZ1Uc?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2022-06-27 13:22:35,225 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 13:22:35,409 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 13:22:40,029 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 13:22:40] "[35m[1mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmEmg.qSfqyNgIy87rFAYeN3lFy-tZ1Uc HTTP/1.1[0m" 500 -
+2022-06-27 13:22:40,305 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 13:22:40] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmEmg.qSfqyNgIy87rFAYeN3lFy-tZ1Uc?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2022-06-27 13:22:40,307 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 13:22:40] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmEmg.qSfqyNgIy87rFAYeN3lFy-tZ1Uc?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2022-06-27 13:22:40,483 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 13:22:40] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmEmg.qSfqyNgIy87rFAYeN3lFy-tZ1Uc?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-06-27 13:22:40,718 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 13:22:40] "GET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmEmg.qSfqyNgIy87rFAYeN3lFy-tZ1Uc?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2022-06-27 13:24:27,766 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/config.py', reloading
+2022-06-27 13:24:27,967 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 13:24:45,185 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 13:24:45] "[35m[1mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmEmg.qSfqyNgIy87rFAYeN3lFy-tZ1Uc HTTP/1.1[0m" 500 -
+2022-06-27 13:24:45,555 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 13:24:45] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmEmg.qSfqyNgIy87rFAYeN3lFy-tZ1Uc?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2022-06-27 13:24:45,621 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 13:24:45] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmEmg.qSfqyNgIy87rFAYeN3lFy-tZ1Uc?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2022-06-27 13:24:46,257 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 13:24:46] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmEmg.qSfqyNgIy87rFAYeN3lFy-tZ1Uc?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-06-27 13:27:02,620 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/config.py', reloading
+2022-06-27 13:27:02,786 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 13:27:56,377 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/config.py', reloading
+2022-06-27 13:27:56,596 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 13:28:12,523 - app - send_email():16]ERROR in email: Connection unexpectedly closed
+2022-06-27 13:28:12,525 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 13:28:12] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 201 -
+2022-06-27 13:28:47,030 - app - send_email():16]ERROR in email: Connection unexpectedly closed
+2022-06-27 13:28:47,031 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 13:28:47] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 201 -
+2022-06-27 13:29:31,907 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/config.py', reloading
+2022-06-27 13:29:32,082 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 13:29:48,673 - app - send_email():16]ERROR in email: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials n14-20020a05600c500e00b003a03564a005sm14695598wmr.10 - gsmtp')
+2022-06-27 13:29:48,674 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 13:29:48] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 201 -
+2022-06-27 13:36:05,596 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/config.py', reloading
+2022-06-27 13:36:05,795 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 13:36:17,523 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 13:36:17] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 201 -
+2022-06-27 13:37:38,382 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 13:37:38] "[35m[1mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmIHg.APNHNplfncTmsMe3_4rwi7um4lw HTTP/1.1[0m" 500 -
+2022-06-27 13:37:38,641 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 13:37:38] "GET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmIHg.APNHNplfncTmsMe3_4rwi7um4lw?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2022-06-27 13:37:38,734 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 13:37:38] "GET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmIHg.APNHNplfncTmsMe3_4rwi7um4lw?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2022-06-27 13:37:39,047 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 13:37:39] "GET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmIHg.APNHNplfncTmsMe3_4rwi7um4lw?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2022-06-27 13:41:05,007 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/config.py', reloading
+2022-06-27 13:41:05,230 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 13:41:11,411 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 13:41:11] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 201 -
+2022-06-27 13:42:00,573 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 13:42:00] "[35m[1mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmJRQ.hUaknTQkLchYOhO0cwUb_y0dGDE HTTP/1.1[0m" 500 -
+2022-06-27 13:42:01,289 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 13:42:01] "GET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmJRQ.hUaknTQkLchYOhO0cwUb_y0dGDE?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2022-06-27 13:42:01,294 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 13:42:01] "GET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmJRQ.hUaknTQkLchYOhO0cwUb_y0dGDE?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2022-06-27 13:42:01,759 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 13:42:01] "GET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmJRQ.hUaknTQkLchYOhO0cwUb_y0dGDE?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2022-06-27 13:44:37,792 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/decorator.py', reloading
+2022-06-27 13:44:38,006 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 13:44:48,110 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/decorator.py', reloading
+2022-06-27 13:44:48,316 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 13:44:53,805 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/decorator.py', reloading
+2022-06-27 13:44:54,004 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 13:45:17,799 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/decorator.py', reloading
+2022-06-27 13:45:18,074 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 13:45:37,125 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/decorator.py', reloading
+2022-06-27 13:45:37,328 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 13:46:00,268 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/decorator.py', reloading
+2022-06-27 13:46:00,475 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 13:46:25,664 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/decorator.py', reloading
+2022-06-27 13:46:25,925 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 13:46:56,273 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 13:46:56,504 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 13:50:29,431 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/__init__.py', reloading
+2022-06-27 13:50:29,618 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 13:51:01,002 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/__init__.py', reloading
+2022-06-27 13:51:01,193 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 13:51:16,104 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 13:51:16] "[35m[1mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmJRQ.hUaknTQkLchYOhO0cwUb_y0dGDE HTTP/1.1[0m" 500 -
+2022-06-27 13:51:16,873 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 13:51:16] "GET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmJRQ.hUaknTQkLchYOhO0cwUb_y0dGDE?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2022-06-27 13:51:16,928 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 13:51:16] "GET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmJRQ.hUaknTQkLchYOhO0cwUb_y0dGDE?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2022-06-27 13:51:17,699 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 13:51:17] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmJRQ.hUaknTQkLchYOhO0cwUb_y0dGDE?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-06-27 13:51:17,934 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 13:51:17] "GET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmJRQ.hUaknTQkLchYOhO0cwUb_y0dGDE?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2022-06-27 13:52:02,049 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 13:52:02,293 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 13:52:04,593 - app - post():85]ERROR in user: Missing user_loader or request_loader. Refer to http://flask-login.readthedocs.io/#how-it-works for more info.
+2022-06-27 13:52:04,595 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 13:52:04] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 500 -
+2022-06-27 13:55:24,515 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/__init__.py', reloading
+2022-06-27 13:55:24,697 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 13:55:33,823 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 13:55:34,043 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 13:55:41,157 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 13:57:05,163 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 13:57:05,445 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 13:57:07,884 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 13:57:07] "[33mGET /questions/1 HTTP/1.1[0m" 404 -
+2022-06-27 13:57:11,529 - app - post():86]ERROR in user: Missing user_loader or request_loader. Refer to http://flask-login.readthedocs.io/#how-it-works for more info.
+2022-06-27 13:57:11,577 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 13:57:11] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 500 -
+2022-06-27 13:57:13,924 - app - post():86]ERROR in user: Missing user_loader or request_loader. Refer to http://flask-login.readthedocs.io/#how-it-works for more info.
+2022-06-27 13:57:13,925 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 13:57:13] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 500 -
+2022-06-27 13:58:01,529 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 13:58:01] "[35m[1mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmJRQ.hUaknTQkLchYOhO0cwUb_y0dGDE HTTP/1.1[0m" 500 -
+2022-06-27 13:58:02,024 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 13:58:02] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmJRQ.hUaknTQkLchYOhO0cwUb_y0dGDE?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2022-06-27 13:58:02,025 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 13:58:02] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmJRQ.hUaknTQkLchYOhO0cwUb_y0dGDE?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2022-06-27 13:58:02,373 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 13:58:02] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmJRQ.hUaknTQkLchYOhO0cwUb_y0dGDE?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-06-27 14:01:45,612 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 14:01:45,822 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 14:02:18,520 - app - post():86]ERROR in user: maximum recursion depth exceeded
+2022-06-27 14:02:42,997 - werkzeug - _log():224]INFO in _internal:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+2022-06-27 14:02:42,999 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 14:03:16,120 - app - post():86]ERROR in user: maximum recursion depth exceeded
+2022-06-27 14:03:49,594 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 14:03:49,762 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 14:03:53,822 - app - post():85]ERROR in user: Missing user_loader or request_loader. Refer to http://flask-login.readthedocs.io/#how-it-works for more info.
+2022-06-27 14:03:53,844 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 14:03:53] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 500 -
+2022-06-27 14:08:57,709 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 14:08:57,911 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 14:09:07,529 - app - post():85]ERROR in user: Missing user_loader or request_loader. Refer to http://flask-login.readthedocs.io/#how-it-works for more info.
+2022-06-27 14:09:07,531 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 14:09:07] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 500 -
+2022-06-27 14:09:40,284 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 14:09:40,577 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 14:13:29,748 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 14:13:29,985 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 14:14:58,747 - app - post():85]ERROR in user: Missing user_loader or request_loader. Refer to http://flask-login.readthedocs.io/#how-it-works for more info.
+2022-06-27 14:14:58,748 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 14:14:58] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 500 -
+2022-06-27 14:15:36,123 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 14:15:36,411 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 14:15:39,716 - app - post():85]ERROR in user: Missing user_loader or request_loader. Refer to http://flask-login.readthedocs.io/#how-it-works for more info.
+2022-06-27 14:15:39,717 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 14:15:39] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 500 -
+2022-06-27 14:15:42,097 - app - post():85]ERROR in user: Missing user_loader or request_loader. Refer to http://flask-login.readthedocs.io/#how-it-works for more info.
+2022-06-27 14:15:42,098 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 14:15:42] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 500 -
+2022-06-27 14:16:12,669 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 14:16:12,893 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 14:16:48,294 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/__init__.py', reloading
+2022-06-27 14:16:48,490 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 14:16:52,970 - app - post():85]ERROR in user: Missing user_loader or request_loader. Refer to http://flask-login.readthedocs.io/#how-it-works for more info.
+2022-06-27 14:16:52,972 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 14:16:52] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 500 -
+2022-06-27 14:17:06,459 - app - post():85]ERROR in user: Missing user_loader or request_loader. Refer to http://flask-login.readthedocs.io/#how-it-works for more info.
+2022-06-27 14:17:06,460 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 14:17:06] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 500 -
+2022-06-27 14:18:37,791 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 14:18:38,048 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 14:19:18,886 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 14:19:18] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 201 -
+2022-06-27 14:20:11,816 - app - post():86]ERROR in user: 400 Bad Request: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+2022-06-27 14:20:11,829 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 14:20:11] "[35m[1mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmSMw.Sg9t7V0eti5QOZPTgGXx50FrMn4 HTTP/1.1[0m" 500 -
+2022-06-27 14:20:12,148 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 14:20:12] "GET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmSMw.Sg9t7V0eti5QOZPTgGXx50FrMn4?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2022-06-27 14:20:12,155 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 14:20:12] "GET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmSMw.Sg9t7V0eti5QOZPTgGXx50FrMn4?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2022-06-27 14:20:12,607 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 14:20:12] "GET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmSMw.Sg9t7V0eti5QOZPTgGXx50FrMn4?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2022-06-27 14:21:26,303 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 14:21:26,563 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 14:21:43,625 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 14:21:43] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 201 -
+2022-06-27 14:22:29,528 - app - post():86]ERROR in user: 400 Bad Request: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+2022-06-27 14:22:29,547 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 14:22:29] "[35m[1mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmSxA.NZcgaKhRVu_mEsPFot4U5T7vg-I HTTP/1.1[0m" 500 -
+2022-06-27 14:22:30,317 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 14:22:30] "GET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmSxA.NZcgaKhRVu_mEsPFot4U5T7vg-I?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2022-06-27 14:22:30,326 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 14:22:30] "GET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmSxA.NZcgaKhRVu_mEsPFot4U5T7vg-I?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2022-06-27 14:22:31,500 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 14:22:31] "GET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmSxA.NZcgaKhRVu_mEsPFot4U5T7vg-I?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2022-06-27 14:22:31,739 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 14:22:31] "GET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmSxA.NZcgaKhRVu_mEsPFot4U5T7vg-I?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2022-06-27 14:27:04,313 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 14:27:04,533 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 14:27:10,828 - app - post():86]ERROR in user: 400 Bad Request: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+2022-06-27 14:27:10,859 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 14:27:10] "[35m[1mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmSxA.NZcgaKhRVu_mEsPFot4U5T7vg-I HTTP/1.1[0m" 500 -
+2022-06-27 14:27:11,219 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 14:27:11] "GET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmSxA.NZcgaKhRVu_mEsPFot4U5T7vg-I?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2022-06-27 14:27:11,238 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 14:27:11] "GET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmSxA.NZcgaKhRVu_mEsPFot4U5T7vg-I?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2022-06-27 14:27:11,586 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 14:27:11] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmSxA.NZcgaKhRVu_mEsPFot4U5T7vg-I?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-06-27 14:27:34,124 - werkzeug - _log():224]INFO in _internal:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+2022-06-27 14:27:34,125 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 14:27:43,723 - app - post():86]ERROR in user: 400 Bad Request: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+2022-06-27 14:27:43,773 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 14:27:43] "[35m[1mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmSxA.NZcgaKhRVu_mEsPFot4U5T7vg-I HTTP/1.1[0m" 500 -
+2022-06-27 14:27:44,271 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 14:27:44] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmSxA.NZcgaKhRVu_mEsPFot4U5T7vg-I?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2022-06-27 14:27:44,278 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 14:27:44] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmSxA.NZcgaKhRVu_mEsPFot4U5T7vg-I?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2022-06-27 14:27:44,502 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 14:27:44] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmSxA.NZcgaKhRVu_mEsPFot4U5T7vg-I?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-06-27 14:30:49,028 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 14:30:49,199 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 14:31:06,235 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 14:31:26,237 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 14:31:56,439 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 14:32:40,717 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 14:32:51,649 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 14:32:51,822 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 14:36:02,391 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/decorator.py', reloading
+2022-06-27 14:36:02,557 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 14:40:09,004 - app - post():86]ERROR in user: 400 Bad Request: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+2022-06-27 14:40:09,059 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 14:40:09] "[35m[1mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmSxA.NZcgaKhRVu_mEsPFot4U5T7vg-I HTTP/1.1[0m" 500 -
+2022-06-27 14:40:09,410 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 14:40:09] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmSxA.NZcgaKhRVu_mEsPFot4U5T7vg-I?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2022-06-27 14:40:09,413 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 14:40:09] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmSxA.NZcgaKhRVu_mEsPFot4U5T7vg-I?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2022-06-27 14:40:09,752 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 14:40:09] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmSxA.NZcgaKhRVu_mEsPFot4U5T7vg-I?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-06-27 14:43:21,076 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 14:43:21,287 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 14:43:38,327 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 14:43:48,432 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 14:43:48] "[35m[1mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmSxA.NZcgaKhRVu_mEsPFot4U5T7vg-I HTTP/1.1[0m" 500 -
+2022-06-27 14:43:48,925 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 14:43:48] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmSxA.NZcgaKhRVu_mEsPFot4U5T7vg-I?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2022-06-27 14:43:48,926 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 14:43:48] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmSxA.NZcgaKhRVu_mEsPFot4U5T7vg-I?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2022-06-27 14:43:49,364 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 14:43:49] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmSxA.NZcgaKhRVu_mEsPFot4U5T7vg-I?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-06-27 14:47:12,252 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 14:47:12,458 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 14:47:25,835 - app - confirm_token():21]ERROR in token: Signature b'NZcgaKhRVu_mEsPFot4U5T7vg-I' does not match
+2022-06-27 14:47:25,935 - app - get():179]ERROR in user: (psycopg2.errors.UndefinedFunction) operator does not exist: character varying = boolean
+LINE 3: WHERE "user".email = false 
+                           ^
+HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
 
-(Background on this error at: https://sqlalche.me/e/14/e3q8)
-2022-06-15 19:22:26,957 - werkzeug - INFO: 127.0.0.1 - - [15/Jun/2022 19:22:26] "[35m[1mGET /auth/signup HTTP/1.1[0m" 500 -
-2022-06-15 19:27:53,485 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/__init__.py', reloading
-2022-06-15 19:27:53,751 - werkzeug - INFO:  * Restarting with stat
-2022-06-15 19:30:02,751 - werkzeug - INFO:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
-2022-06-15 19:30:02,752 - werkzeug - INFO:  * Restarting with stat
-2022-06-15 19:30:30,691 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/__init__.py', reloading
-2022-06-15 19:30:30,863 - werkzeug - INFO:  * Restarting with stat
-2022-06-15 19:30:49,723 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/__init__.py', reloading
-2022-06-15 19:30:49,951 - werkzeug - INFO:  * Restarting with stat
-2022-06-15 19:31:30,245 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/__init__.py', reloading
-2022-06-15 19:31:30,425 - werkzeug - INFO:  * Restarting with stat
-2022-06-15 19:31:41,976 - werkzeug - INFO:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
-2022-06-15 19:31:41,978 - werkzeug - INFO:  * Restarting with stat
-2022-06-15 19:32:14,738 - werkzeug - INFO:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
-2022-06-15 19:32:35,505 - werkzeug - INFO:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
-2022-06-15 19:36:15,845 - werkzeug - INFO:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
-2022-06-15 19:36:27,070 - werkzeug - INFO:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
-2022-06-15 19:36:36,730 - werkzeug - INFO:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
-2022-06-15 19:36:55,696 - werkzeug - INFO:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
-2022-06-15 19:37:17,445 - werkzeug - INFO:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
-2022-06-15 19:37:47,468 - werkzeug - INFO:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
-2022-06-15 19:38:47,014 - werkzeug - INFO:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
-2022-06-15 19:39:32,898 - werkzeug - INFO:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
-2022-06-15 19:40:36,053 - werkzeug - INFO:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
-2022-06-15 19:41:19,464 - werkzeug - INFO:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
-2022-06-15 19:41:19,466 - werkzeug - INFO:  * Restarting with stat
-2022-06-15 19:41:32,314 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/config.py', reloading
-2022-06-15 19:41:32,479 - werkzeug - INFO:  * Restarting with stat
-2022-06-15 19:41:45,782 - werkzeug - INFO:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
-2022-06-15 19:41:45,783 - werkzeug - INFO:  * Restarting with stat
-2022-06-15 19:42:27,165 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/__init__.py', reloading
-2022-06-15 19:42:27,344 - werkzeug - INFO:  * Restarting with stat
-2022-06-15 19:44:30,754 - werkzeug - INFO:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
-2022-06-15 19:44:30,756 - werkzeug - INFO:  * Restarting with stat
-2022-06-15 19:45:06,005 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/__init__.py', reloading
-2022-06-15 19:45:06,258 - werkzeug - INFO:  * Restarting with stat
-2022-06-15 19:45:33,399 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/__init__.py', reloading
-2022-06-15 19:45:33,636 - werkzeug - INFO:  * Restarting with stat
-2022-06-15 19:46:40,427 - werkzeug - INFO:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
-2022-06-15 19:46:40,428 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 11:16:44,691 - werkzeug - INFO:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
-2022-06-16 11:17:05,251 - werkzeug - INFO:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
-2022-06-16 11:17:05,252 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 11:17:35,599 - werkzeug - INFO:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
-2022-06-16 11:17:35,600 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 11:17:43,046 - werkzeug - INFO:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
-2022-06-16 11:17:43,047 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 12:07:35,980 - werkzeug - INFO:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
-2022-06-16 12:07:45,950 - werkzeug - INFO:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
-2022-06-16 12:07:59,744 - werkzeug - INFO:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
-2022-06-16 12:07:59,745 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 12:08:36,808 - werkzeug - INFO: 127.0.0.1 - - [16/Jun/2022 12:08:36] "[31m[1mPOST /auth/signup HTTP/1.1[0m" 400 -
-2022-06-16 12:09:38,401 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
-2022-06-16 12:09:38,524 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 12:10:14,940 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
-2022-06-16 12:10:15,121 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 12:10:58,779 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
-2022-06-16 12:10:58,903 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 12:11:16,830 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
-2022-06-16 12:11:17,027 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 12:11:53,570 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
-2022-06-16 12:11:53,735 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 12:12:12,758 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
-2022-06-16 12:12:12,898 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 12:13:21,934 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
-2022-06-16 12:13:22,066 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 12:14:32,081 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
-2022-06-16 12:14:32,320 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 12:16:27,533 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
-2022-06-16 12:16:27,665 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 12:17:22,550 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
-2022-06-16 12:17:22,733 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 12:18:50,125 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
-2022-06-16 12:18:50,252 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 12:27:37,971 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/schema.py', reloading
-2022-06-16 12:27:38,098 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 12:27:53,937 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/schema.py', reloading
-2022-06-16 12:27:54,066 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 12:28:15,093 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/schema.py', reloading
-2022-06-16 12:28:15,230 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 12:28:35,074 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/schema.py', reloading
-2022-06-16 12:28:35,220 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 12:29:20,788 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/schema.py', reloading
-2022-06-16 12:29:20,943 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 12:29:32,698 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/schema.py', reloading
-2022-06-16 12:29:32,828 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 12:29:42,519 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/schema.py', reloading
-2022-06-16 12:29:42,687 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 12:29:48,063 - app - ERROR: (psycopg2.OperationalError) FATAL:  password authentication failed for user "roo"
+[SQL: SELECT "user".id AS user_id, "user".name AS user_name, "user".username AS user_username, "user".email AS user_email, "user".password AS user_password, "user".is_active AS user_is_active, "user".confirmed_on AS user_confirmed_on, "user".date_created AS user_date_created 
+FROM "user" 
+WHERE "user".email = false 
+ LIMIT %(param_1)s]
+[parameters: {'param_1': 1}]
+(Background on this error at: https://sqlalche.me/e/14/f405)
+2022-06-27 14:47:25,938 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 14:47:25] "[35m[1mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmSxA.NZcgaKhRVu_mEsPFot4U5T7vg-I HTTP/1.1[0m" 500 -
+2022-06-27 14:49:05,856 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 14:49:06,195 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 14:49:15,182 - app - post():86]ERROR in user: 400 Bad Request: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+2022-06-27 14:49:15,225 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 14:49:15] "[35m[1mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmSxA.NZcgaKhRVu_mEsPFot4U5T7vg-I HTTP/1.1[0m" 500 -
+2022-06-27 14:49:15,772 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 14:49:15] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmSxA.NZcgaKhRVu_mEsPFot4U5T7vg-I?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2022-06-27 14:49:15,773 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 14:49:15] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmSxA.NZcgaKhRVu_mEsPFot4U5T7vg-I?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2022-06-27 14:49:15,940 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 14:49:15] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmSxA.NZcgaKhRVu_mEsPFot4U5T7vg-I?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-06-27 14:49:52,972 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 14:49:53,207 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 14:50:17,540 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 14:53:01,891 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 14:53:02,133 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 14:53:45,876 - app - confirm_token():21]ERROR in token: Signature b'NZcgaKhRVu_mEsPFot4U5T7vg-I' does not match
+2022-06-27 14:53:45,980 - app - get():179]ERROR in user: (psycopg2.errors.UndefinedFunction) operator does not exist: character varying = boolean
+LINE 3: WHERE "user".email = false 
+                           ^
+HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
 
-(Background on this error at: https://sqlalche.me/e/14/e3q8)
-2022-06-16 12:29:48,063 - werkzeug - INFO: 127.0.0.1 - - [16/Jun/2022 12:29:48] "[35m[1mGET /auth/signup HTTP/1.1[0m" 500 -
-2022-06-16 12:30:25,263 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/config.py', reloading
-2022-06-16 12:30:25,440 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 12:30:26,276 - werkzeug - INFO: 127.0.0.1 - - [16/Jun/2022 12:30:26] "GET /auth/signup HTTP/1.1" 200 -
-2022-06-16 12:32:52,905 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/schema.py', reloading
-2022-06-16 12:32:53,029 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 12:32:59,591 - werkzeug - INFO: 127.0.0.1 - - [16/Jun/2022 12:32:59] "GET /auth/signup HTTP/1.1" 200 -
-2022-06-16 12:33:51,789 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/schema.py', reloading
-2022-06-16 12:33:51,952 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 12:33:55,148 - werkzeug - INFO: 127.0.0.1 - - [16/Jun/2022 12:33:55] "GET /auth/signup HTTP/1.1" 200 -
-2022-06-16 12:34:51,889 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/schema.py', reloading
-2022-06-16 12:34:52,028 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 12:34:56,718 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 12:39:54,205 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/schema.py', reloading
-2022-06-16 12:39:54,478 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 12:40:09,426 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 12:40:18,218 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 12:40:38,171 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/schema.py', reloading
-2022-06-16 12:40:38,295 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 12:42:09,792 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 12:42:35,922 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 12:42:50,750 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 12:43:29,092 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 12:44:39,255 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 12:45:05,435 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 12:46:08,638 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 12:46:46,912 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 12:53:23,073 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 12:53:49,392 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 12:54:54,310 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 12:55:43,986 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 12:56:39,005 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 12:57:03,276 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 12:57:53,271 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 12:59:24,232 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 13:01:24,436 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 13:01:41,383 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 13:02:54,676 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 13:03:02,734 - werkzeug - INFO: 127.0.0.1 - - [16/Jun/2022 13:03:02] "GET /auth/signup HTTP/1.1" 200 -
-2022-06-16 13:03:08,270 - werkzeug - INFO: 127.0.0.1 - - [16/Jun/2022 13:03:08] "GET /auth/signup HTTP/1.1" 200 -
-2022-06-16 13:03:11,999 - werkzeug - INFO: 127.0.0.1 - - [16/Jun/2022 13:03:11] "[31m[1mPOST /auth/signup HTTP/1.1[0m" 400 -
-2022-06-16 13:03:41,445 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_base.py', reloading
-2022-06-16 13:03:41,644 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 13:04:36,488 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
-2022-06-16 13:04:36,691 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 13:05:54,999 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
-2022-06-16 13:05:55,198 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 13:05:56,224 - werkzeug - INFO: 127.0.0.1 - - [16/Jun/2022 13:05:56] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 500 -
-2022-06-16 13:07:03,195 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
-2022-06-16 13:07:03,365 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 13:07:43,725 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 13:07:45,126 - werkzeug - INFO: 127.0.0.1 - - [16/Jun/2022 13:07:45] "[31m[1mPOST /auth/signup HTTP/1.1[0m" 400 -
-2022-06-16 13:08:13,911 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
-2022-06-16 13:08:14,134 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 13:08:39,286 - werkzeug - INFO: 127.0.0.1 - - [16/Jun/2022 13:08:39] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 500 -
-2022-06-16 13:08:58,562 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
-2022-06-16 13:08:58,747 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 13:08:59,722 - werkzeug - INFO: 127.0.0.1 - - [16/Jun/2022 13:08:59] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 500 -
-2022-06-16 13:09:21,872 - werkzeug - INFO:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
-2022-06-16 13:09:21,873 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 13:09:26,567 - werkzeug - INFO: 127.0.0.1 - - [16/Jun/2022 13:09:26] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 500 -
-2022-06-16 13:12:52,426 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/schema.py', reloading
-2022-06-16 13:12:52,596 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 13:13:39,394 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 13:14:06,431 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
-2022-06-16 13:14:06,618 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 13:15:39,595 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
-2022-06-16 13:15:39,806 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 13:15:44,843 - werkzeug - INFO: 127.0.0.1 - - [16/Jun/2022 13:15:44] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 500 -
-2022-06-16 13:16:13,143 - werkzeug - INFO:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
-2022-06-16 13:16:13,144 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 13:30:26,956 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
-2022-06-16 13:30:27,087 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 13:38:44,859 - werkzeug - INFO:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
-2022-06-16 13:38:44,859 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 13:38:48,425 - werkzeug - INFO: 127.0.0.1 - - [16/Jun/2022 13:38:48] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 500 -
-2022-06-16 13:40:16,689 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
-2022-06-16 13:40:16,850 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 13:40:23,116 - werkzeug - INFO: 127.0.0.1 - - [16/Jun/2022 13:40:23] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 500 -
-2022-06-16 13:41:56,479 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
-2022-06-16 13:41:56,650 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 13:42:01,363 - werkzeug - INFO:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
-2022-06-16 13:42:01,364 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 13:42:06,276 - werkzeug - INFO: 127.0.0.1 - - [16/Jun/2022 13:42:06] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 500 -
-2022-06-16 13:42:36,502 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
-2022-06-16 13:42:36,690 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 13:42:53,553 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
-2022-06-16 13:42:53,706 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 13:42:58,081 - werkzeug - INFO:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
-2022-06-16 13:42:58,082 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 13:43:02,040 - werkzeug - INFO: 127.0.0.1 - - [16/Jun/2022 13:43:02] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 500 -
-2022-06-16 13:44:02,156 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
-2022-06-16 13:44:02,374 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 13:44:07,988 - werkzeug - INFO:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
-2022-06-16 13:44:07,988 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 13:44:11,447 - werkzeug - INFO: 127.0.0.1 - - [16/Jun/2022 13:44:11] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 500 -
-2022-06-16 13:45:05,652 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
-2022-06-16 13:45:05,804 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 13:45:20,973 - werkzeug - INFO:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
-2022-06-16 13:45:20,974 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 13:45:25,673 - werkzeug - INFO: 127.0.0.1 - - [16/Jun/2022 13:45:25] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 500 -
-2022-06-16 13:46:12,633 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
-2022-06-16 13:46:12,807 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 13:46:13,775 - app - ERROR: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "ix_user_email"
-DETAIL:  Key (email)=(alovegakevin@gmail.com) already exists.
+[SQL: SELECT "user".id AS user_id, "user".name AS user_name, "user".username AS user_username, "user".email AS user_email, "user".password AS user_password, "user".is_active AS user_is_active, "user".confirmed_on AS user_confirmed_on, "user".date_created AS user_date_created 
+FROM "user" 
+WHERE "user".email = false 
+ LIMIT %(param_1)s]
+[parameters: {'param_1': 1}]
+(Background on this error at: https://sqlalche.me/e/14/f405)
+2022-06-27 14:53:45,984 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 14:53:45] "[35m[1mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmSxA.NZcgaKhRVu_mEsPFot4U5T7vg-I HTTP/1.1[0m" 500 -
+2022-06-27 14:55:23,922 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 14:55:24,176 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 14:56:40,415 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/token.py', reloading
+2022-06-27 14:56:40,644 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 14:57:00,793 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 14:57:00] "GET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmSxA.NZcgaKhRVu_mEsPFot4U5T7vg-I HTTP/1.1" 200 -
+2022-06-27 14:57:27,006 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 14:57:27,203 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 14:57:31,351 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 14:57:31] "GET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmSxA.NZcgaKhRVu_mEsPFot4U5T7vg-I HTTP/1.1" 200 -
+2022-06-27 14:58:31,786 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 14:58:31,972 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 14:59:55,813 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 14:59:56,060 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 15:00:37,844 - app - post():86]ERROR in user: 400 Bad Request: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+2022-06-27 15:00:37,889 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 15:00:37] "[35m[1mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmSxA.NZcgaKhRVu_mEsPFot4U5T7vg-I HTTP/1.1[0m" 500 -
+2022-06-27 15:00:38,979 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 15:00:38] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmSxA.NZcgaKhRVu_mEsPFot4U5T7vg-I?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2022-06-27 15:00:39,096 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 15:00:39] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmSxA.NZcgaKhRVu_mEsPFot4U5T7vg-I?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2022-06-27 15:00:40,179 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 15:00:40] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmSxA.NZcgaKhRVu_mEsPFot4U5T7vg-I?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-06-27 15:03:10,543 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/models.py', reloading
+2022-06-27 15:03:10,726 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 15:03:26,750 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/decorator.py', reloading
+2022-06-27 15:03:26,994 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 15:04:04,294 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 15:04:04,505 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 15:05:34,676 - app - post():86]ERROR in user: 400 Bad Request: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+2022-06-27 15:05:34,771 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 15:05:34] "[35m[1mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmSxA.NZcgaKhRVu_mEsPFot4U5T7vg-I HTTP/1.1[0m" 500 -
+2022-06-27 15:05:35,934 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 15:05:35] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmSxA.NZcgaKhRVu_mEsPFot4U5T7vg-I?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2022-06-27 15:05:35,935 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 15:05:35] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmSxA.NZcgaKhRVu_mEsPFot4U5T7vg-I?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2022-06-27 15:05:36,805 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 15:05:36] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmSxA.NZcgaKhRVu_mEsPFot4U5T7vg-I?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-06-27 15:07:42,548 - werkzeug - _log():224]INFO in _internal:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+2022-06-27 15:07:42,551 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 15:07:49,141 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 15:07:49] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 201 -
+2022-06-27 15:08:02,723 - app - post():86]ERROR in user: 400 Bad Request: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+2022-06-27 15:08:02,743 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 15:08:02] "[35m[1mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmSxA.NZcgaKhRVu_mEsPFot4U5T7vg-I HTTP/1.1[0m" 500 -
+2022-06-27 15:08:03,283 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 15:08:03] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmSxA.NZcgaKhRVu_mEsPFot4U5T7vg-I?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2022-06-27 15:08:03,300 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 15:08:03] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmSxA.NZcgaKhRVu_mEsPFot4U5T7vg-I?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2022-06-27 15:08:03,583 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 15:08:03] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmSxA.NZcgaKhRVu_mEsPFot4U5T7vg-I?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-06-27 15:09:23,836 - app - post():86]ERROR in user: 400 Bad Request: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+2022-06-27 15:09:23,851 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 15:09:23] "[35m[1mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmdkQ.3P8pTVG3iUNgDcaMe40uzhK5MMU HTTP/1.1[0m" 500 -
+2022-06-27 15:09:24,312 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 15:09:24] "GET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmdkQ.3P8pTVG3iUNgDcaMe40uzhK5MMU?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2022-06-27 15:09:24,354 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 15:09:24] "GET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmdkQ.3P8pTVG3iUNgDcaMe40uzhK5MMU?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2022-06-27 15:09:24,746 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 15:09:24] "GET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmdkQ.3P8pTVG3iUNgDcaMe40uzhK5MMU?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2022-06-27 15:13:48,397 - werkzeug - _log():224]INFO in _internal:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+2022-06-27 15:13:48,398 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 15:13:57,986 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 15:13:57] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 201 -
+2022-06-27 15:14:06,381 - app - post():86]ERROR in user: 400 Bad Request: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+2022-06-27 15:14:06,400 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 15:14:06] "[35m[1mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmfAg.y06VFeagyGk4lUixIWmSt_Uju8E HTTP/1.1[0m" 500 -
+2022-06-27 15:14:06,845 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 15:14:06] "GET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmfAg.y06VFeagyGk4lUixIWmSt_Uju8E?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2022-06-27 15:14:06,847 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 15:14:06] "GET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmfAg.y06VFeagyGk4lUixIWmSt_Uju8E?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2022-06-27 15:14:07,104 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 15:14:07] "GET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmfAg.y06VFeagyGk4lUixIWmSt_Uju8E?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2022-06-27 15:16:49,839 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 15:16:50,044 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 15:16:58,511 - app - post():86]ERROR in user: 400 Bad Request: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+2022-06-27 15:16:58,566 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 15:16:58] "[35m[1mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmfAg.y06VFeagyGk4lUixIWmSt_Uju8E HTTP/1.1[0m" 500 -
+2022-06-27 15:16:58,960 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 15:16:58] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmfAg.y06VFeagyGk4lUixIWmSt_Uju8E?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2022-06-27 15:16:58,973 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 15:16:58] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmfAg.y06VFeagyGk4lUixIWmSt_Uju8E?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2022-06-27 15:16:59,772 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 15:16:59] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmfAg.y06VFeagyGk4lUixIWmSt_Uju8E?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-06-27 15:17:31,864 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 15:17:32,092 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 15:17:39,035 - app - post():86]ERROR in user: 400 Bad Request: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+2022-06-27 15:17:39,119 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 15:17:39] "GET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmfAg.y06VFeagyGk4lUixIWmSt_Uju8E HTTP/1.1" 200 -
+2022-06-27 15:18:37,941 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 15:18:38,171 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 15:18:49,109 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 15:18:49,346 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 15:18:58,810 - app - post():86]ERROR in user: 400 Bad Request: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+2022-06-27 15:18:58,829 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 15:18:58] "[35m[1mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmfAg.y06VFeagyGk4lUixIWmSt_Uju8E HTTP/1.1[0m" 500 -
+2022-06-27 15:19:33,835 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 15:19:34,015 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 15:25:55,509 - werkzeug - _log():224]INFO in _internal:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+2022-06-27 15:25:55,509 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 15:26:03,667 - app - post():86]ERROR in user: 400 Bad Request: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+2022-06-27 15:26:03,756 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 15:26:03] "[35m[1mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmfAg.y06VFeagyGk4lUixIWmSt_Uju8E HTTP/1.1[0m" 500 -
+2022-06-27 15:26:04,949 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 15:26:04] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmfAg.y06VFeagyGk4lUixIWmSt_Uju8E?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2022-06-27 15:26:04,956 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 15:26:04] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmfAg.y06VFeagyGk4lUixIWmSt_Uju8E?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2022-06-27 15:26:05,318 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 15:26:05] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmfAg.y06VFeagyGk4lUixIWmSt_Uju8E?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-06-27 15:26:22,406 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 15:26:22,690 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 15:27:16,204 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 15:27:16,419 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 15:27:22,965 - app - post():86]ERROR in user: 400 Bad Request: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+2022-06-27 15:27:23,005 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 15:27:23] "GET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmfAg.y06VFeagyGk4lUixIWmSt_Uju8E HTTP/1.1" 200 -
+2022-06-27 15:28:55,394 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 15:28:55,706 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 15:29:10,949 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 15:29:16,096 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 15:30:37,121 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 15:31:14,913 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 15:31:28,710 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 15:31:46,488 - app - post():86]ERROR in user: 400 Bad Request: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+2022-06-27 15:31:46,559 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 15:31:46] "GET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmfAg.y06VFeagyGk4lUixIWmSt_Uju8E HTTP/1.1" 200 -
+2022-06-27 15:33:46,576 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 15:33:46,873 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 15:34:00,310 - app - post():86]ERROR in user: 400 Bad Request: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+2022-06-27 15:34:00,327 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 15:34:00] "GET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmfAg.y06VFeagyGk4lUixIWmSt_Uju8E HTTP/1.1" 200 -
+2022-06-27 15:34:27,293 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 15:34:27,505 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 15:35:22,318 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/__init__.py', reloading
+2022-06-27 15:35:22,561 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 15:35:35,333 - app - post():86]ERROR in user: 400 Bad Request: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+2022-06-27 15:35:35,398 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 15:35:35] "GET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmfAg.y06VFeagyGk4lUixIWmSt_Uju8E HTTP/1.1" 200 -
+2022-06-27 15:36:51,547 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/__init__.py', reloading
+2022-06-27 15:36:51,775 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 15:37:01,822 - werkzeug - _log():224]INFO in _internal:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+2022-06-27 15:37:01,824 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 15:37:12,429 - app - post():86]ERROR in user: 400 Bad Request: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+2022-06-27 15:37:12,468 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 15:37:12] "GET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmfAg.y06VFeagyGk4lUixIWmSt_Uju8E HTTP/1.1" 200 -
+2022-06-27 15:37:31,951 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 15:37:32,162 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 15:37:35,199 - app - post():86]ERROR in user: 400 Bad Request: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+2022-06-27 15:37:35,236 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 15:37:35] "[35m[1mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmfAg.y06VFeagyGk4lUixIWmSt_Uju8E HTTP/1.1[0m" 500 -
+2022-06-27 15:37:35,806 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 15:37:35] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmfAg.y06VFeagyGk4lUixIWmSt_Uju8E?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2022-06-27 15:37:35,833 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 15:37:35] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmfAg.y06VFeagyGk4lUixIWmSt_Uju8E?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2022-06-27 15:37:36,286 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 15:37:36] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmfAg.y06VFeagyGk4lUixIWmSt_Uju8E?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-06-27 15:38:03,414 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/__init__.py', reloading
+2022-06-27 15:38:03,629 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 15:38:22,748 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 15:38:22,953 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 15:38:38,166 - app - post():90]ERROR in user: 400 Bad Request: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+2022-06-27 15:38:38,208 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 15:38:38] "[35m[1mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmfAg.y06VFeagyGk4lUixIWmSt_Uju8E HTTP/1.1[0m" 500 -
+2022-06-27 15:38:38,974 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 15:38:38] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmfAg.y06VFeagyGk4lUixIWmSt_Uju8E?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2022-06-27 15:38:38,978 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 15:38:38] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmfAg.y06VFeagyGk4lUixIWmSt_Uju8E?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2022-06-27 15:38:39,478 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 15:38:39] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmfAg.y06VFeagyGk4lUixIWmSt_Uju8E?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-06-27 15:42:10,783 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 15:42:11,061 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 15:42:22,176 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/__init__.py', reloading
+2022-06-27 15:42:22,427 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 15:42:31,726 - app - post():87]ERROR in user: 400 Bad Request: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+2022-06-27 15:42:31,757 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 15:42:31] "[35m[1mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmfAg.y06VFeagyGk4lUixIWmSt_Uju8E HTTP/1.1[0m" 500 -
+2022-06-27 15:42:32,131 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 15:42:32] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmfAg.y06VFeagyGk4lUixIWmSt_Uju8E?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2022-06-27 15:42:32,149 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 15:42:32] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmfAg.y06VFeagyGk4lUixIWmSt_Uju8E?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2022-06-27 15:42:32,567 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 15:42:32] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrmfAg.y06VFeagyGk4lUixIWmSt_Uju8E?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-06-27 15:43:04,218 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 15:43:04] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 201 -
+2022-06-27 15:43:16,165 - app - post():87]ERROR in user: 400 Bad Request: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+2022-06-27 15:43:16,177 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 15:43:16] "[35m[1mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.Yrml1Q.PqrcCsyIBC_sCdc1gngsIOcAAtU HTTP/1.1[0m" 500 -
+2022-06-27 15:43:16,424 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 15:43:16] "GET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.Yrml1Q.PqrcCsyIBC_sCdc1gngsIOcAAtU?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2022-06-27 15:43:16,441 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 15:43:16] "GET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.Yrml1Q.PqrcCsyIBC_sCdc1gngsIOcAAtU?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2022-06-27 15:43:16,646 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 15:43:16] "GET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.Yrml1Q.PqrcCsyIBC_sCdc1gngsIOcAAtU?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2022-06-27 15:50:25,135 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 15:50:25,345 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 15:50:37,541 - app - post():87]ERROR in user: 400 Bad Request: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+2022-06-27 15:50:37,574 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 15:50:37] "GET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.Yrml1Q.PqrcCsyIBC_sCdc1gngsIOcAAtU HTTP/1.1" 200 -
+2022-06-27 15:59:09,726 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 15:59:09,996 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 15:59:35,852 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 15:59:57,944 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 16:04:45,133 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 16:04:45,367 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 16:12:59,935 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 16:13:00,193 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 16:13:05,131 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 16:13:05] "[35m[1mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.Yrml1Q.PqrcCsyIBC_sCdc1gngsIOcAAtU HTTP/1.1[0m" 500 -
+2022-06-27 16:13:05,531 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 16:13:05] "GET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.Yrml1Q.PqrcCsyIBC_sCdc1gngsIOcAAtU?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2022-06-27 16:13:05,532 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 16:13:05] "GET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.Yrml1Q.PqrcCsyIBC_sCdc1gngsIOcAAtU?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2022-06-27 16:13:05,950 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 16:13:05] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.Yrml1Q.PqrcCsyIBC_sCdc1gngsIOcAAtU?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-06-27 16:13:25,352 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/__init__.py', reloading
+2022-06-27 16:13:25,637 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 16:13:27,327 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 16:13:27] "GET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.Yrml1Q.PqrcCsyIBC_sCdc1gngsIOcAAtU HTTP/1.1" 200 -
+2022-06-27 16:14:01,209 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 16:14:01,429 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 16:14:07,903 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 16:14:07] "[31m[1mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.Yrml1Q.PqrcCsyIBC_sCdc1gngsIOcAAtU HTTP/1.1[0m" 401 -
+2022-06-27 16:15:18,321 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 16:15:18,576 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 16:15:40,296 - app - post():87]ERROR in user: 400 Bad Request: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+2022-06-27 16:15:40,404 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 16:15:40] "[35m[1mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.Yrml1Q.PqrcCsyIBC_sCdc1gngsIOcAAtU HTTP/1.1[0m" 500 -
+2022-06-27 16:15:40,978 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 16:15:40] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.Yrml1Q.PqrcCsyIBC_sCdc1gngsIOcAAtU?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2022-06-27 16:15:40,979 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 16:15:40] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.Yrml1Q.PqrcCsyIBC_sCdc1gngsIOcAAtU?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2022-06-27 16:15:41,409 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 16:15:41] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.Yrml1Q.PqrcCsyIBC_sCdc1gngsIOcAAtU?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-06-27 16:16:02,874 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 16:16:03,085 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 16:16:04,328 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 16:16:04] "[31m[1mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.Yrml1Q.PqrcCsyIBC_sCdc1gngsIOcAAtU HTTP/1.1[0m" 401 -
+2022-06-27 16:16:17,026 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 16:16:17,205 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 16:16:28,223 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/__init__.py', reloading
+2022-06-27 16:16:28,444 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 16:16:31,445 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 16:16:31] "[35m[1mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.Yrml1Q.PqrcCsyIBC_sCdc1gngsIOcAAtU HTTP/1.1[0m" 500 -
+2022-06-27 16:16:31,724 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 16:16:31] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.Yrml1Q.PqrcCsyIBC_sCdc1gngsIOcAAtU?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2022-06-27 16:16:31,733 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 16:16:31] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.Yrml1Q.PqrcCsyIBC_sCdc1gngsIOcAAtU?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2022-06-27 16:16:31,820 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 16:16:31] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.Yrml1Q.PqrcCsyIBC_sCdc1gngsIOcAAtU?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-06-27 16:16:43,614 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/__init__.py', reloading
+2022-06-27 16:16:43,925 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 16:16:45,274 - app - post():87]ERROR in user: 400 Bad Request: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+2022-06-27 16:16:45,357 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 16:16:45] "[35m[1mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.Yrml1Q.PqrcCsyIBC_sCdc1gngsIOcAAtU HTTP/1.1[0m" 500 -
+2022-06-27 16:16:45,801 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 16:16:45] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.Yrml1Q.PqrcCsyIBC_sCdc1gngsIOcAAtU?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2022-06-27 16:16:45,806 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 16:16:45] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.Yrml1Q.PqrcCsyIBC_sCdc1gngsIOcAAtU?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2022-06-27 16:16:45,874 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 16:16:45] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.Yrml1Q.PqrcCsyIBC_sCdc1gngsIOcAAtU?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-06-27 16:17:27,164 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 16:17:27,347 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 16:17:33,050 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 16:17:33] "[31m[1mPOST /auth/signup HTTP/1.1[0m" 403 -
+2022-06-27 16:17:41,352 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 16:17:41] "[31m[1mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.Yrml1Q.PqrcCsyIBC_sCdc1gngsIOcAAtU HTTP/1.1[0m" 401 -
+2022-06-27 16:17:58,495 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 16:17:58,694 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 16:18:13,640 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 16:18:13,832 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 16:18:15,478 - app - post():88]ERROR in user: 400 Bad Request: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+2022-06-27 16:18:15,543 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 16:18:15] "[35m[1mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.Yrml1Q.PqrcCsyIBC_sCdc1gngsIOcAAtU HTTP/1.1[0m" 500 -
+2022-06-27 16:18:15,870 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 16:18:15] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.Yrml1Q.PqrcCsyIBC_sCdc1gngsIOcAAtU?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2022-06-27 16:18:15,875 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 16:18:15] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.Yrml1Q.PqrcCsyIBC_sCdc1gngsIOcAAtU?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2022-06-27 16:18:16,095 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 16:18:16] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.Yrml1Q.PqrcCsyIBC_sCdc1gngsIOcAAtU?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-06-27 16:18:30,831 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 16:18:31,227 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 16:18:32,717 - app - post():87]ERROR in user: 400 Bad Request: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+2022-06-27 16:18:32,765 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 16:18:32] "[35m[1mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.Yrml1Q.PqrcCsyIBC_sCdc1gngsIOcAAtU HTTP/1.1[0m" 500 -
+2022-06-27 16:18:33,073 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 16:18:33] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.Yrml1Q.PqrcCsyIBC_sCdc1gngsIOcAAtU?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2022-06-27 16:18:33,074 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 16:18:33] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.Yrml1Q.PqrcCsyIBC_sCdc1gngsIOcAAtU?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2022-06-27 16:18:33,265 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 16:18:33] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.Yrml1Q.PqrcCsyIBC_sCdc1gngsIOcAAtU?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-06-27 16:18:35,278 - app - post():87]ERROR in user: 400 Bad Request: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+2022-06-27 16:18:35,293 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 16:18:35] "[35m[1mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.Yrml1Q.PqrcCsyIBC_sCdc1gngsIOcAAtU HTTP/1.1[0m" 500 -
+2022-06-27 16:18:35,606 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 16:18:35] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.Yrml1Q.PqrcCsyIBC_sCdc1gngsIOcAAtU?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2022-06-27 16:18:35,612 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 16:18:35] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.Yrml1Q.PqrcCsyIBC_sCdc1gngsIOcAAtU?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2022-06-27 16:18:35,698 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 16:18:35] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.Yrml1Q.PqrcCsyIBC_sCdc1gngsIOcAAtU?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-06-27 16:21:35,430 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 16:21:35,630 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 16:21:42,171 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 16:21:42] "[35m[1mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.Yrml1Q.PqrcCsyIBC_sCdc1gngsIOcAAtU HTTP/1.1[0m" 500 -
+2022-06-27 16:21:42,505 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 16:21:42] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.Yrml1Q.PqrcCsyIBC_sCdc1gngsIOcAAtU?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2022-06-27 16:21:42,507 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 16:21:42] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.Yrml1Q.PqrcCsyIBC_sCdc1gngsIOcAAtU?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2022-06-27 16:21:42,802 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 16:21:42] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.Yrml1Q.PqrcCsyIBC_sCdc1gngsIOcAAtU?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-06-27 16:22:40,615 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 16:22:40,860 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 16:22:42,458 - app - post():87]ERROR in user: 400 Bad Request: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+2022-06-27 16:22:42,517 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 16:22:42] "[35m[1mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.Yrml1Q.PqrcCsyIBC_sCdc1gngsIOcAAtU HTTP/1.1[0m" 500 -
+2022-06-27 16:22:42,937 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 16:22:42] "GET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.Yrml1Q.PqrcCsyIBC_sCdc1gngsIOcAAtU?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2022-06-27 16:22:42,938 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 16:22:42] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.Yrml1Q.PqrcCsyIBC_sCdc1gngsIOcAAtU?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2022-06-27 16:22:43,003 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 16:22:43] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.Yrml1Q.PqrcCsyIBC_sCdc1gngsIOcAAtU?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-06-27 16:25:27,719 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 16:25:28,067 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 16:26:40,070 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/decorator.py', reloading
+2022-06-27 16:26:40,247 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 16:27:51,174 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 16:27:51,526 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 16:32:07,397 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 16:32:07,605 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 16:33:57,466 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 16:33:57,746 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 16:34:44,223 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 16:34:44,420 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 16:35:33,674 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 16:35:33,918 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 16:36:08,086 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/__init__.py', reloading
+2022-06-27 16:36:08,316 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 16:38:24,348 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 16:38:24,667 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 16:39:10,125 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 16:39:10,324 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 16:44:29,743 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 16:44:29,952 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 16:56:22,798 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 16:56:22] "[35m[1mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.Yrml1Q.PqrcCsyIBC_sCdc1gngsIOcAAtU HTTP/1.1[0m" 500 -
+2022-06-27 16:56:23,746 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 16:56:23] "GET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.Yrml1Q.PqrcCsyIBC_sCdc1gngsIOcAAtU?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2022-06-27 16:56:23,762 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 16:56:23] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.Yrml1Q.PqrcCsyIBC_sCdc1gngsIOcAAtU?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2022-06-27 16:56:24,594 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 16:56:24] "GET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.Yrml1Q.PqrcCsyIBC_sCdc1gngsIOcAAtU?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2022-06-27 16:56:55,874 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 16:56:56,072 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 16:57:27,132 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 16:57:27] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 201 -
+2022-06-27 16:57:42,224 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 16:57:42] "[35m[1mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.Yrm3RA.4LskytWlelSUHoXKQO1fNVEs1cs?access_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY1NjMzODI0NCwianRpIjoiOTllOGRlODItYzc1Ni00N2ZjLWIxMGEtN2JlZTI3MDFiYWNlIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFsd2EiLCJuYmYiOjE2NTYzMzgyNDQsImV4cCI6MTY1NjMzOTE0NH0.asOONc_fNu0U2iOjaxbCJRGNi2t9fe_67-DZfDeMGEU HTTP/1.1[0m" 500 -
+2022-06-27 16:57:42,937 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 16:57:42] "GET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.Yrm3RA.4LskytWlelSUHoXKQO1fNVEs1cs?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2022-06-27 16:57:42,954 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 16:57:42] "GET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.Yrm3RA.4LskytWlelSUHoXKQO1fNVEs1cs?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2022-06-27 16:57:43,216 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 16:57:43] "GET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.Yrm3RA.4LskytWlelSUHoXKQO1fNVEs1cs?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2022-06-27 16:59:09,817 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 16:59:10,132 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 16:59:13,200 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 16:59:13] "[35m[1mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.Yrm3RA.4LskytWlelSUHoXKQO1fNVEs1cs?access_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY1NjMzODI0NCwianRpIjoiOTllOGRlODItYzc1Ni00N2ZjLWIxMGEtN2JlZTI3MDFiYWNlIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFsd2EiLCJuYmYiOjE2NTYzMzgyNDQsImV4cCI6MTY1NjMzOTE0NH0.asOONc_fNu0U2iOjaxbCJRGNi2t9fe_67-DZfDeMGEU HTTP/1.1[0m" 500 -
+2022-06-27 16:59:13,887 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 16:59:13] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.Yrm3RA.4LskytWlelSUHoXKQO1fNVEs1cs?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2022-06-27 16:59:13,902 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 16:59:13] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.Yrm3RA.4LskytWlelSUHoXKQO1fNVEs1cs?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2022-06-27 16:59:14,326 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 16:59:14] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.Yrm3RA.4LskytWlelSUHoXKQO1fNVEs1cs?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-06-27 17:01:04,512 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/__init__.py', reloading
+2022-06-27 17:01:04,881 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 17:01:18,978 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 17:01:18] "[33mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.Yrm3RA.4LskytWlelSUHoXKQO1fNVEs1cs?access_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY1NjMzODI0NCwianRpIjoiOTllOGRlODItYzc1Ni00N2ZjLWIxMGEtN2JlZTI3MDFiYWNlIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFsd2EiLCJuYmYiOjE2NTYzMzgyNDQsImV4cCI6MTY1NjMzOTE0NH0.asOONc_fNu0U2iOjaxbCJRGNi2t9fe_67-DZfDeMGEU HTTP/1.1[0m" 404 -
+2022-06-27 17:01:20,437 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 17:01:20] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-06-27 17:04:15,971 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 17:04:15] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 201 -
+2022-06-27 17:08:38,447 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 17:08:38,655 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 17:09:10,931 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 17:09:10] "[35m[1mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.Yrm43Q.AqCEITvi875seMn1bk7Pw48yqWA/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY1NjMzODY1MywianRpIjoiZWZjOWVmNTUtODA4NS00MDA1LTkwMGMtN2I0NmNmNjVjNGViIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFsd2EiLCJuYmYiOjE2NTYzMzg2NTMsImV4cCI6MTY1NjMzOTU1M30.pEc8blMl_vjwcnNtHOMMCD3ubCDJrIXPNr5rQU5V9gs HTTP/1.1[0m" 500 -
+2022-06-27 17:09:11,352 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 17:09:11] "GET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.Yrm43Q.AqCEITvi875seMn1bk7Pw48yqWA/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY1NjMzODY1MywianRpIjoiZWZjOWVmNTUtODA4NS00MDA1LTkwMGMtN2I0NmNmNjVjNGViIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFsd2EiLCJuYmYiOjE2NTYzMzg2NTMsImV4cCI6MTY1NjMzOTU1M30.pEc8blMl_vjwcnNtHOMMCD3ubCDJrIXPNr5rQU5V9gs?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2022-06-27 17:09:11,357 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 17:09:11] "GET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.Yrm43Q.AqCEITvi875seMn1bk7Pw48yqWA/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY1NjMzODY1MywianRpIjoiZWZjOWVmNTUtODA4NS00MDA1LTkwMGMtN2I0NmNmNjVjNGViIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFsd2EiLCJuYmYiOjE2NTYzMzg2NTMsImV4cCI6MTY1NjMzOTU1M30.pEc8blMl_vjwcnNtHOMMCD3ubCDJrIXPNr5rQU5V9gs?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2022-06-27 17:09:12,240 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 17:09:12] "GET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.Yrm43Q.AqCEITvi875seMn1bk7Pw48yqWA/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY1NjMzODY1MywianRpIjoiZWZjOWVmNTUtODA4NS00MDA1LTkwMGMtN2I0NmNmNjVjNGViIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFsd2EiLCJuYmYiOjE2NTYzMzg2NTMsImV4cCI6MTY1NjMzOTU1M30.pEc8blMl_vjwcnNtHOMMCD3ubCDJrIXPNr5rQU5V9gs?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2022-06-27 17:09:31,513 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 17:09:31,791 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 17:09:38,186 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 17:09:38] "[35m[1mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.Yrm43Q.AqCEITvi875seMn1bk7Pw48yqWA/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY1NjMzODY1MywianRpIjoiZWZjOWVmNTUtODA4NS00MDA1LTkwMGMtN2I0NmNmNjVjNGViIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFsd2EiLCJuYmYiOjE2NTYzMzg2NTMsImV4cCI6MTY1NjMzOTU1M30.pEc8blMl_vjwcnNtHOMMCD3ubCDJrIXPNr5rQU5V9gs HTTP/1.1[0m" 500 -
+2022-06-27 17:09:38,838 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 17:09:38] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.Yrm43Q.AqCEITvi875seMn1bk7Pw48yqWA/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY1NjMzODY1MywianRpIjoiZWZjOWVmNTUtODA4NS00MDA1LTkwMGMtN2I0NmNmNjVjNGViIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFsd2EiLCJuYmYiOjE2NTYzMzg2NTMsImV4cCI6MTY1NjMzOTU1M30.pEc8blMl_vjwcnNtHOMMCD3ubCDJrIXPNr5rQU5V9gs?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2022-06-27 17:09:38,864 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 17:09:38] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.Yrm43Q.AqCEITvi875seMn1bk7Pw48yqWA/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY1NjMzODY1MywianRpIjoiZWZjOWVmNTUtODA4NS00MDA1LTkwMGMtN2I0NmNmNjVjNGViIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFsd2EiLCJuYmYiOjE2NTYzMzg2NTMsImV4cCI6MTY1NjMzOTU1M30.pEc8blMl_vjwcnNtHOMMCD3ubCDJrIXPNr5rQU5V9gs?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2022-06-27 17:09:39,163 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 17:09:39] "[36mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.Yrm43Q.AqCEITvi875seMn1bk7Pw48yqWA/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY1NjMzODY1MywianRpIjoiZWZjOWVmNTUtODA4NS00MDA1LTkwMGMtN2I0NmNmNjVjNGViIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFsd2EiLCJuYmYiOjE2NTYzMzg2NTMsImV4cCI6MTY1NjMzOTU1M30.pEc8blMl_vjwcnNtHOMMCD3ubCDJrIXPNr5rQU5V9gs?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-06-27 17:11:28,490 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 17:11:28,845 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 17:11:37,616 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 17:11:37] "GET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.Yrm43Q.AqCEITvi875seMn1bk7Pw48yqWA/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY1NjMzODY1MywianRpIjoiZWZjOWVmNTUtODA4NS00MDA1LTkwMGMtN2I0NmNmNjVjNGViIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFsd2EiLCJuYmYiOjE2NTYzMzg2NTMsImV4cCI6MTY1NjMzOTU1M30.pEc8blMl_vjwcnNtHOMMCD3ubCDJrIXPNr5rQU5V9gs HTTP/1.1" 200 -
+2022-06-27 17:21:16,529 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 17:21:16,867 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 17:25:54,270 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 17:25:54,459 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 18:22:51,597 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/token.py', reloading
+2022-06-27 18:22:51,891 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 18:35:25,616 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 18:35:25] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-06-27 18:36:00,374 - app - post():87]ERROR in user: Could not build url for endpoint 'Confirm' with values ['token']. Did you forget to specify values ['access_token']?
+2022-06-27 18:36:00,376 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 18:36:00] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 500 -
+2022-06-27 18:37:08,014 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/__init__.py', reloading
+2022-06-27 18:37:08,215 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 18:37:49,369 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/token.py', reloading
+2022-06-27 18:37:49,639 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 18:38:11,682 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 18:38:53,447 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 18:39:26,727 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 18:39:57,724 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/token.py', reloading
+2022-06-27 18:39:57,949 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 18:41:40,219 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/token.py', reloading
+2022-06-27 18:41:40,375 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 18:42:22,868 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/token.py', reloading
+2022-06-27 18:42:23,025 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 18:43:26,640 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/token.py', reloading
+2022-06-27 18:43:26,949 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 18:44:43,733 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/token.py', reloading
+2022-06-27 18:44:43,890 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 18:45:03,779 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/token.py', reloading
+2022-06-27 18:45:03,978 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 18:45:11,705 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 18:45:29,591 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/token.py', reloading
+2022-06-27 18:45:29,815 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 18:45:57,709 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/token.py', reloading
+2022-06-27 18:45:57,912 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 18:47:39,373 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/token.py', reloading
+2022-06-27 18:47:39,583 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 18:48:46,802 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 18:50:56,682 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/token.py', reloading
+2022-06-27 18:50:56,874 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 18:51:28,241 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 18:51:28] "[31m[1mPOST /auth/signup HTTP/1.1[0m" 403 -
+2022-06-27 18:52:06,886 - app - post():87]ERROR in user: 'Flask' object has no attribute 'login_manager'
+2022-06-27 18:52:06,888 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 18:52:06] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 500 -
+2022-06-27 18:53:43,163 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 18:53:43,442 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 18:54:08,862 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 18:54:09,016 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 18:54:12,959 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 18:54:12] "[31m[1mPOST /auth/signup HTTP/1.1[0m" 403 -
+2022-06-27 18:54:30,211 - app - confirm_token():20]ERROR in token: Signature age 147 > 1 seconds
+2022-06-27 18:54:30,224 - app - get():178]ERROR in user: (psycopg2.errors.UndefinedFunction) operator does not exist: character varying = boolean
+LINE 3: WHERE "user".email = false 
+                           ^
+HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
 
-[SQL: INSERT INTO "user" (name, username, email, password, date_created) VALUES (%(name)s, %(username)s, %(email)s, %(password)s, %(date_created)s) RETURNING "user".id]
-[parameters: {'name': 'kelvin Alwavega', 'username': 'Kelvin', 'email': 'alovegakevin@gmail.com', 'password': '$pbkdf2-sha256$29000$Q.i9lzJmbI1Ram1NibHWmg$RINaDCcrquJuk4dUXr0a/totK6sn7b1JdTC1J8sgs88', 'date_created': datetime.datetime(2022, 6, 16, 10, 46, 13, 769044)}]
-(Background on this error at: https://sqlalche.me/e/14/gkpj)
-2022-06-16 13:46:13,776 - werkzeug - INFO: 127.0.0.1 - - [16/Jun/2022 13:46:13] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 500 -
-2022-06-16 13:46:28,594 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
-2022-06-16 13:46:28,770 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 13:46:31,698 - app - ERROR: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "ix_user_email"
-DETAIL:  Key (email)=(alovegakevin@gmail.com) already exists.
-
-[SQL: INSERT INTO "user" (name, username, email, password, date_created) VALUES (%(name)s, %(username)s, %(email)s, %(password)s, %(date_created)s) RETURNING "user".id]
-[parameters: {'name': 'kelvin Alwavega', 'username': 'Kelvin', 'email': 'alovegakevin@gmail.com', 'password': '$pbkdf2-sha256$29000$as2ZM2ZMSYnxntN6j5Fyzg$0tX2zHSLcuobKxXPp1j35kxts2IDrjzmYDz9H.tr3nU', 'date_created': datetime.datetime(2022, 6, 16, 10, 46, 31, 696427)}]
-(Background on this error at: https://sqlalche.me/e/14/gkpj)
-2022-06-16 13:46:31,700 - werkzeug - INFO: 127.0.0.1 - - [16/Jun/2022 13:46:31] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 500 -
-2022-06-16 13:47:17,425 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
-2022-06-16 13:47:17,644 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 13:47:20,860 - app - ERROR: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "ix_user_email"
-DETAIL:  Key (email)=(alovegakevin@gmail.com) already exists.
-
-[SQL: INSERT INTO "user" (name, username, email, password, date_created) VALUES (%(name)s, %(username)s, %(email)s, %(password)s, %(date_created)s) RETURNING "user".id]
-[parameters: {'name': 'kelvin Alwavega', 'username': 'Kelvin', 'email': 'alovegakevin@gmail.com', 'password': '$pbkdf2-sha256$29000$KgUgpBTi/F/LeW.tNSbkHA$bWLaSKyZCtg55/SGAleHyAEa9yvqOgV2UynpR28X9Bg', 'date_created': datetime.datetime(2022, 6, 16, 10, 47, 20, 858765)}]
-(Background on this error at: https://sqlalche.me/e/14/gkpj)
-2022-06-16 13:47:20,862 - werkzeug - INFO: 127.0.0.1 - - [16/Jun/2022 13:47:20] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 500 -
-2022-06-16 13:47:36,491 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
-2022-06-16 13:47:36,651 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 13:47:44,364 - werkzeug - INFO:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
-2022-06-16 13:47:44,365 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 13:47:47,033 - app - ERROR: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "ix_user_email"
-DETAIL:  Key (email)=(alovegakevin@gmail.com) already exists.
-
-[SQL: INSERT INTO "user" (name, username, email, password, date_created) VALUES (%(name)s, %(username)s, %(email)s, %(password)s, %(date_created)s) RETURNING "user".id]
-[parameters: {'name': 'kelvin Alwavega', 'username': 'Kelvin', 'email': 'alovegakevin@gmail.com', 'password': '$pbkdf2-sha256$29000$2/s/B2AsBeAcg9A6R8iZUw$5iVlBNKoMzxpsD.KR8CtRe.iKxNiq6sbkovyyTLKCTE', 'date_created': datetime.datetime(2022, 6, 16, 10, 47, 47, 31567)}]
-(Background on this error at: https://sqlalche.me/e/14/gkpj)
-2022-06-16 13:47:47,034 - werkzeug - INFO: 127.0.0.1 - - [16/Jun/2022 13:47:47] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 500 -
-2022-06-16 13:48:16,688 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
-2022-06-16 13:48:16,834 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 13:48:17,871 - app - ERROR: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "ix_user_email"
-DETAIL:  Key (email)=(alovegakevin@gmail.com) already exists.
-
-[SQL: INSERT INTO "user" (name, username, email, password, date_created) VALUES (%(name)s, %(username)s, %(email)s, %(password)s, %(date_created)s) RETURNING "user".id]
-[parameters: {'name': 'kelvin Alwavega', 'username': 'Kelvin', 'email': 'alovegakevin@gmail.com', 'password': '$pbkdf2-sha256$29000$R4gxplSqFaL0/t8bo9T6fw$3BRJHEtSEqxPmET/cqAlfOKLB/KQJx.nx0bAAkfeFIA', 'date_created': datetime.datetime(2022, 6, 16, 10, 48, 17, 869287)}]
-(Background on this error at: https://sqlalche.me/e/14/gkpj)
-2022-06-16 13:48:17,872 - werkzeug - INFO: 127.0.0.1 - - [16/Jun/2022 13:48:17] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 500 -
-2022-06-16 13:49:46,315 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
-2022-06-16 13:49:52,786 - werkzeug - INFO:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
-2022-06-16 13:49:52,787 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 13:49:56,336 - app - ERROR: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "ix_user_email"
-DETAIL:  Key (email)=(alovegakevin@gmail.com) already exists.
-
-[SQL: INSERT INTO "user" (name, username, email, password, date_created) VALUES (%(name)s, %(username)s, %(email)s, %(password)s, %(date_created)s) RETURNING "user".id]
-[parameters: {'name': 'kelvin Alwavega', 'username': 'Kelvin', 'email': 'alovegakevin@gmail.com', 'password': '$pbkdf2-sha256$29000$jrH2nrMWorR2bs2Zc45xDg$r4iB/2rWrvDg4kWiMuxAcC4rHEkDnDY42CFbKXQSfYQ', 'date_created': datetime.datetime(2022, 6, 16, 10, 49, 56, 334926)}]
-(Background on this error at: https://sqlalche.me/e/14/gkpj)
-2022-06-16 13:49:56,337 - werkzeug - INFO: 127.0.0.1 - - [16/Jun/2022 13:49:56] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 500 -
-2022-06-16 13:50:36,250 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
-2022-06-16 13:50:36,465 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 13:50:37,419 - app - ERROR: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "ix_user_email"
-DETAIL:  Key (email)=(alovegakevin@gmail.com) already exists.
-
-[SQL: INSERT INTO "user" (name, username, email, password, date_created) VALUES (%(name)s, %(username)s, %(email)s, %(password)s, %(date_created)s) RETURNING "user".id]
-[parameters: {'name': 'kelvin Alwavega', 'username': 'Kelvin', 'email': 'alovegakevin@gmail.com', 'password': '$pbkdf2-sha256$29000$y7l3jrH2/n8vZSxl7B0DIA$SOmMpWU.O3fR4MiafpDeJTYQTspW3SXm7vdz/G0XPRI', 'date_created': datetime.datetime(2022, 6, 16, 10, 50, 37, 418290)}]
-(Background on this error at: https://sqlalche.me/e/14/gkpj)
-2022-06-16 13:50:37,420 - werkzeug - INFO: 127.0.0.1 - - [16/Jun/2022 13:50:37] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 500 -
-2022-06-16 13:51:15,802 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
-2022-06-16 13:51:15,970 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 13:51:16,888 - app - ERROR: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "ix_user_email"
-DETAIL:  Key (email)=(alovegakevin@gmail.com) already exists.
-
-[SQL: INSERT INTO "user" (name, username, email, password, date_created) VALUES (%(name)s, %(username)s, %(email)s, %(password)s, %(date_created)s) RETURNING "user".id]
-[parameters: {'name': 'kelvin Alwavega', 'username': 'Kelvin', 'email': 'alovegakevin@gmail.com', 'password': '$pbkdf2-sha256$29000$WGstZUwJwbiXMuY8Z4zxXg$POOrr0YKMD/LBKsmy2ZdA50TmZLmkjg/0aKP7IbT.Z0', 'date_created': datetime.datetime(2022, 6, 16, 10, 51, 16, 885928)}]
-(Background on this error at: https://sqlalche.me/e/14/gkpj)
-2022-06-16 13:51:16,889 - werkzeug - INFO: 127.0.0.1 - - [16/Jun/2022 13:51:16] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 500 -
-2022-06-16 13:53:29,776 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
-2022-06-16 13:53:29,972 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 13:56:01,420 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
-2022-06-16 13:56:01,598 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 13:56:15,493 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
-2022-06-16 13:56:15,689 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 13:56:16,692 - app - ERROR: 'function' object has no attribute 'filter_by'
-2022-06-16 13:56:16,711 - werkzeug - INFO: 127.0.0.1 - - [16/Jun/2022 13:56:16] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 500 -
-2022-06-16 13:56:56,163 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
-2022-06-16 13:56:56,367 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 13:56:57,384 - app - ERROR: 'function' object has no attribute 'filter_by'
-2022-06-16 13:56:57,400 - werkzeug - INFO: 127.0.0.1 - - [16/Jun/2022 13:56:57] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 500 -
-2022-06-16 13:58:12,703 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
-2022-06-16 13:58:12,890 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 13:58:13,945 - app - ERROR: 'function' object has no attribute 'filter_by'
-2022-06-16 13:58:13,963 - werkzeug - INFO: 127.0.0.1 - - [16/Jun/2022 13:58:13] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 500 -
-2022-06-16 13:59:12,799 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
-2022-06-16 13:59:13,028 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 13:59:14,896 - app - ERROR: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "ix_user_email"
-DETAIL:  Key (email)=(alovegakevin@gmail.com) already exists.
-
-[SQL: INSERT INTO "user" (name, username, email, password, date_created) VALUES (%(name)s, %(username)s, %(email)s, %(password)s, %(date_created)s) RETURNING "user".id]
-[parameters: {'name': 'kelvin Alwavega', 'username': 'Kelvin', 'email': 'alovegakevin@gmail.com', 'password': '$pbkdf2-sha256$29000$0DqntBbCGANgrDXm3Ps/5w$9raU8sxWGBmngbllLBeSUF2SRMdvmq1csGEr4OJgkWI', 'date_created': datetime.datetime(2022, 6, 16, 10, 59, 14, 894295)}]
-(Background on this error at: https://sqlalche.me/e/14/gkpj)
-2022-06-16 13:59:14,897 - werkzeug - INFO: 127.0.0.1 - - [16/Jun/2022 13:59:14] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 500 -
-2022-06-16 14:00:49,959 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
-2022-06-16 14:00:50,122 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 14:02:44,545 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
-2022-06-16 14:02:44,732 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 14:02:45,796 - werkzeug - INFO: 127.0.0.1 - - [16/Jun/2022 14:02:45] "[31m[1mPOST /auth/signup HTTP/1.1[0m" 403 -
-2022-06-16 14:03:12,252 - werkzeug - INFO: 127.0.0.1 - - [16/Jun/2022 14:03:12] "[31m[1mPOST /auth/signup HTTP/1.1[0m" 400 -
-2022-06-16 14:04:51,445 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
-2022-06-16 14:04:51,573 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 14:05:32,607 - werkzeug - INFO: 127.0.0.1 - - [16/Jun/2022 14:05:32] "[31m[1mPOST /auth/signup HTTP/1.1[0m" 403 -
-2022-06-16 14:08:06,632 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/schema.py', reloading
-2022-06-16 14:08:06,772 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 14:08:15,633 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 14:08:27,500 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 14:08:38,253 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/schema.py', reloading
-2022-06-16 14:08:38,381 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 14:09:24,879 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/schema.py', reloading
-2022-06-16 14:09:25,033 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 14:09:26,209 - werkzeug - INFO: 127.0.0.1 - - [16/Jun/2022 14:09:26] "[31m[1mPOST /auth/signup HTTP/1.1[0m" 400 -
-2022-06-16 14:09:58,331 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/schema.py', reloading
-2022-06-16 14:09:58,484 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 14:10:02,772 - werkzeug - INFO: 127.0.0.1 - - [16/Jun/2022 14:10:02] "[31m[1mPOST /auth/signup HTTP/1.1[0m" 400 -
-2022-06-16 14:10:08,488 - werkzeug - INFO: 127.0.0.1 - - [16/Jun/2022 14:10:08] "[31m[1mPOST /auth/signup HTTP/1.1[0m" 400 -
-2022-06-16 14:10:54,605 - werkzeug - INFO: 127.0.0.1 - - [16/Jun/2022 14:10:54] "[31m[1mPOST /auth/signup HTTP/1.1[0m" 400 -
-2022-06-16 14:11:20,795 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
-2022-06-16 14:11:20,959 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 14:11:21,824 - werkzeug - INFO: 127.0.0.1 - - [16/Jun/2022 14:11:21] "[31m[1mPOST /auth/signup HTTP/1.1[0m" 400 -
-2022-06-16 14:11:49,097 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
-2022-06-16 14:11:49,239 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 14:12:10,341 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
-2022-06-16 14:12:10,501 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 14:12:38,655 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
-2022-06-16 14:12:38,806 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 14:13:01,862 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
-2022-06-16 14:13:02,005 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 14:13:38,268 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
-2022-06-16 14:13:38,417 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 14:14:17,736 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
-2022-06-16 14:14:17,872 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 14:14:30,642 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
-2022-06-16 14:14:30,811 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 14:15:27,744 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_base.py', reloading
-2022-06-16 14:15:27,870 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 14:16:01,317 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_base.py', reloading
-2022-06-16 14:16:01,447 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 14:19:22,385 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_base.py', reloading
-2022-06-16 14:19:22,603 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 14:22:00,193 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_base.py', reloading
-2022-06-16 14:22:00,310 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 14:22:26,397 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
-2022-06-16 14:22:26,581 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 14:22:47,428 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
-2022-06-16 14:22:47,558 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 14:23:02,535 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
-2022-06-16 14:23:02,658 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 14:23:40,966 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_base.py', reloading
-2022-06-16 14:23:41,234 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 14:24:41,064 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_base.py', reloading
-2022-06-16 14:24:41,246 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 14:26:29,000 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_base.py', reloading
-2022-06-16 14:26:29,128 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 14:27:08,427 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_base.py', reloading
-2022-06-16 14:27:08,546 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 14:27:31,629 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_base.py', reloading
-2022-06-16 14:27:31,762 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 14:28:22,168 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_base.py', reloading
-2022-06-16 14:28:22,337 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 14:29:53,846 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_base.py', reloading
-2022-06-16 14:29:53,990 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 14:30:25,174 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_base.py', reloading
-2022-06-16 14:30:25,340 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 14:31:23,127 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_base.py', reloading
-2022-06-16 14:31:23,291 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 14:32:03,680 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_base.py', reloading
-2022-06-16 14:32:03,904 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 14:32:21,007 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_base.py', reloading
-2022-06-16 14:32:21,179 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 14:35:37,996 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_base.py', reloading
-2022-06-16 14:35:38,121 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 14:36:44,402 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/config.py', reloading
-2022-06-16 14:36:44,574 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 14:40:24,823 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
-2022-06-16 14:40:24,966 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 14:41:06,620 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_base.py', reloading
-2022-06-16 14:41:06,768 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 14:44:40,694 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_base.py', reloading
-2022-06-16 14:44:40,834 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 14:44:57,637 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_base.py', reloading
-2022-06-16 14:44:57,770 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 14:45:17,686 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_base.py', reloading
-2022-06-16 14:45:17,853 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 14:45:32,725 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_base.py', reloading
-2022-06-16 14:45:32,877 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 14:45:42,606 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
-2022-06-16 14:45:42,737 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 14:46:10,872 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
-2022-06-16 14:46:11,023 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 14:46:26,809 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
-2022-06-16 14:46:26,933 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 14:46:37,756 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
-2022-06-16 14:46:37,884 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 14:47:25,558 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
-2022-06-16 14:47:25,692 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 14:47:51,731 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
-2022-06-16 14:47:51,865 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 14:48:10,836 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
-2022-06-16 14:48:10,974 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 14:49:19,076 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
-2022-06-16 14:49:19,233 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 14:49:33,077 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
-2022-06-16 14:49:33,214 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 14:50:00,590 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
-2022-06-16 14:50:00,801 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 14:50:19,770 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
-2022-06-16 14:50:19,893 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 14:50:43,000 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
-2022-06-16 14:50:43,145 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 14:50:57,046 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
-2022-06-16 14:50:57,180 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 14:51:17,211 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
-2022-06-16 14:51:17,345 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 14:51:46,548 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
-2022-06-16 14:51:46,765 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 14:52:21,141 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
-2022-06-16 14:52:21,284 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 14:53:01,937 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
-2022-06-16 14:53:02,069 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 14:57:16,832 - werkzeug - INFO:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
-2022-06-16 14:58:28,263 - werkzeug - INFO:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
-2022-06-16 14:58:28,265 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 14:58:54,603 - werkzeug - INFO:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
-2022-06-16 14:58:54,604 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 15:03:28,642 - werkzeug - INFO:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
-2022-06-16 15:03:28,643 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 15:03:36,669 - werkzeug - INFO: 127.0.0.1 - - [16/Jun/2022 15:03:36] "[31m[1mPOST /auth/signup HTTP/1.1[0m" 403 -
-2022-06-16 15:05:02,533 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
-2022-06-16 15:05:02,690 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 15:06:15,817 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
-2022-06-16 15:06:15,949 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 15:06:38,897 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
-2022-06-16 15:06:39,040 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 15:08:00,535 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
-2022-06-16 15:08:00,655 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 15:08:24,581 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
-2022-06-16 15:08:24,723 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 15:08:42,609 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_base.py', reloading
-2022-06-16 15:08:42,759 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 15:09:12,859 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_base.py', reloading
-2022-06-16 15:09:13,018 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 15:51:17,864 - werkzeug - INFO:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
-2022-06-16 15:51:17,867 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 15:51:22,228 - werkzeug - INFO: 127.0.0.1 - - [16/Jun/2022 15:51:22] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 201 -
-2022-06-16 15:51:49,745 - werkzeug - INFO: 127.0.0.1 - - [16/Jun/2022 15:51:49] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 201 -
-2022-06-16 15:51:52,905 - werkzeug - INFO: 127.0.0.1 - - [16/Jun/2022 15:51:52] "[31m[1mPOST /auth/signup HTTP/1.1[0m" 403 -
-2022-06-16 15:52:23,799 - werkzeug - INFO: 127.0.0.1 - - [16/Jun/2022 15:52:23] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 201 -
-2022-06-16 16:23:12,528 - werkzeug - INFO:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
-2022-06-16 16:23:12,530 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 16:23:18,409 - werkzeug - INFO: 127.0.0.1 - - [16/Jun/2022 16:23:18] "[31m[1mPOST /auth/signup HTTP/1.1[0m" 403 -
-2022-06-16 16:23:27,333 - werkzeug - INFO: 127.0.0.1 - - [16/Jun/2022 16:23:27] "[31m[1mPOST /auth/signup HTTP/1.1[0m" 403 -
-2022-06-16 16:23:28,202 - werkzeug - INFO: 127.0.0.1 - - [16/Jun/2022 16:23:28] "[31m[1mPOST /auth/signup HTTP/1.1[0m" 403 -
-2022-06-16 16:23:28,740 - werkzeug - INFO: 127.0.0.1 - - [16/Jun/2022 16:23:28] "[31m[1mPOST /auth/signup HTTP/1.1[0m" 403 -
-2022-06-16 16:23:57,112 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
-2022-06-16 16:23:57,318 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 16:26:07,036 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
-2022-06-16 16:26:07,248 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 16:26:44,798 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
-2022-06-16 16:26:44,955 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 16:27:38,907 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
-2022-06-16 16:27:39,066 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 16:28:42,245 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
-2022-06-16 16:28:42,415 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 16:30:06,601 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
-2022-06-16 16:30:06,732 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 16:32:13,434 - werkzeug - INFO: 127.0.0.1 - - [16/Jun/2022 16:32:13] "[31m[1mPOST /auth/signup HTTP/1.1[0m" 403 -
-2022-06-16 16:32:14,419 - werkzeug - INFO: 127.0.0.1 - - [16/Jun/2022 16:32:14] "[31m[1mPOST /auth/signup HTTP/1.1[0m" 403 -
-2022-06-16 16:36:39,767 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
-2022-06-16 16:36:39,921 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 16:36:54,658 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
-2022-06-16 16:36:54,886 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 16:37:08,737 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
-2022-06-16 16:37:08,885 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 16:43:02,581 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
-2022-06-16 16:43:02,741 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 16:53:57,695 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
-2022-06-16 16:53:57,879 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 16:55:06,836 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
-2022-06-16 16:55:06,984 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 16:56:22,260 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
-2022-06-16 16:56:22,393 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 16:56:32,329 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
-2022-06-16 16:56:32,465 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 16:57:10,791 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
-2022-06-16 16:57:10,995 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 16:57:11,943 - werkzeug - INFO: 127.0.0.1 - - [16/Jun/2022 16:57:11] "[31m[1mPOST /auth/signup HTTP/1.1[0m" 403 -
-2022-06-16 16:57:13,616 - werkzeug - INFO: 127.0.0.1 - - [16/Jun/2022 16:57:13] "[31m[1mPOST /auth/signup HTTP/1.1[0m" 403 -
-2022-06-16 16:57:15,301 - werkzeug - INFO: 127.0.0.1 - - [16/Jun/2022 16:57:15] "[31m[1mPOST /auth/signup HTTP/1.1[0m" 403 -
-2022-06-16 16:57:17,689 - werkzeug - INFO: 127.0.0.1 - - [16/Jun/2022 16:57:17] "[31m[1mPOST /auth/signup HTTP/1.1[0m" 403 -
-2022-06-16 16:57:44,362 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
-2022-06-16 16:57:44,533 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 16:57:45,461 - app - ERROR: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "ix_user_email"
-DETAIL:  Key (email)=(booh@example.com) already exists.
-
-[SQL: INSERT INTO "user" (name, username, email, password, date_created) VALUES (%(name)s, %(username)s, %(email)s, %(password)s, %(date_created)s) RETURNING "user".id]
-[parameters: {'name': 'Bush mokeira', 'username': 'bush', 'email': 'booh@example.com', 'password': '$pbkdf2-sha256$29000$cO6dkzJGiDHmnFPKOae0Ng$jcBuOCHuTwtMa.i3SYTRSBxTAh1okSD/jsUXicGuPKM', 'date_created': datetime.datetime(2022, 6, 16, 13, 57, 45, 457324)}]
-(Background on this error at: https://sqlalche.me/e/14/gkpj)
-2022-06-16 16:57:45,463 - werkzeug - INFO: 127.0.0.1 - - [16/Jun/2022 16:57:45] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 500 -
-2022-06-16 16:58:06,078 - app - ERROR: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "ix_user_email"
-DETAIL:  Key (email)=(booh@example.com) already exists.
-
-[SQL: INSERT INTO "user" (name, username, email, password, date_created) VALUES (%(name)s, %(username)s, %(email)s, %(password)s, %(date_created)s) RETURNING "user".id]
-[parameters: {'name': 'Bush mokeira', 'username': 'bush', 'email': 'booh@example.com', 'password': '$pbkdf2-sha256$29000$G6MU4rzXOmesda6VEuJ8jw$dmEORUCD/Pmz/P3GnVML2sZ3y51C0TpAlMCigbQqAKI', 'date_created': datetime.datetime(2022, 6, 16, 13, 58, 6, 76698)}]
-(Background on this error at: https://sqlalche.me/e/14/gkpj)
-2022-06-16 16:58:06,078 - werkzeug - INFO: 127.0.0.1 - - [16/Jun/2022 16:58:06] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 500 -
-2022-06-16 16:58:13,889 - werkzeug - INFO: 127.0.0.1 - - [16/Jun/2022 16:58:13] "[35m[1mPOST /auth/signup HTTP/1.1[0m" 201 -
-2022-06-16 16:58:28,264 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
-2022-06-16 16:58:28,430 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 17:05:12,202 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_base.py', reloading
-2022-06-16 17:05:12,321 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 17:05:45,519 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
-2022-06-16 17:05:45,706 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 17:06:12,638 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
-2022-06-16 17:06:12,777 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 17:06:28,708 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
-2022-06-16 17:06:28,858 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 17:06:55,014 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
-2022-06-16 17:06:55,140 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 17:07:09,971 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
-2022-06-16 17:07:10,123 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 17:07:29,021 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
-2022-06-16 17:07:29,154 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 17:08:23,066 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
-2022-06-16 17:08:23,298 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 17:08:42,224 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
-2022-06-16 17:08:42,605 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 17:09:00,366 - werkzeug - INFO: 127.0.0.1 - - [16/Jun/2022 17:09:00] "[31m[1mPOST /auth/signup HTTP/1.1[0m" 403 -
-2022-06-16 17:09:15,117 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
-2022-06-16 17:09:15,249 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 17:09:47,657 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
-2022-06-16 17:09:47,856 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 17:10:51,054 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
-2022-06-16 17:10:51,351 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 17:12:14,000 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/models.py', reloading
-2022-06-16 17:12:14,130 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 17:14:08,352 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
-2022-06-16 17:14:08,526 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 17:14:36,675 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/models.py', reloading
-2022-06-16 17:14:36,793 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 17:14:55,753 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
-2022-06-16 17:14:55,924 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 17:15:08,775 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_signup.py', reloading
-2022-06-16 17:15:08,953 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 17:16:05,815 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_login.py', reloading
-2022-06-16 17:16:05,994 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 17:17:43,809 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_login.py', reloading
-2022-06-16 17:17:43,981 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 17:18:28,539 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_login.py', reloading
-2022-06-16 17:18:28,713 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 17:21:51,325 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_login.py', reloading
-2022-06-16 17:21:51,484 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 17:22:17,697 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_login.py', reloading
-2022-06-16 17:22:17,835 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 17:22:28,764 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_login.py', reloading
-2022-06-16 17:22:28,890 - werkzeug - INFO:  * Restarting with stat
-2022-06-16 17:23:49,203 - werkzeug - INFO:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/schema.py', reloading
-2022-06-16 17:23:49,431 - werkzeug - INFO:  * Restarting with stat
+[SQL: SELECT "user".id AS user_id, "user".name AS user_name, "user".username AS user_username, "user".email AS user_email, "user".password AS user_password, "user".confirmed AS user_confirmed, "user".confirmed_on AS user_confirmed_on, "user".date_created AS user_date_created 
+FROM "user" 
+WHERE "user".email = false 
+ LIMIT %(param_1)s]
+[parameters: {'param_1': 1}]
+(Background on this error at: https://sqlalche.me/e/14/f405)
+2022-06-27 18:54:30,225 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 18:54:30] "[35m[1mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrnSIw.G3gVomp2J-4h5Wyuhrq-_4DgB1c HTTP/1.1[0m" 500 -
+2022-06-27 18:57:52,431 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/token.py', reloading
+2022-06-27 18:57:52,689 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 18:58:03,491 - app - confirm_token():20]ERROR in token: Signature age 360 > 1 seconds
+2022-06-27 18:58:03,526 - app - get():178]ERROR in user: (psycopg2.ProgrammingError) can't adapt type 'Response'
+[SQL: SELECT "user".id AS user_id, "user".name AS user_name, "user".username AS user_username, "user".email AS user_email, "user".password AS user_password, "user".confirmed AS user_confirmed, "user".confirmed_on AS user_confirmed_on, "user".date_created AS user_date_created 
+FROM "user" 
+WHERE "user".email = %(email_1)s 
+ LIMIT %(param_1)s]
+[parameters: {'email_1': <Response 33 bytes [401 UNAUTHORIZED]>, 'param_1': 1}]
+(Background on this error at: https://sqlalche.me/e/14/f405)
+2022-06-27 18:58:03,527 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 18:58:03] "[35m[1mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrnSIw.G3gVomp2J-4h5Wyuhrq-_4DgB1c HTTP/1.1[0m" 500 -
+2022-06-27 19:00:01,459 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 19:00:01,649 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 19:01:58,873 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 19:01:59,056 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 19:02:07,151 - app - confirm_token():20]ERROR in token: Signature age 604 > 1 seconds
+2022-06-27 19:02:07,237 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 19:02:07] "[35m[1mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrnSIw.G3gVomp2J-4h5Wyuhrq-_4DgB1c HTTP/1.1[0m" 500 -
+2022-06-27 19:02:07,927 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 19:02:07] "GET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrnSIw.G3gVomp2J-4h5Wyuhrq-_4DgB1c?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2022-06-27 19:02:07,929 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 19:02:07] "GET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrnSIw.G3gVomp2J-4h5Wyuhrq-_4DgB1c?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2022-06-27 19:02:09,857 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 19:02:09] "GET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrnSIw.G3gVomp2J-4h5Wyuhrq-_4DgB1c?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2022-06-27 19:02:10,123 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 19:02:10] "GET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrnSIw.G3gVomp2J-4h5Wyuhrq-_4DgB1c?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2022-06-27 19:03:58,639 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/user.py', reloading
+2022-06-27 19:03:59,011 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 19:04:02,833 - app - confirm_token():20]ERROR in token: Signature age 719 > 1 seconds
+2022-06-27 19:04:02,892 - app - get():173]ERROR in user: (psycopg2.ProgrammingError) can't adapt type 'Response'
+[SQL: SELECT "user".id AS user_id, "user".name AS user_name, "user".username AS user_username, "user".email AS user_email, "user".password AS user_password, "user".confirmed AS user_confirmed, "user".confirmed_on AS user_confirmed_on, "user".date_created AS user_date_created 
+FROM "user" 
+WHERE "user".email = %(email_1)s 
+ LIMIT %(param_1)s]
+[parameters: {'email_1': <Response 33 bytes [401 UNAUTHORIZED]>, 'param_1': 1}]
+(Background on this error at: https://sqlalche.me/e/14/f405)
+2022-06-27 19:04:02,893 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 19:04:02] "[31m[1mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrnSIw.G3gVomp2J-4h5Wyuhrq-_4DgB1c HTTP/1.1[0m" 401 -
+2022-06-27 19:19:01,388 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/decorator.py', reloading
+2022-06-27 19:19:01,658 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 19:19:15,087 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/decorator.py', reloading
+2022-06-27 19:19:15,238 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 19:20:07,812 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/decorator.py', reloading
+2022-06-27 19:20:07,942 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 19:20:22,689 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/decorator.py', reloading
+2022-06-27 19:20:22,833 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 19:20:32,500 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/decorator.py', reloading
+2022-06-27 19:20:32,642 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 19:20:43,278 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/decorator.py', reloading
+2022-06-27 19:20:43,407 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 19:20:46,993 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/decorator.py', reloading
+2022-06-27 19:20:47,133 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 19:21:04,043 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/decorator.py', reloading
+2022-06-27 19:21:04,175 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 19:21:24,128 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/decorator.py', reloading
+2022-06-27 19:21:24,297 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 19:21:29,978 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/decorator.py', reloading
+2022-06-27 19:21:30,114 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 19:21:40,828 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/decorator.py', reloading
+2022-06-27 19:21:40,975 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 19:21:53,649 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/decorator.py', reloading
+2022-06-27 19:21:53,839 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 19:22:10,610 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/decorator.py', reloading
+2022-06-27 19:22:10,759 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 19:22:19,400 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/decorator.py', reloading
+2022-06-27 19:22:19,542 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 19:22:29,127 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/decorator.py', reloading
+2022-06-27 19:22:29,298 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 19:22:38,142 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/decorator.py', reloading
+2022-06-27 19:22:38,275 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 19:22:41,783 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/decorator.py', reloading
+2022-06-27 19:22:41,931 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 19:22:46,405 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/decorator.py', reloading
+2022-06-27 19:22:46,557 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 19:22:53,072 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/decorator.py', reloading
+2022-06-27 19:22:53,202 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 19:23:00,807 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/decorator.py', reloading
+2022-06-27 19:23:00,943 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 19:23:21,983 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/decorator.py', reloading
+2022-06-27 19:23:22,124 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 19:23:29,659 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/decorator.py', reloading
+2022-06-27 19:23:29,800 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 19:23:46,533 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/decorator.py', reloading
+2022-06-27 19:23:46,677 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 19:24:03,434 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/decorator.py', reloading
+2022-06-27 19:24:03,604 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 19:25:06,365 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/token.py', reloading
+2022-06-27 19:25:06,531 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 19:25:29,362 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/decorator.py', reloading
+2022-06-27 19:25:29,514 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 19:25:53,394 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/decorator.py', reloading
+2022-06-27 19:25:53,528 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 19:26:49,136 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/decorator.py', reloading
+2022-06-27 19:26:49,334 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 19:27:26,750 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/decorator.py', reloading
+2022-06-27 19:27:26,933 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 19:28:06,275 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/decorator.py', reloading
+2022-06-27 19:28:06,410 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 19:28:59,123 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/decorator.py', reloading
+2022-06-27 19:28:59,266 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 19:29:26,267 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/decorator.py', reloading
+2022-06-27 19:29:26,409 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 19:29:44,263 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/decorator.py', reloading
+2022-06-27 19:29:44,455 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 19:30:40,092 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/decorator.py', reloading
+2022-06-27 19:30:40,236 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 19:31:20,642 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/decorator.py', reloading
+2022-06-27 19:31:20,789 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 19:32:08,381 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/token.py', reloading
+2022-06-27 19:32:08,538 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 19:32:41,780 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/token.py', reloading
+2022-06-27 19:32:41,979 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 19:32:56,820 - app - confirm_token():20]ERROR in token: Signature age 2453 > 1 seconds
+2022-06-27 19:32:56,977 - app - get():173]ERROR in user: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2022-06-27 19:32:56,978 - werkzeug - _log():224]INFO in _internal: 127.0.0.1 - - [27/Jun/2022 19:32:56] "[31m[1mGET /confirm/ImtldmluYWxvdmVnYUBnbWFpbC5jb20i.YrnSIw.G3gVomp2J-4h5Wyuhrq-_4DgB1c HTTP/1.1[0m" 401 -
+2022-06-27 19:35:20,037 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/decorator.py', reloading
+2022-06-27 19:35:20,206 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 19:36:12,016 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/decorator.py', reloading
+2022-06-27 19:36:12,212 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 19:37:07,974 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/decorator.py', reloading
+2022-06-27 19:37:08,145 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-27 19:37:51,600 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/decorator.py', reloading
+2022-06-27 19:37:51,754 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat

@@ -1,8 +1,8 @@
-"""empty message
+"""update user field
 
-Revision ID: ed50958c690f
+Revision ID: 3d257fa66a3b
 Revises: 
-Create Date: 2022-06-15 17:16:20.171958
+Create Date: 2022-06-27 15:13:05.222280
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = 'ed50958c690f'
+revision = '3d257fa66a3b'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -36,12 +36,14 @@ def upgrade():
     sa.Column('username', sa.String(length=100), nullable=True),
     sa.Column('email', sa.String(length=100), nullable=True),
     sa.Column('password', sa.String(length=200), nullable=True),
+    sa.Column('confirmed', sa.Boolean(), nullable=False),
+    sa.Column('confirmed_on', sa.DateTime(), nullable=True),
     sa.Column('date_created', sa.DateTime(), nullable=False),
     sa.PrimaryKeyConstraint('id')
     )
     op.create_index(op.f('ix_user_email'), 'user', ['email'], unique=True)
     op.create_index(op.f('ix_user_name'), 'user', ['name'], unique=False)
-    op.create_index(op.f('ix_user_username'), 'user', ['username'], unique=False)
+    op.create_index(op.f('ix_user_username'), 'user', ['username'], unique=True)
     op.create_table('badges',
     sa.Column('badge_id', sa.Integer(), nullable=False),
     sa.Column('user_id', sa.Integer(), nullable=False),
