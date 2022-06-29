@@ -21,25 +21,25 @@ class DevelopmentConfig(Config):
     # MAIL_USE_TLS = False
     # MAIL_USE_SSL = True
     MAIL_SERVER='smtp.mailtrap.io'
-    MAIL_PORT=2525
-    MAIL_USERNAME='6f0a580826fa2c'
-    MAIL_PASSWORD='c66df6573eb8b0'
-    MAIL_DEFAULT_SENDER='kelvin@example.com'
+    MAIL_PORT=os.getenv('MAIL_PORT2')
+    MAIL_USERNAME=os.getenv('MAIL_USERNAME2')
+    MAIL_PASSWORD=os.getenv('MAIL_PASSWORD2')
+    MAIL_DEFAULT_SENDER=os.getenv('MAIL_DEFAULT_SENDER')
     MAIL_USE_TLS = True
     MAIL_USE_SSL = False
-    SQLALCHEMY_DATABASE_URI="postgresql://root:root@localhost:5432/postgres"
+    SQLALCHEMY_DATABASE_URI=os.getenv('SQLALCHEMY_DATABASE_URI')
     SQLALCHEMY_TRACK_MODIFICATIONS = True
 
 
 class TestingConfig(Config):
     """Configurations for Testing, with a separate test database."""
     TESTING = True
-    SQLALCHEMY_DATABASE_URI = "postgresql://root:root@localhost:5432/test_db"
+    SQLALCHEMY_DATABASE_URI=os.getenv('SQLALCHEMY_DATABASE_URI2')
     SECRET_KEY = os.getenv('SECRET_KEY')
     MAIL_SERVER='smtp.mailtrap.io'
     MAIL_PORT=2525
-    MAIL_USERNAME='6f0a580826fa2c'
-    MAIL_PASSWORD='c66df6573eb8b0'
+    MAIL_USERNAME=os.getenv('MAIL_USERNAME2')
+    MAIL_PASSWORD=os.getenv('MAIL_PASSWORD2')
     MAIL_DEFAULT_SENDER='kelvin@example.com'
     MAIL_USE_TLS = True
     MAIL_USE_SSL = False
