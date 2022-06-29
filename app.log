@@ -311,3 +311,5 @@ WHERE "user".email = %(email_1)s
 2022-06-29 17:22:39,974 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
 2022-06-29 17:23:02,234 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/test/test_user_login.py', reloading
 2022-06-29 17:23:02,520 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
+2022-06-29 17:32:36,414 - werkzeug - _log():224]INFO in _internal:  * Detected change in '/home/alovega/Downloads/Projects/python/StackOverflow-Lite/app/__init__.py', reloading
+2022-06-29 17:32:36,554 - werkzeug - _log():224]INFO in _internal:  * Restarting with stat
