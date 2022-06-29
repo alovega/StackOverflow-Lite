@@ -41,7 +41,8 @@ api = Api(app)
 api.add_resource(ConfirmEmail, '/confirm/<token>', endpoint='Confirm')
 api.add_resource(UserRegister, '/auth/signup', endpoint='Register')
 api.add_resource(UserLogin, '/auth/login', endpoint='Login')
-api.add_resource(TokenRefresh, '/auth/login/refresh', endpoint='Refresh')
+api.add_resource(Index, '/', endpoint='Index')
+# api.add_resource(TokenRefresh, '/auth/login/refresh', endpoint='Refresh')
 
 # create_api(app)
 

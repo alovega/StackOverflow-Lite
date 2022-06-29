@@ -1,12 +1,13 @@
 from functools import wraps
 
-from flask import current_app, flash, jsonify, make_response, request
+from flask import current_app, jsonify, make_response, request
+
+from flask_jwt_extended import current_user, get_jwt_identity
 
 from app.models import User
 
 from .token import verify_token
 
-from flask_login import current_user
 
 def check_confirmed(func):
     @wraps(func)

@@ -14,10 +14,19 @@ class DevelopmentConfig(Config):
     """Configurations for Development."""
     FLASK_ENV = 'development'
     DEBUG = False
-    MAIL_SERVER  =  'smtp.gmail.com'
-    MAIL_PORT  = 465
-    MAIL_USE_TLS = False
-    MAIL_USE_SSL = True
+    SECRET_KEY=os.getenv('SECRET_KEY')
+    SECURITY_PASSWORD_SALT=os.getenv('SECURITY_PASSWORD_SALT')
+    # MAIL_SERVER  =  'smtp.gmail.com'
+    # MAIL_PORT  = 465
+    # MAIL_USE_TLS = False
+    # MAIL_USE_SSL = True
+    MAIL_SERVER='smtp.mailtrap.io'
+    MAIL_PORT=2525
+    MAIL_USERNAME='6f0a580826fa2c'
+    MAIL_PASSWORD='c66df6573eb8b0'
+    MAIL_DEFAULT_SENDER='kelvin@example.com'
+    MAIL_USE_TLS = True
+    MAIL_USE_SSL = False
     SQLALCHEMY_DATABASE_URI="postgresql://root:root@localhost:5432/postgres"
     SQLALCHEMY_TRACK_MODIFICATIONS = True
 

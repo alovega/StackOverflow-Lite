@@ -1,15 +1,15 @@
-from flask import current_app, jsonify, make_response
-
-from itsdangerous import BadSignature, Serializer, SignatureExpired, URLSafeTimedSerializer
+from flask import current_app
+import jwt
+from datetime import datetime, timezone, timedelta
+from itsdangerous import BadSignature, SignatureExpired, URLSafeTimedSerializer
 
 def generate_confirmation_token(email):
     try:
         serializer = URLSafeTimedSerializer(current_app.config['SECRET_KEY'])
         return serializer.dumps(email, salt=current_app.config['SECURITY_PASSWORD_SALT'])
-    
     except Exception as e:
         current_app.logger.error(f"{e}")
-        return {"Error": "Error while generating token"}
+        return Exception
 
 
 def confirm_token(token, expiration=1):
@@ -26,24 +26,26 @@ def confirm_token(token, expiration=1):
         return {"Error": "token expired"}
     except BadSignature as e:
         current_app.logger.error(f"{e}")
-        return {"Error": "Invalid token provided"}
+        return Exception
 
 
-def generate_auth_token(email, expiration= 3600 * 15):
-    serializer = Serializer(current_app.config['SECRET_KEY'], expires_in = expiration)
-    return serializer.dumps(email= email, salt=current_app.config['SECURITY_PASSWORD_SALT'])
+def generate_auth_token(email, expiration=3600*15):
+    try:
+        return str(jwt.encode({"email": email, "exp": datetime.now(tz=timezone.utc)+ timedelta(days=15)}, f"'{current_app.config['SECRET_KEY']}'", algorithm="HS256"))
+    except Exception as s:
+        current_app.logger.error(f"{s}")
+        return Exception
 
 
 def verify_token(token):
-    serializer = Serializer(current_app.config['SECRET_KEY'])
     try:
-        email = serializer.loads(token, salt=current_app.config['SECURITY_PASSWORD_SALT'])
+        email = jwt.decode(token, f"'{current_app.config['SECRET_KEY']}'", algorithms=['HS256']).get('email')
         return email
-    except SignatureExpired as e:
+    except jwt.ExpiredSignatureError as e:
         current_app.logger.error(f"{e}")
-        return {"Error": "token expired"}
-    except BadSignature as e:
+        return Exception
+    except jwt.DecodeError as e:
         current_app.logger.error(f"{e}")
-        return {"Error": "Invalid token provided"}
+        return Exception
 
     

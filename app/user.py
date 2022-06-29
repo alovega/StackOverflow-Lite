@@ -1,9 +1,8 @@
 import datetime
 from app.email import send_email
-from .token import generate_confirmation_token, confirm_token
+from .token import generate_auth_token, generate_confirmation_token, confirm_token
 from flask import jsonify, make_response, render_template, request, url_for
-from flask_login import LoginManager, current_user, login_required, login_user
-from flask_restful import Resource, reqparse
+from flask_restful import Resource
 from passlib.hash import pbkdf2_sha256 as sha256
 from flask_jwt_extended import (
     create_access_token, create_refresh_token, jwt_required, get_jwt_identity
@@ -11,10 +10,11 @@ from flask_jwt_extended import (
 from flask import current_app
 
 from app.models import User, db
-from app.schema import UserFormSchema, UserSchema
+from app.schema import UserFormSchema, LoginFormSchema, UserSchema
 
 
 user_form = UserFormSchema()
+login_form = LoginFormSchema()
 user_schema = UserSchema()
 users_schema = UserSchema(many=True)
 # login_manager = LoginManager()
@@ -72,6 +72,7 @@ class UserRegister(Resource):
             elif User.query.filter_by(username=user.username).first():
                 return make_response(jsonify({"message": "username already used"}), 403)
             me = User(username=user.username, password=user.password, email=user.email, name=user.name, confirmed=False)
+            print(me.email)
             db.session.add(me)
             db.session.commit()
             token = generate_confirmation_token(me.email)
@@ -96,15 +97,6 @@ class UserRegister(Resource):
             return make_response(jsonify({"error": "Server Error"}), 500)
 
 class UserLogin(Resource):
-    def __init__(self):
-        self.request_parse = reqparse.RequestParser()
-        self.request_parse.add_argument(
-            'username', type=str, required=True, help='please input username', location=['json', 'form']
-        )
-        self.request_parse.add_argument(
-            'password', type=str, required=True, help='please input password', location=['json', 'form']
-        )
-
     def post(self):
         """
                Login
@@ -124,35 +116,36 @@ class UserLogin(Resource):
                    404:
                        description: User doesn't exist
                """
-        args = self.request_parse.parse_args()
-        username = args['username']
-        password = args['password']
-        if not username.replace(" ", ""):
-            return {"message": "input valid username"}, 400
-        elif not password.replace(" ", ""):
-            return {"message": "input password it is empty"}, 400
-        user = User.query.filter_by(username=args['username']).first()
-        if not user:
-            return {"message": 'User {} doesn\'t exist'.format(args['username'])}, 404
+        try:
+            args = request.json
+            error = login_form.validate(args)
 
-        if UserData.verify_hash(args['password'], user.password):
-            # access_token = create_access_token(identity=user.username)
-            # refresh_token = create_refresh_token(identity=user.username)
-            return make_response(jsonify( {
-                       'message': 'Logged in as {}'.format(user.username),
-                    #    'access_token': access_token,
-                    #    'refresh_token': refresh_token
-                   }), 202)
-        else:
-            return {'message': 'wrong credentials provided'}, 401
+            if error:
+                return make_response(jsonify({"message": f"{error}"}), 400)
+            user = User.query.filter_by(email=args['email']).first()
+            if not user:
+                return {"message": 'User doesn\'t exist'}, 404
+
+            if UserData.verify_hash(args['password'], user.password):
+                access_token = generate_auth_token(email=args['email'])
+                return make_response(jsonify( {
+                        'message': 'Logged in as {}'.format(user.username),
+                        'token': access_token,
+
+                    }), 202)
+            else:
+                return make_response(jsonify({'message': 'wrong credentials provided'}), 401)
+        except Exception as s:
+            current_app.logger.error(f"{s}")
+            return make_response(jsonify({'message': f'Unable to log in {s}'}), 500)
 
 
-class TokenRefresh(Resource):
-    @jwt_required(refresh=True)
-    def post(self):
-        current_user = get_jwt_identity()
-        access_token = create_access_token(identity=current_user)
-        return {'access_token': access_token}, 202
+# class TokenRefresh(Resource):
+#     @jwt_required(refresh=True)
+#     def post(self):
+#         current_user = get_jwt_identity()
+#         access_token = create_access_token(identity=current_user)
+#         return {'access_token': access_token}, 202
 
 class ConfirmEmail(Resource):
     def get(self, token):
@@ -170,12 +163,26 @@ class ConfirmEmail(Resource):
         except Exception as e:
             current_app.logger.error(f"{e}")
             db.session.rollback()
-            return make_response(jsonify({"error":f"The confirmation link is invalid or has expired."}), 401)
+            return make_response(render_template('user/unconfirmed.html'), 401)
 
 
 class Unconfirmed(Resource):
-    @login_required
-    def get():
-        if current_user.is_active:
-            return make_response(jsonify({"message":'You have confirmed your account. Thanks!'}), 200)
-        return render_template('user/unconfirmed.html')
+    def post(self):
+        try:
+            args = request.json
+            current_user = User.query.filter_by(email=args['email']).first()
+            if current_user.confirmed:
+                return make_response(jsonify({"message":'You have confirmed your account. Thanks!'}), 200)
+            token=generate_confirmation_token(email=args['email'])
+            confirm_url = url_for('Confirm', token=token, _external=True)
+            html = render_template('user/activate.html', confirm_url=confirm_url)
+            subject = "Please confirm your email"
+            send_email(args['email'], subject, html)
+            return make_response(jsonify({"message":'Confirmation Email has been sent!'}), 200)
+        except Exception as e:
+            current_app.logger.error(f"{e}")
+            return make_response(jsonify({"message":'Error while try to send email!'}), 404)
+
+class Index(Resource):
+    def get(self):
+        return make_response(render_template('user/activate.html'))

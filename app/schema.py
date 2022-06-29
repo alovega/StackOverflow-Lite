@@ -27,11 +27,10 @@ class UserFormSchema(Schema):
     class Meta:
         fields = ("email", "name", "username", "password")
 
-class LoginSchema(Schema):
+class LoginFormSchema(Schema):
     #below are the fields with the form should expect
     not_blank = validate.Length(min=2, error='Field cannot be blank')
-    username = fields.Str(required=True, validate=not_blank)
-    email = fields.Email(required=True)
+    email = fields.Email(required=True, validate=not_blank)
     password = fields.Str(required=True, validate=not_blank)
 
     class Meta:
